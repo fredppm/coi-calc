@@ -1,0 +1,2229 @@
+{
+  "summary": {
+    "total_images": 245,
+    "categories": {
+      "Icons": 25,
+      "Designation_images": 14,
+      "Building_images": 200,
+      "index.php?title=Building_images&filefrom=Vehicles+Depot.png#mw-category-media": 6
+    },
+    "file_types": {
+      "svg": 23,
+      "png": 222
+    },
+    "total_estimated_size_mb": 14.2578125
+  },
+  "images": [
+    {
+      "filename": "Ambox_clock_yellow.svg",
+      "url": "https://wiki.coigame.com/images/0/0a/Ambox_clock_yellow.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Ambox_clock_yellow.svg",
+      "width": 620,
+      "height": 620,
+      "size": "42 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Ambox_clock.svg",
+      "url": "https://wiki.coigame.com/images/5/55/Ambox_clock.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Ambox_clock.svg",
+      "width": 620,
+      "height": 620,
+      "size": "60 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Ambox_important.svg",
+      "url": "https://wiki.coigame.com/images/b/b4/Ambox_important.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Ambox_important.svg",
+      "width": 40,
+      "height": 40,
+      "size": "7 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Ambox_warning_blue_construction.svg",
+      "url": "https://wiki.coigame.com/images/e/e1/Ambox_warning_blue_construction.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Ambox_warning_blue_construction.svg",
+      "width": 378,
+      "height": 326,
+      "size": "11 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Ambox_warning_pn.svg",
+      "url": "https://wiki.coigame.com/images/1/15/Ambox_warning_pn.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Ambox_warning_pn.svg",
+      "width": 600,
+      "height": 500,
+      "size": "5 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "CC_some_rights_reserved.svg",
+      "url": "https://wiki.coigame.com/images/7/79/CC_some_rights_reserved.svg",
+      "file_page_url": "https://wiki.coigame.com/File:CC_some_rights_reserved.svg",
+      "width": 744,
+      "height": 300,
+      "size": "22 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Cc-by_new.svg",
+      "url": "https://wiki.coigame.com/images/3/3c/Cc-by_new.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Cc-by_new.svg",
+      "width": 64,
+      "height": 64,
+      "size": "4 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Cc-nc.svg",
+      "url": "https://wiki.coigame.com/images/d/db/Cc-nc.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Cc-nc.svg",
+      "width": 64,
+      "height": 64,
+      "size": "2 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Cc-nd.svg",
+      "url": "https://wiki.coigame.com/images/c/c7/Cc-nd.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Cc-nd.svg",
+      "width": 64,
+      "height": 64,
+      "size": null,
+      "category": "Icons"
+    },
+    {
+      "filename": "Cc-sa.svg",
+      "url": "https://wiki.coigame.com/images/2/29/Cc-sa.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Cc-sa.svg",
+      "width": 64,
+      "height": 64,
+      "size": "3 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Clock_60s.png",
+      "url": "https://wiki.coigame.com/images/b/b9/Clock_60s.png?20220116192507",
+      "file_page_url": "https://wiki.coigame.com/File:Clock_60s.png",
+      "width": 16,
+      "height": 16,
+      "size": "2 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Copyleft.svg",
+      "url": "https://wiki.coigame.com/images/8/8b/Copyleft.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Copyleft.svg",
+      "width": 197,
+      "height": 197,
+      "size": "1 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Edit-clear.svg",
+      "url": "https://wiki.coigame.com/images/f/f2/Edit-clear.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Edit-clear.svg",
+      "width": 48,
+      "height": 48,
+      "size": "19 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Edit-copy_green.svg",
+      "url": "https://wiki.coigame.com/images/1/15/Edit-copy_green.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Edit-copy_green.svg",
+      "width": 48,
+      "height": 48,
+      "size": "15 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Emblem-question-yellow.svg",
+      "url": "https://wiki.coigame.com/images/a/aa/Emblem-question-yellow.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Emblem-question-yellow.svg",
+      "width": 48,
+      "height": 48,
+      "size": "8 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Fair_use_logo.svg",
+      "url": "https://wiki.coigame.com/images/7/78/Fair_use_logo.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Fair_use_logo.svg",
+      "width": 197,
+      "height": 197,
+      "size": null,
+      "category": "Icons"
+    },
+    {
+      "filename": "GNU_logo.svg",
+      "url": "https://wiki.coigame.com/images/b/ba/GNU_logo.svg",
+      "file_page_url": "https://wiki.coigame.com/File:GNU_logo.svg",
+      "width": 535,
+      "height": 523,
+      "size": "24 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "GPLv3.svg",
+      "url": "https://wiki.coigame.com/images/b/bb/GPLv3.svg",
+      "file_page_url": "https://wiki.coigame.com/File:GPLv3.svg",
+      "width": 720,
+      "height": 358,
+      "size": "30 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Green_copyright.svg",
+      "url": "https://wiki.coigame.com/images/5/57/Green_copyright.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Green_copyright.svg",
+      "width": 197,
+      "height": 197,
+      "size": "1 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Information_icon4.svg",
+      "url": "https://wiki.coigame.com/images/1/1d/Information_icon4.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Information_icon4.svg",
+      "width": 620,
+      "height": 620,
+      "size": "1 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Merge-split-transwiki_default.svg",
+      "url": "https://wiki.coigame.com/images/e/e0/Merge-split-transwiki_default.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Merge-split-transwiki_default.svg",
+      "width": 36,
+      "height": 40,
+      "size": null,
+      "category": "Icons"
+    },
+    {
+      "filename": "Mozilla-stone-high-res-e61d5c2e5341.png",
+      "url": "https://wiki.coigame.com/images/e/e8/Mozilla-stone-high-res-e61d5c2e5341.png?20220112105418",
+      "file_page_url": "https://wiki.coigame.com/File:Mozilla-stone-high-res-e61d5c2e5341.png",
+      "width": 340,
+      "height": 90,
+      "size": "2 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Nuvola_apps_important.svg",
+      "url": "https://wiki.coigame.com/images/f/f7/Nuvola_apps_important.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Nuvola_apps_important.svg",
+      "width": 600,
+      "height": 500,
+      "size": "5 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "PD-icon.svg",
+      "url": "https://wiki.coigame.com/images/6/62/PD-icon.svg",
+      "file_page_url": "https://wiki.coigame.com/File:PD-icon.svg",
+      "width": 196,
+      "height": 196,
+      "size": null,
+      "category": "Icons"
+    },
+    {
+      "filename": "Semi-protection-shackle-keyhole.svg",
+      "url": "https://wiki.coigame.com/images/b/bf/Semi-protection-shackle-keyhole.svg",
+      "file_page_url": "https://wiki.coigame.com/File:Semi-protection-shackle-keyhole.svg",
+      "width": 512,
+      "height": 512,
+      "size": "3 KB",
+      "category": "Icons"
+    },
+    {
+      "filename": "Buildings.png",
+      "url": "https://wiki.coigame.com/images/2/2f/Buildings.png?20220116120523",
+      "file_page_url": "https://wiki.coigame.com/File:Buildings.png",
+      "width": 128,
+      "height": 128,
+      "size": null,
+      "category": "Designation_images"
+    },
+    {
+      "filename": "CargoDocks.png",
+      "url": "https://wiki.coigame.com/images/c/c6/CargoDocks.png?20220116120640",
+      "file_page_url": "https://wiki.coigame.com/File:CargoDocks.png",
+      "width": 128,
+      "height": 128,
+      "size": "2 KB",
+      "category": "Designation_images"
+    },
+    {
+      "filename": "CrudeOilRefining.png",
+      "url": "https://wiki.coigame.com/images/b/ba/CrudeOilRefining.png?20220116120325",
+      "file_page_url": "https://wiki.coigame.com/File:CrudeOilRefining.png",
+      "width": 128,
+      "height": 128,
+      "size": "2 KB",
+      "category": "Designation_images"
+    },
+    {
+      "filename": "FoodProduction.png",
+      "url": "https://wiki.coigame.com/images/2/22/FoodProduction.png?20220116120124",
+      "file_page_url": "https://wiki.coigame.com/File:FoodProduction.png",
+      "width": 128,
+      "height": 128,
+      "size": "3 KB",
+      "category": "Designation_images"
+    },
+    {
+      "filename": "GeneralMachines.png",
+      "url": "https://wiki.coigame.com/images/1/19/GeneralMachines.png?20220113030025",
+      "file_page_url": "https://wiki.coigame.com/File:GeneralMachines.png",
+      "width": 128,
+      "height": 128,
+      "size": "2 KB",
+      "category": "Designation_images"
+    },
+    {
+      "filename": "HousingAndServices.png",
+      "url": "https://wiki.coigame.com/images/0/07/HousingAndServices.png?20220116120618",
+      "file_page_url": "https://wiki.coigame.com/File:HousingAndServices.png",
+      "width": 128,
+      "height": 128,
+      "size": "1 KB",
+      "category": "Designation_images"
+    },
+    {
+      "filename": "Landmarks.png",
+      "url": "https://wiki.coigame.com/images/4/43/Landmarks.png?20220616004001",
+      "file_page_url": "https://wiki.coigame.com/File:Landmarks.png",
+      "width": 64,
+      "height": 64,
+      "size": null,
+      "category": "Designation_images"
+    },
+    {
+      "filename": "Metallurgy_%26_Smelting.png",
+      "url": "https://wiki.coigame.com/images/d/df/Metallurgy_%26_Smelting.png?20220113032326",
+      "file_page_url": "https://wiki.coigame.com/File:Metallurgy_%26_Smelting.png",
+      "width": 128,
+      "height": 128,
+      "size": "3 KB",
+      "category": "Designation_images"
+    },
+    {
+      "filename": "PowerProduction.png",
+      "url": "https://wiki.coigame.com/images/a/a9/PowerProduction.png?20220116115855",
+      "file_page_url": "https://wiki.coigame.com/File:PowerProduction.png",
+      "width": 128,
+      "height": 128,
+      "size": "2 KB",
+      "category": "Designation_images"
+    },
+    {
+      "filename": "Storage.png",
+      "url": "https://wiki.coigame.com/images/4/48/Storage.png?20220116120513",
+      "file_page_url": "https://wiki.coigame.com/File:Storage.png",
+      "width": 128,
+      "height": 128,
+      "size": null,
+      "category": "Designation_images"
+    },
+    {
+      "filename": "Transports.png",
+      "url": "https://wiki.coigame.com/images/7/73/Transports.png?20220116120416",
+      "file_page_url": "https://wiki.coigame.com/File:Transports.png",
+      "width": 128,
+      "height": 128,
+      "size": "2 KB",
+      "category": "Designation_images"
+    },
+    {
+      "filename": "Waste_Management.png",
+      "url": "https://wiki.coigame.com/images/2/28/Waste_Management.png?20220114225212",
+      "file_page_url": "https://wiki.coigame.com/File:Waste_Management.png",
+      "width": 128,
+      "height": 128,
+      "size": "2 KB",
+      "category": "Designation_images"
+    },
+    {
+      "filename": "WaterExtractionAndProcessing.png",
+      "url": "https://wiki.coigame.com/images/e/e5/WaterExtractionAndProcessing.png?20220114221803",
+      "file_page_url": "https://wiki.coigame.com/File:WaterExtractionAndProcessing.png",
+      "width": 128,
+      "height": 128,
+      "size": "2 KB",
+      "category": "Designation_images"
+    },
+    {
+      "filename": "Worker.png",
+      "url": "https://wiki.coigame.com/images/b/bf/Worker.png?20220113024902",
+      "file_page_url": "https://wiki.coigame.com/File:Worker.png",
+      "width": 128,
+      "height": 128,
+      "size": "2 KB",
+      "category": "Designation_images"
+    },
+    {
+      "filename": "Air_Separator.png",
+      "url": "https://wiki.coigame.com/images/2/29/Air_Separator.png?20220610162008",
+      "file_page_url": "https://wiki.coigame.com/File:Air_Separator.png",
+      "width": 256,
+      "height": 256,
+      "size": "76 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Anaerobic_Digester.png",
+      "url": "https://wiki.coigame.com/images/8/81/Anaerobic_Digester.png?20220610162046",
+      "file_page_url": "https://wiki.coigame.com/File:Anaerobic_Digester.png",
+      "width": 256,
+      "height": 256,
+      "size": "92 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Arc_Furnace_II.png",
+      "url": "https://wiki.coigame.com/images/e/e5/Arc_Furnace_II.png?20220610162111",
+      "file_page_url": "https://wiki.coigame.com/File:Arc_Furnace_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "90 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Arc_Furnace.png",
+      "url": "https://wiki.coigame.com/images/6/6e/Arc_Furnace.png?20220610162121",
+      "file_page_url": "https://wiki.coigame.com/File:Arc_Furnace.png",
+      "width": 256,
+      "height": 256,
+      "size": "86 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Assembly_(Electric)_II.png",
+      "url": "https://wiki.coigame.com/images/6/62/Assembly_%28Electric%29_II.png?20220112122141",
+      "file_page_url": "https://wiki.coigame.com/File:Assembly_(Electric)_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "80 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Assembly_(Electric).png",
+      "url": "https://wiki.coigame.com/images/e/e2/Assembly_%28Electric%29.png?20220112122144",
+      "file_page_url": "https://wiki.coigame.com/File:Assembly_(Electric).png",
+      "width": 256,
+      "height": 256,
+      "size": "82 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Assembly_(Manual).png",
+      "url": "https://wiki.coigame.com/images/3/33/Assembly_%28Manual%29.png?20220112122147",
+      "file_page_url": "https://wiki.coigame.com/File:Assembly_(Manual).png",
+      "width": 256,
+      "height": 256,
+      "size": "79 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Assembly_(Robotic)_II.png",
+      "url": "https://wiki.coigame.com/images/3/3a/Assembly_%28Robotic%29_II.png?20250523214824",
+      "file_page_url": "https://wiki.coigame.com/File:Assembly_(Robotic)_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "84 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Assembly_(Robotic).png",
+      "url": "https://wiki.coigame.com/images/0/01/Assembly_%28Robotic%29.png?20220112122150",
+      "file_page_url": "https://wiki.coigame.com/File:Assembly_(Robotic).png",
+      "width": 256,
+      "height": 256,
+      "size": "58 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Baking_Unit.png",
+      "url": "https://wiki.coigame.com/images/6/6b/Baking_Unit.png?20220609182223",
+      "file_page_url": "https://wiki.coigame.com/File:Baking_Unit.png",
+      "width": 256,
+      "height": 256,
+      "size": "43 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Barrier_(Corner).png",
+      "url": "https://wiki.coigame.com/images/9/9f/Barrier_%28Corner%29.png?20220618130643",
+      "file_page_url": "https://wiki.coigame.com/File:Barrier_(Corner).png",
+      "width": 256,
+      "height": 256,
+      "size": "76 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Barrier_(Cross).png",
+      "url": "https://wiki.coigame.com/images/d/d9/Barrier_%28Cross%29.png?20220618130737",
+      "file_page_url": "https://wiki.coigame.com/File:Barrier_(Cross).png",
+      "width": 256,
+      "height": 256,
+      "size": "86 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Barrier_(Ending).png",
+      "url": "https://wiki.coigame.com/images/4/4c/Barrier_%28Ending%29.png?20220618130759",
+      "file_page_url": "https://wiki.coigame.com/File:Barrier_(Ending).png",
+      "width": 256,
+      "height": 256,
+      "size": "74 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Barrier_(Straight).png",
+      "url": "https://wiki.coigame.com/images/9/9d/Barrier_%28Straight%29.png?20220618130620",
+      "file_page_url": "https://wiki.coigame.com/File:Barrier_(Straight).png",
+      "width": 256,
+      "height": 256,
+      "size": "85 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Barrier_(Tee).png",
+      "url": "https://wiki.coigame.com/images/3/35/Barrier_%28Tee%29.png?20220618130830",
+      "file_page_url": "https://wiki.coigame.com/File:Barrier_(Tee).png",
+      "width": 256,
+      "height": 256,
+      "size": "76 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Basic_Distiller.png",
+      "url": "https://wiki.coigame.com/images/d/d0/Basic_Distiller.png?20220112122157",
+      "file_page_url": "https://wiki.coigame.com/File:Basic_Distiller.png",
+      "width": 256,
+      "height": 256,
+      "size": "71 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Beacon.png",
+      "url": "https://wiki.coigame.com/images/b/b3/Beacon.png?20220112122333",
+      "file_page_url": "https://wiki.coigame.com/File:Beacon.png",
+      "width": 256,
+      "height": 256,
+      "size": "40 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Biomass_Collection.png",
+      "url": "https://wiki.coigame.com/images/c/c3/Biomass_Collection.png?20220617233855",
+      "file_page_url": "https://wiki.coigame.com/File:Biomass_Collection.png",
+      "width": 256,
+      "height": 256,
+      "size": "88 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Blast_Furnace_II.png",
+      "url": "https://wiki.coigame.com/images/5/5c/Blast_Furnace_II.png?20220112122414",
+      "file_page_url": "https://wiki.coigame.com/File:Blast_Furnace_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "81 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Blast_Furnace.png",
+      "url": "https://wiki.coigame.com/images/e/ed/Blast_Furnace.png?20220112122336",
+      "file_page_url": "https://wiki.coigame.com/File:Blast_Furnace.png",
+      "width": 256,
+      "height": 256,
+      "size": "78 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Boiler_(Coal).png",
+      "url": "https://wiki.coigame.com/images/5/5a/Boiler_%28Coal%29.png?20220112122418",
+      "file_page_url": "https://wiki.coigame.com/File:Boiler_(Coal).png",
+      "width": 256,
+      "height": 256,
+      "size": "78 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Boiler_(Electric).png",
+      "url": "https://wiki.coigame.com/images/c/c3/Boiler_%28Electric%29.png?20220112122553",
+      "file_page_url": "https://wiki.coigame.com/File:Boiler_(Electric).png",
+      "width": 256,
+      "height": 256,
+      "size": "70 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Boiler_(Gas).png",
+      "url": "https://wiki.coigame.com/images/4/4a/Boiler_%28Gas%29.png?20220112122421",
+      "file_page_url": "https://wiki.coigame.com/File:Boiler_(Gas).png",
+      "width": 256,
+      "height": 256,
+      "size": "68 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Captain%27s_Office_(Old).png",
+      "url": "https://wiki.coigame.com/images/d/dc/Captain%27s_Office_%28Old%29.png?20220725055955",
+      "file_page_url": "https://wiki.coigame.com/File:Captain%27s_Office_(Old).png",
+      "width": 256,
+      "height": 256,
+      "size": "84 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Captain%27s_Office_I.png",
+      "url": "https://wiki.coigame.com/images/8/84/Captain%27s_Office_I.png?20230522093352",
+      "file_page_url": "https://wiki.coigame.com/File:Captain%27s_Office_I.png",
+      "width": 256,
+      "height": 256,
+      "size": "55 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Captain%27s_Office_II.png",
+      "url": "https://wiki.coigame.com/images/a/a2/Captain%27s_Office_II.png?20220725072903",
+      "file_page_url": "https://wiki.coigame.com/File:Captain%27s_Office_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "74 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Cargo_Depot_(2).png",
+      "url": "https://wiki.coigame.com/images/6/64/Cargo_Depot_%282%29.png?20220112122430",
+      "file_page_url": "https://wiki.coigame.com/File:Cargo_Depot_(2).png",
+      "width": 256,
+      "height": 256,
+      "size": "67 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Cargo_Depot_(4).png",
+      "url": "https://wiki.coigame.com/images/1/13/Cargo_Depot_%284%29.png?20220112122427",
+      "file_page_url": "https://wiki.coigame.com/File:Cargo_Depot_(4).png",
+      "width": 256,
+      "height": 256,
+      "size": "69 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Cargo_Depot_(6).png",
+      "url": "https://wiki.coigame.com/images/7/7e/Cargo_Depot_%286%29.png?20220617233830",
+      "file_page_url": "https://wiki.coigame.com/File:Cargo_Depot_(6).png",
+      "width": 256,
+      "height": 256,
+      "size": "95 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Cargo_Depot_(8).png",
+      "url": "https://wiki.coigame.com/images/9/98/Cargo_Depot_%288%29.png?20220617233829",
+      "file_page_url": "https://wiki.coigame.com/File:Cargo_Depot_(8).png",
+      "width": 256,
+      "height": 256,
+      "size": "91 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Chemical_Plant.png",
+      "url": "https://wiki.coigame.com/images/6/65/Chemical_Plant.png?20220610110857",
+      "file_page_url": "https://wiki.coigame.com/File:Chemical_Plant.png",
+      "width": 256,
+      "height": 256,
+      "size": "97 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Chicken_Farm.png",
+      "url": "https://wiki.coigame.com/images/e/ef/Chicken_Farm.png?20220617233827",
+      "file_page_url": "https://wiki.coigame.com/File:Chicken_Farm.png",
+      "width": 256,
+      "height": 256,
+      "size": "60 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Clinic.png",
+      "url": "https://wiki.coigame.com/images/4/4f/Clinic.png?20220704214513",
+      "file_page_url": "https://wiki.coigame.com/File:Clinic.png",
+      "width": 256,
+      "height": 256,
+      "size": "103 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Coal_Maker.png",
+      "url": "https://wiki.coigame.com/images/f/f7/Coal_Maker.png?20220112122443",
+      "file_page_url": "https://wiki.coigame.com/File:Coal_Maker.png",
+      "width": 256,
+      "height": 256,
+      "size": "61 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Compactor.png",
+      "url": "https://wiki.coigame.com/images/1/11/Compactor.png?20230522095359",
+      "file_page_url": "https://wiki.coigame.com/File:Compactor.png",
+      "width": 256,
+      "height": 256,
+      "size": "81 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Concrete_Mixer_II.png",
+      "url": "https://wiki.coigame.com/images/2/2f/Concrete_Mixer_II.png?20220622211358",
+      "file_page_url": "https://wiki.coigame.com/File:Concrete_Mixer_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "70 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Concrete_Mixer_III.png",
+      "url": "https://wiki.coigame.com/images/8/8d/Concrete_Mixer_III.png?20220622211427",
+      "file_page_url": "https://wiki.coigame.com/File:Concrete_Mixer_III.png",
+      "width": 256,
+      "height": 256,
+      "size": "70 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Concrete_Mixer.png",
+      "url": "https://wiki.coigame.com/images/7/74/Concrete_Mixer.png?20220622211518",
+      "file_page_url": "https://wiki.coigame.com/File:Concrete_Mixer.png",
+      "width": 256,
+      "height": 256,
+      "size": "69 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Consumer_Electronics_Module.png",
+      "url": "https://wiki.coigame.com/images/9/9a/Consumer_Electronics_Module.png?20220617233859",
+      "file_page_url": "https://wiki.coigame.com/File:Consumer_Electronics_Module.png",
+      "width": 256,
+      "height": 256,
+      "size": "83 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Cooled_Caster_II.png",
+      "url": "https://wiki.coigame.com/images/3/30/Cooled_Caster_II.png?20220119100929",
+      "file_page_url": "https://wiki.coigame.com/File:Cooled_Caster_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "70 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Cooled_Caster.png",
+      "url": "https://wiki.coigame.com/images/4/4c/Cooled_Caster.png?20220119101052",
+      "file_page_url": "https://wiki.coigame.com/File:Cooled_Caster.png",
+      "width": 256,
+      "height": 256,
+      "size": "76 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Cooling_Tower_(Large).png",
+      "url": "https://wiki.coigame.com/images/3/39/Cooling_Tower_%28Large%29.png?20220112122454",
+      "file_page_url": "https://wiki.coigame.com/File:Cooling_Tower_(Large).png",
+      "width": 256,
+      "height": 256,
+      "size": "69 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Cooling_Tower_(Old).png",
+      "url": "https://wiki.coigame.com/images/7/78/Cooling_Tower_%28Old%29.png?20220112122457",
+      "file_page_url": "https://wiki.coigame.com/File:Cooling_Tower_(Old).png",
+      "width": 256,
+      "height": 256,
+      "size": "88 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Copper_Electrolysis.png",
+      "url": "https://wiki.coigame.com/images/4/4f/Copper_Electrolysis.png?20220112122500",
+      "file_page_url": "https://wiki.coigame.com/File:Copper_Electrolysis.png",
+      "width": 256,
+      "height": 256,
+      "size": "72 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Cracking_Unit.png",
+      "url": "https://wiki.coigame.com/images/6/6d/Cracking_Unit.png?20220112122532",
+      "file_page_url": "https://wiki.coigame.com/File:Cracking_Unit.png",
+      "width": 256,
+      "height": 256,
+      "size": "78 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Crusher_(Large).png",
+      "url": "https://wiki.coigame.com/images/b/b4/Crusher_%28Large%29.png?20230522095028",
+      "file_page_url": "https://wiki.coigame.com/File:Crusher_(Large).png",
+      "width": 256,
+      "height": 256,
+      "size": "73 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Crusher.png",
+      "url": "https://wiki.coigame.com/images/7/7a/Crusher.png?20220112122535",
+      "file_page_url": "https://wiki.coigame.com/File:Crusher.png",
+      "width": 256,
+      "height": 256,
+      "size": "82 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Data_Center.png",
+      "url": "https://wiki.coigame.com/images/f/f0/Data_Center.png?20220616010714",
+      "file_page_url": "https://wiki.coigame.com/File:Data_Center.png",
+      "width": 256,
+      "height": 256,
+      "size": "71 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Diesel_Generator.png",
+      "url": "https://wiki.coigame.com/images/f/fa/Diesel_Generator.png?20220112122540",
+      "file_page_url": "https://wiki.coigame.com/File:Diesel_Generator.png",
+      "width": 256,
+      "height": 256,
+      "size": "64 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Distillation_(Stage_I).png",
+      "url": "https://wiki.coigame.com/images/5/53/Distillation_%28Stage_I%29.png?20220112122542",
+      "file_page_url": "https://wiki.coigame.com/File:Distillation_(Stage_I).png",
+      "width": 256,
+      "height": 256,
+      "size": "69 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Distillation_(Stage_II).png",
+      "url": "https://wiki.coigame.com/images/f/fa/Distillation_%28Stage_II%29.png?20220112122547",
+      "file_page_url": "https://wiki.coigame.com/File:Distillation_(Stage_II).png",
+      "width": 256,
+      "height": 256,
+      "size": "69 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Distillation_(Stage_III).png",
+      "url": "https://wiki.coigame.com/images/0/0a/Distillation_%28Stage_III%29.png?20220112122550",
+      "file_page_url": "https://wiki.coigame.com/File:Distillation_(Stage_III).png",
+      "width": 256,
+      "height": 256,
+      "size": "61 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Eggs.png",
+      "url": "https://wiki.coigame.com/images/a/a3/Eggs.png?20220610224003",
+      "file_page_url": "https://wiki.coigame.com/File:Eggs.png",
+      "width": 128,
+      "height": 128,
+      "size": "6 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Electrolyzer_(old).png",
+      "url": "https://wiki.coigame.com/images/8/88/Electrolyzer_%28old%29.png?20220112122609",
+      "file_page_url": "https://wiki.coigame.com/File:Electrolyzer_(old).png",
+      "width": 256,
+      "height": 256,
+      "size": "86 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Electrolyzer_II.png",
+      "url": "https://wiki.coigame.com/images/7/7c/Electrolyzer_II.png?20230522094114",
+      "file_page_url": "https://wiki.coigame.com/File:Electrolyzer_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "76 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Electrolyzer.png",
+      "url": "https://wiki.coigame.com/images/5/58/Electrolyzer.png?20230522094057",
+      "file_page_url": "https://wiki.coigame.com/File:Electrolyzer.png",
+      "width": 256,
+      "height": 256,
+      "size": "74 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Enrichment_Plant.png",
+      "url": "https://wiki.coigame.com/images/1/1f/Enrichment_Plant.png?20220112122611",
+      "file_page_url": "https://wiki.coigame.com/File:Enrichment_Plant.png",
+      "width": 256,
+      "height": 256,
+      "size": "56 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Evaporation_Pond_(Heated).png",
+      "url": "https://wiki.coigame.com/images/6/67/Evaporation_Pond_%28Heated%29.png?20220112122614",
+      "file_page_url": "https://wiki.coigame.com/File:Evaporation_Pond_(Heated).png",
+      "width": 256,
+      "height": 256,
+      "size": "43 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Evaporation_Pond.png",
+      "url": "https://wiki.coigame.com/images/f/f1/Evaporation_Pond.png?20220112122618",
+      "file_page_url": "https://wiki.coigame.com/File:Evaporation_Pond.png",
+      "width": 256,
+      "height": 256,
+      "size": "38 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Exhaust_Scrubber.png",
+      "url": "https://wiki.coigame.com/images/b/b5/Exhaust_Scrubber.png?20220112122621",
+      "file_page_url": "https://wiki.coigame.com/File:Exhaust_Scrubber.png",
+      "width": 256,
+      "height": 256,
+      "size": "53 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Farm.png",
+      "url": "https://wiki.coigame.com/images/a/a7/Farm.png?20220112122625",
+      "file_page_url": "https://wiki.coigame.com/File:Farm.png",
+      "width": 256,
+      "height": 256,
+      "size": "73 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Fast_Breeder_Reactor.png",
+      "url": "https://wiki.coigame.com/images/9/98/Fast_Breeder_Reactor.png?20230522095305",
+      "file_page_url": "https://wiki.coigame.com/File:Fast_Breeder_Reactor.png",
+      "width": 256,
+      "height": 256,
+      "size": "92 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Fermentation_Tank.png",
+      "url": "https://wiki.coigame.com/images/7/72/Fermentation_Tank.png?20220617233818",
+      "file_page_url": "https://wiki.coigame.com/File:Fermentation_Tank.png",
+      "width": 256,
+      "height": 256,
+      "size": "95 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Flare_Old.png",
+      "url": "https://wiki.coigame.com/images/6/61/Flare_Old.png?20220112122627",
+      "file_page_url": "https://wiki.coigame.com/File:Flare_Old.png",
+      "width": 256,
+      "height": 256,
+      "size": "32 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Flare.png",
+      "url": "https://wiki.coigame.com/images/5/54/Flare.png?20220608171439",
+      "file_page_url": "https://wiki.coigame.com/File:Flare.png",
+      "width": 256,
+      "height": 256,
+      "size": "12 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Flat_Balancer.png",
+      "url": "https://wiki.coigame.com/images/d/d9/Flat_Balancer.png?20220715072228",
+      "file_page_url": "https://wiki.coigame.com/File:Flat_Balancer.png",
+      "width": 256,
+      "height": 256,
+      "size": "96 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Flat_Conveyor_II.png",
+      "url": "https://wiki.coigame.com/images/e/e0/Flat_Conveyor_II.png?20220112122657",
+      "file_page_url": "https://wiki.coigame.com/File:Flat_Conveyor_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "39 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Flat_Conveyor_III.png",
+      "url": "https://wiki.coigame.com/images/7/7a/Flat_Conveyor_III.png?20220119101344",
+      "file_page_url": "https://wiki.coigame.com/File:Flat_Conveyor_III.png",
+      "width": 256,
+      "height": 256,
+      "size": "42 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Flat_Conveyor.png",
+      "url": "https://wiki.coigame.com/images/b/b1/Flat_Conveyor.png?20220112122700",
+      "file_page_url": "https://wiki.coigame.com/File:Flat_Conveyor.png",
+      "width": 256,
+      "height": 256,
+      "size": "37 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Flat_Sorter.png",
+      "url": "https://wiki.coigame.com/images/0/06/Flat_Sorter.png?20220715072603",
+      "file_page_url": "https://wiki.coigame.com/File:Flat_Sorter.png",
+      "width": 256,
+      "height": 256,
+      "size": "94 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Fluid_Module_(L).png",
+      "url": "https://wiki.coigame.com/images/a/ad/Fluid_Module_%28L%29.png?20220617233837",
+      "file_page_url": "https://wiki.coigame.com/File:Fluid_Module_(L).png",
+      "width": 256,
+      "height": 256,
+      "size": "103 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Fluid_Module_(M).png",
+      "url": "https://wiki.coigame.com/images/c/c7/Fluid_Module_%28M%29.png?20220112122707",
+      "file_page_url": "https://wiki.coigame.com/File:Fluid_Module_(M).png",
+      "width": 256,
+      "height": 256,
+      "size": "73 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Fluid_Module_(S).png",
+      "url": "https://wiki.coigame.com/images/7/77/Fluid_Module_%28S%29.png?20220112122712",
+      "file_page_url": "https://wiki.coigame.com/File:Fluid_Module_(S).png",
+      "width": 256,
+      "height": 256,
+      "size": "65 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Fluid_Storage_III.png",
+      "url": "https://wiki.coigame.com/images/d/dc/Fluid_Storage_III.png?20220613110030",
+      "file_page_url": "https://wiki.coigame.com/File:Fluid_Storage_III.png",
+      "width": 256,
+      "height": 256,
+      "size": "94 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Flywheel.png",
+      "url": "https://wiki.coigame.com/images/b/b7/Flywheel.png?20220112122723",
+      "file_page_url": "https://wiki.coigame.com/File:Flywheel.png",
+      "width": 256,
+      "height": 256,
+      "size": "75 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Food_Market_II.png",
+      "url": "https://wiki.coigame.com/images/1/1d/Food_Market_II.png?20220617233856",
+      "file_page_url": "https://wiki.coigame.com/File:Food_Market_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "87 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Food_Market.png",
+      "url": "https://wiki.coigame.com/images/e/e7/Food_Market.png?20220617192241",
+      "file_page_url": "https://wiki.coigame.com/File:Food_Market.png",
+      "width": 256,
+      "height": 256,
+      "size": "74 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Forestry_Control_Tower.png",
+      "url": "https://wiki.coigame.com/images/6/61/Forestry_Control_Tower.png?20230522104447",
+      "file_page_url": "https://wiki.coigame.com/File:Forestry_Control_Tower.png",
+      "width": 256,
+      "height": 256,
+      "size": "86 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Fuel_Station_II.png",
+      "url": "https://wiki.coigame.com/images/2/2b/Fuel_Station_II.png?20220618091936",
+      "file_page_url": "https://wiki.coigame.com/File:Fuel_Station_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "77 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Fuel_Station_III.png",
+      "url": "https://wiki.coigame.com/images/9/93/Fuel_Station_III.png?20220614232531",
+      "file_page_url": "https://wiki.coigame.com/File:Fuel_Station_III.png",
+      "width": 256,
+      "height": 256,
+      "size": "80 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Fuel_Station.png",
+      "url": "https://wiki.coigame.com/images/a/a3/Fuel_Station.png?20220618092039",
+      "file_page_url": "https://wiki.coigame.com/File:Fuel_Station.png",
+      "width": 256,
+      "height": 256,
+      "size": "70 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Gas_Injection_Pump.png",
+      "url": "https://wiki.coigame.com/images/3/32/Gas_Injection_Pump.png?20220613110822",
+      "file_page_url": "https://wiki.coigame.com/File:Gas_Injection_Pump.png",
+      "width": 256,
+      "height": 256,
+      "size": "65 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Glass_Maker_II.png",
+      "url": "https://wiki.coigame.com/images/4/4e/Glass_Maker_II.png?20220112122746",
+      "file_page_url": "https://wiki.coigame.com/File:Glass_Maker_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "29 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Glass_Maker.png",
+      "url": "https://wiki.coigame.com/images/6/67/Glass_Maker.png?20220112122811",
+      "file_page_url": "https://wiki.coigame.com/File:Glass_Maker.png",
+      "width": 256,
+      "height": 256,
+      "size": "29 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Gold_Furnace.png",
+      "url": "https://wiki.coigame.com/images/0/0f/Gold_Furnace.png?20220617000848",
+      "file_page_url": "https://wiki.coigame.com/File:Gold_Furnace.png",
+      "width": 256,
+      "height": 256,
+      "size": "77 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Greenhouse_II.png",
+      "url": "https://wiki.coigame.com/images/9/95/Greenhouse_II.png?20220112122752",
+      "file_page_url": "https://wiki.coigame.com/File:Greenhouse_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "56 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Greenhouse.png",
+      "url": "https://wiki.coigame.com/images/9/93/Greenhouse.png?20220112122755",
+      "file_page_url": "https://wiki.coigame.com/File:Greenhouse.png",
+      "width": 256,
+      "height": 256,
+      "size": "51 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Groundwater_Pump.png",
+      "url": "https://wiki.coigame.com/images/c/cd/Groundwater_Pump.png?20220112122800",
+      "file_page_url": "https://wiki.coigame.com/File:Groundwater_Pump.png",
+      "width": 256,
+      "height": 256,
+      "size": "50 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "High-Pressure_Turbine_(old).png",
+      "url": "https://wiki.coigame.com/images/5/5f/High-Pressure_Turbine_%28old%29.png?20220112122826",
+      "file_page_url": "https://wiki.coigame.com/File:High-Pressure_Turbine_(old).png",
+      "width": 256,
+      "height": 256,
+      "size": "53 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "High-Pressure_Turbine_II_(old).png",
+      "url": "https://wiki.coigame.com/images/b/bc/High-Pressure_Turbine_II_%28old%29.png?20220112122804",
+      "file_page_url": "https://wiki.coigame.com/File:High-Pressure_Turbine_II_(old).png",
+      "width": 256,
+      "height": 256,
+      "size": "59 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "High-Pressure_Turbine_II.png",
+      "url": "https://wiki.coigame.com/images/6/67/High-Pressure_Turbine_II.png?20230522101904",
+      "file_page_url": "https://wiki.coigame.com/File:High-Pressure_Turbine_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "84 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "High-Pressure_Turbine.png",
+      "url": "https://wiki.coigame.com/images/3/34/High-Pressure_Turbine.png?20230522101843",
+      "file_page_url": "https://wiki.coigame.com/File:High-Pressure_Turbine.png",
+      "width": 256,
+      "height": 256,
+      "size": "75 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Household_Appliances_Module.png",
+      "url": "https://wiki.coigame.com/images/f/f2/Household_Appliances_Module.png?20220617233858",
+      "file_page_url": "https://wiki.coigame.com/File:Household_Appliances_Module.png",
+      "width": 256,
+      "height": 256,
+      "size": "85 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Household_Electronics_Module.png",
+      "url": "https://wiki.coigame.com/images/f/f7/Household_Electronics_Module.png?20220112122828",
+      "file_page_url": "https://wiki.coigame.com/File:Household_Electronics_Module.png",
+      "width": 256,
+      "height": 256,
+      "size": "64 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Household_Goods_Module.png",
+      "url": "https://wiki.coigame.com/images/3/3d/Household_Goods_Module.png?20220112122831",
+      "file_page_url": "https://wiki.coigame.com/File:Household_Goods_Module.png",
+      "width": 256,
+      "height": 256,
+      "size": "63 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Housing_II.png",
+      "url": "https://wiki.coigame.com/images/2/25/Housing_II.png?20220112122834",
+      "file_page_url": "https://wiki.coigame.com/File:Housing_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "55 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Housing_III.png",
+      "url": "https://wiki.coigame.com/images/f/f3/Housing_III.png?20220112122837",
+      "file_page_url": "https://wiki.coigame.com/File:Housing_III.png",
+      "width": 256,
+      "height": 256,
+      "size": "67 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Housing.png",
+      "url": "https://wiki.coigame.com/images/5/59/Housing.png?20220112122840",
+      "file_page_url": "https://wiki.coigame.com/File:Housing.png",
+      "width": 256,
+      "height": 256,
+      "size": "50 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Hydrogen_Reformer.png",
+      "url": "https://wiki.coigame.com/images/2/2c/Hydrogen_Reformer.png?20220112122843",
+      "file_page_url": "https://wiki.coigame.com/File:Hydrogen_Reformer.png",
+      "width": 256,
+      "height": 256,
+      "size": "75 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Incineration_Plant.png",
+      "url": "https://wiki.coigame.com/images/4/4d/Incineration_Plant.png?20230522095408",
+      "file_page_url": "https://wiki.coigame.com/File:Incineration_Plant.png",
+      "width": 256,
+      "height": 256,
+      "size": "86 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Irrigated_Farm.png",
+      "url": "https://wiki.coigame.com/images/d/dc/Irrigated_Farm.png?20220112122846",
+      "file_page_url": "https://wiki.coigame.com/File:Irrigated_Farm.png",
+      "width": 256,
+      "height": 256,
+      "size": "74 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Liquid_Dump.png",
+      "url": "https://wiki.coigame.com/images/e/e5/Liquid_Dump.png?20220112122859",
+      "file_page_url": "https://wiki.coigame.com/File:Liquid_Dump.png",
+      "width": 256,
+      "height": 256,
+      "size": "30 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Loose_Module_(L).png",
+      "url": "https://wiki.coigame.com/images/1/12/Loose_Module_%28L%29.png?20220617233834",
+      "file_page_url": "https://wiki.coigame.com/File:Loose_Module_(L).png",
+      "width": 256,
+      "height": 256,
+      "size": "97 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Loose_Module_(M).png",
+      "url": "https://wiki.coigame.com/images/e/e5/Loose_Module_%28M%29.png?20220112122902",
+      "file_page_url": "https://wiki.coigame.com/File:Loose_Module_(M).png",
+      "width": 256,
+      "height": 256,
+      "size": "76 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Loose_Module_(S).png",
+      "url": "https://wiki.coigame.com/images/4/4e/Loose_Module_%28S%29.png?20220112122904",
+      "file_page_url": "https://wiki.coigame.com/File:Loose_Module_(S).png",
+      "width": 256,
+      "height": 256,
+      "size": "60 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Loose_Storage_III.png",
+      "url": "https://wiki.coigame.com/images/7/7c/Loose_Storage_III.png?20220613110100",
+      "file_page_url": "https://wiki.coigame.com/File:Loose_Storage_III.png",
+      "width": 256,
+      "height": 256,
+      "size": "86 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Low-Pressure_Turbine_(old).png",
+      "url": "https://wiki.coigame.com/images/5/58/Low-Pressure_Turbine_%28old%29.png?20220112122916",
+      "file_page_url": "https://wiki.coigame.com/File:Low-Pressure_Turbine_(old).png",
+      "width": 256,
+      "height": 256,
+      "size": "61 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Low-Pressure_Turbine_II.png",
+      "url": "https://wiki.coigame.com/images/9/97/Low-Pressure_Turbine_II.png?20230522102423",
+      "file_page_url": "https://wiki.coigame.com/File:Low-Pressure_Turbine_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "105 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Low-Pressure_Turbine.png",
+      "url": "https://wiki.coigame.com/images/6/67/Low-Pressure_Turbine.png?20230522102348",
+      "file_page_url": "https://wiki.coigame.com/File:Low-Pressure_Turbine.png",
+      "width": 256,
+      "height": 256,
+      "size": "91 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Mainframe_Computer.png",
+      "url": "https://wiki.coigame.com/images/7/7a/Mainframe_Computer.png?20230522103515",
+      "file_page_url": "https://wiki.coigame.com/File:Mainframe_Computer.png",
+      "width": 256,
+      "height": 256,
+      "size": "90 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Maintenance_Depot_(Basic).png",
+      "url": "https://wiki.coigame.com/images/b/b7/Maintenance_Depot_%28Basic%29.png?20220112122919",
+      "file_page_url": "https://wiki.coigame.com/File:Maintenance_Depot_(Basic).png",
+      "width": 256,
+      "height": 256,
+      "size": "55 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Maintenance_Depot.png",
+      "url": "https://wiki.coigame.com/images/6/6a/Maintenance_Depot.png?20220112122935",
+      "file_page_url": "https://wiki.coigame.com/File:Maintenance_Depot.png",
+      "width": 256,
+      "height": 256,
+      "size": "89 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Maintenance_II_Depot.png",
+      "url": "https://wiki.coigame.com/images/0/07/Maintenance_II_Depot.png?20220112122937",
+      "file_page_url": "https://wiki.coigame.com/File:Maintenance_II_Depot.png",
+      "width": 256,
+      "height": 256,
+      "size": "89 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Maintenance_III_Depot.png",
+      "url": "https://wiki.coigame.com/images/6/69/Maintenance_III_Depot.png?20220617233754",
+      "file_page_url": "https://wiki.coigame.com/File:Maintenance_III_Depot.png",
+      "width": 256,
+      "height": 256,
+      "size": "105 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Metal_Caster_II.png",
+      "url": "https://wiki.coigame.com/images/5/59/Metal_Caster_II.png?20220119100815",
+      "file_page_url": "https://wiki.coigame.com/File:Metal_Caster_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "65 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Metal_Caster.png",
+      "url": "https://wiki.coigame.com/images/7/75/Metal_Caster.png?20220112122939",
+      "file_page_url": "https://wiki.coigame.com/File:Metal_Caster.png",
+      "width": 256,
+      "height": 256,
+      "size": "65 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Microchip_Machine_II.png",
+      "url": "https://wiki.coigame.com/images/7/74/Microchip_Machine_II.png?20220616000824",
+      "file_page_url": "https://wiki.coigame.com/File:Microchip_Machine_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "77 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Microchip_Machine.png",
+      "url": "https://wiki.coigame.com/images/c/cd/Microchip_Machine.png?20220616000841",
+      "file_page_url": "https://wiki.coigame.com/File:Microchip_Machine.png",
+      "width": 256,
+      "height": 256,
+      "size": "78 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Mine_Control_Tower.png",
+      "url": "https://wiki.coigame.com/images/6/63/Mine_Control_Tower.png?20220112122943",
+      "file_page_url": "https://wiki.coigame.com/File:Mine_Control_Tower.png",
+      "width": 256,
+      "height": 256,
+      "size": "53 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Mixer_(old).png",
+      "url": "https://wiki.coigame.com/images/8/8d/Mixer_%28old%29.png?20220609130720",
+      "file_page_url": "https://wiki.coigame.com/File:Mixer_(old).png",
+      "width": 256,
+      "height": 256,
+      "size": "76 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Mixer_II.png",
+      "url": "https://wiki.coigame.com/images/9/9e/Mixer_II.png?20230522093008",
+      "file_page_url": "https://wiki.coigame.com/File:Mixer_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "88 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Mixer.png",
+      "url": "https://wiki.coigame.com/images/4/4d/Mixer.png?20230522092939",
+      "file_page_url": "https://wiki.coigame.com/File:Mixer.png",
+      "width": 256,
+      "height": 256,
+      "size": "79 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Molten_Balancer.png",
+      "url": "https://wiki.coigame.com/images/d/d9/Molten_Balancer.png?20220715072236",
+      "file_page_url": "https://wiki.coigame.com/File:Molten_Balancer.png",
+      "width": 256,
+      "height": 256,
+      "size": "87 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Molten_Channel.png",
+      "url": "https://wiki.coigame.com/images/0/00/Molten_Channel.png?20220112122953",
+      "file_page_url": "https://wiki.coigame.com/File:Molten_Channel.png",
+      "width": 256,
+      "height": 256,
+      "size": "30 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Nuclear_Reactor_(old).png",
+      "url": "https://wiki.coigame.com/images/e/e4/Nuclear_Reactor_%28old%29.png?20220112122956",
+      "file_page_url": "https://wiki.coigame.com/File:Nuclear_Reactor_(old).png",
+      "width": 256,
+      "height": 256,
+      "size": "63 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Nuclear_Reactor_II.png",
+      "url": "https://wiki.coigame.com/images/a/aa/Nuclear_Reactor_II.png?20230522094347",
+      "file_page_url": "https://wiki.coigame.com/File:Nuclear_Reactor_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "88 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Nuclear_Reactor.png",
+      "url": "https://wiki.coigame.com/images/9/99/Nuclear_Reactor.png?20230522094601",
+      "file_page_url": "https://wiki.coigame.com/File:Nuclear_Reactor.png",
+      "width": 256,
+      "height": 256,
+      "size": "84 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Nuclear_Reprocessing_Plant.png",
+      "url": "https://wiki.coigame.com/images/e/ed/Nuclear_Reprocessing_Plant.png?20230522095321",
+      "file_page_url": "https://wiki.coigame.com/File:Nuclear_Reprocessing_Plant.png",
+      "width": 256,
+      "height": 256,
+      "size": "63 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Nuclear_Waste_Storage_(old).png",
+      "url": "https://wiki.coigame.com/images/7/76/Nuclear_Waste_Storage_%28old%29.png?20230522100427",
+      "file_page_url": "https://wiki.coigame.com/File:Nuclear_Waste_Storage_(old).png",
+      "width": 256,
+      "height": 256,
+      "size": "57 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Oil_Pump.png",
+      "url": "https://wiki.coigame.com/images/5/5d/Oil_Pump.png?20220112123009",
+      "file_page_url": "https://wiki.coigame.com/File:Oil_Pump.png",
+      "width": 256,
+      "height": 256,
+      "size": "73 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Oxygen_Furnace_II.png",
+      "url": "https://wiki.coigame.com/images/6/6f/Oxygen_Furnace_II.png?20220119101152",
+      "file_page_url": "https://wiki.coigame.com/File:Oxygen_Furnace_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "76 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Oxygen_Furnace.png",
+      "url": "https://wiki.coigame.com/images/9/96/Oxygen_Furnace.png?20220112123011",
+      "file_page_url": "https://wiki.coigame.com/File:Oxygen_Furnace.png",
+      "width": 256,
+      "height": 256,
+      "size": "80 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Pipe_Balancer.png",
+      "url": "https://wiki.coigame.com/images/c/cb/Pipe_Balancer.png?20220715072245",
+      "file_page_url": "https://wiki.coigame.com/File:Pipe_Balancer.png",
+      "width": 256,
+      "height": 256,
+      "size": "85 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Pipe_II.png",
+      "url": "https://wiki.coigame.com/images/3/3a/Pipe_II.png?20220112123018",
+      "file_page_url": "https://wiki.coigame.com/File:Pipe_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "26 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Pipe_III.png",
+      "url": "https://wiki.coigame.com/images/0/04/Pipe_III.png?20220119101434",
+      "file_page_url": "https://wiki.coigame.com/File:Pipe_III.png",
+      "width": 256,
+      "height": 256,
+      "size": "30 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Pipe.png",
+      "url": "https://wiki.coigame.com/images/b/b9/Pipe.png?20220112123021",
+      "file_page_url": "https://wiki.coigame.com/File:Pipe.png",
+      "width": 256,
+      "height": 256,
+      "size": "22 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Polymerization_Plant.png",
+      "url": "https://wiki.coigame.com/images/4/4a/Polymerization_Plant.png?20220112123023",
+      "file_page_url": "https://wiki.coigame.com/File:Polymerization_Plant.png",
+      "width": 256,
+      "height": 256,
+      "size": "73 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Power_Generator_(Large).png",
+      "url": "https://wiki.coigame.com/images/f/f6/Power_Generator_%28Large%29.png?20220112123026",
+      "file_page_url": "https://wiki.coigame.com/File:Power_Generator_(Large).png",
+      "width": 256,
+      "height": 256,
+      "size": "72 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Power_Generator.png",
+      "url": "https://wiki.coigame.com/images/2/2e/Power_Generator.png?20220112123038",
+      "file_page_url": "https://wiki.coigame.com/File:Power_Generator.png",
+      "width": 256,
+      "height": 256,
+      "size": "67 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Radioactive_Waste_Storage.png",
+      "url": "https://wiki.coigame.com/images/2/21/Radioactive_Waste_Storage.png?20230522100054",
+      "file_page_url": "https://wiki.coigame.com/File:Radioactive_Waste_Storage.png",
+      "width": 256,
+      "height": 256,
+      "size": "73 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Rainwater_Harvester.png",
+      "url": "https://wiki.coigame.com/images/b/b8/Rainwater_Harvester.png?20220112123051",
+      "file_page_url": "https://wiki.coigame.com/File:Rainwater_Harvester.png",
+      "width": 128,
+      "height": 128,
+      "size": "17 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Recyclables_Collection.png",
+      "url": "https://wiki.coigame.com/images/6/62/Recyclables_Collection.png?20220617233853",
+      "file_page_url": "https://wiki.coigame.com/File:Recyclables_Collection.png",
+      "width": 256,
+      "height": 256,
+      "size": "90 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Research_Lab_II.png",
+      "url": "https://wiki.coigame.com/images/8/8c/Research_Lab_II.png?20220112123055",
+      "file_page_url": "https://wiki.coigame.com/File:Research_Lab_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "68 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Research_Lab_III.png",
+      "url": "https://wiki.coigame.com/images/2/28/Research_Lab_III.png?20220112123058",
+      "file_page_url": "https://wiki.coigame.com/File:Research_Lab_III.png",
+      "width": 256,
+      "height": 256,
+      "size": "70 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Research_Lab_IV.png",
+      "url": "https://wiki.coigame.com/images/8/87/Research_Lab_IV.png?20220112123101",
+      "file_page_url": "https://wiki.coigame.com/File:Research_Lab_IV.png",
+      "width": 256,
+      "height": 256,
+      "size": "81 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Research_Lab_V.png",
+      "url": "https://wiki.coigame.com/images/9/9a/Research_Lab_V.png?20220617233839",
+      "file_page_url": "https://wiki.coigame.com/File:Research_Lab_V.png",
+      "width": 256,
+      "height": 256,
+      "size": "115 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Research_Lab.png",
+      "url": "https://wiki.coigame.com/images/a/a0/Research_Lab.png?20220112123105",
+      "file_page_url": "https://wiki.coigame.com/File:Research_Lab.png",
+      "width": 256,
+      "height": 256,
+      "size": "51 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Retaining_Wall_(Corner).png",
+      "url": "https://wiki.coigame.com/images/1/14/Retaining_Wall_%28Corner%29.png?20220704213004",
+      "file_page_url": "https://wiki.coigame.com/File:Retaining_Wall_(Corner).png",
+      "width": 256,
+      "height": 256,
+      "size": "71 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Retaining_Wall_(Cross).png",
+      "url": "https://wiki.coigame.com/images/c/cc/Retaining_Wall_%28Cross%29.png?20220704213031",
+      "file_page_url": "https://wiki.coigame.com/File:Retaining_Wall_(Cross).png",
+      "width": 256,
+      "height": 256,
+      "size": "76 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Retaining_Wall_(Long).png",
+      "url": "https://wiki.coigame.com/images/a/a1/Retaining_Wall_%28Long%29.png?20220704212917",
+      "file_page_url": "https://wiki.coigame.com/File:Retaining_Wall_(Long).png",
+      "width": 256,
+      "height": 256,
+      "size": "95 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Retaining_Wall_(Short).png",
+      "url": "https://wiki.coigame.com/images/9/9f/Retaining_Wall_%28Short%29.png?20220704212945",
+      "file_page_url": "https://wiki.coigame.com/File:Retaining_Wall_(Short).png",
+      "width": 256,
+      "height": 256,
+      "size": "60 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Retaining_Wall_(Tee).png",
+      "url": "https://wiki.coigame.com/images/d/d2/Retaining_Wall_%28Tee%29.png?20220704213048",
+      "file_page_url": "https://wiki.coigame.com/File:Retaining_Wall_(Tee).png",
+      "width": 256,
+      "height": 256,
+      "size": "75 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Reverse_Osmosis.png",
+      "url": "https://wiki.coigame.com/images/b/b4/Reverse_Osmosis.png?20220112123107",
+      "file_page_url": "https://wiki.coigame.com/File:Reverse_Osmosis.png",
+      "width": 256,
+      "height": 256,
+      "size": "70 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Rocket_Assembly_Depot.png",
+      "url": "https://wiki.coigame.com/images/f/fb/Rocket_Assembly_Depot.png?20220617233901",
+      "file_page_url": "https://wiki.coigame.com/File:Rocket_Assembly_Depot.png",
+      "width": 256,
+      "height": 256,
+      "size": "71 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Rocket_Launch_Pad.png",
+      "url": "https://wiki.coigame.com/images/a/a1/Rocket_Launch_Pad.png?20220617233903",
+      "file_page_url": "https://wiki.coigame.com/File:Rocket_Launch_Pad.png",
+      "width": 256,
+      "height": 256,
+      "size": "86 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Rotary_Kiln_(Gas).png",
+      "url": "https://wiki.coigame.com/images/b/b4/Rotary_Kiln_%28Gas%29.png?20220608224324",
+      "file_page_url": "https://wiki.coigame.com/File:Rotary_Kiln_(Gas).png",
+      "width": 256,
+      "height": 256,
+      "size": "35 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Rotary_Kiln.png",
+      "url": "https://wiki.coigame.com/images/b/b9/Rotary_Kiln.png?20220112123110",
+      "file_page_url": "https://wiki.coigame.com/File:Rotary_Kiln.png",
+      "width": 256,
+      "height": 256,
+      "size": "42 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Rubber_Maker.png",
+      "url": "https://wiki.coigame.com/images/9/9d/Rubber_Maker.png?20220112123115",
+      "file_page_url": "https://wiki.coigame.com/File:Rubber_Maker.png",
+      "width": 256,
+      "height": 256,
+      "size": "86 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Seawater_Pump_(Tall).png",
+      "url": "https://wiki.coigame.com/images/5/55/Seawater_Pump_%28Tall%29.png?20220112123129",
+      "file_page_url": "https://wiki.coigame.com/File:Seawater_Pump_(Tall).png",
+      "width": 256,
+      "height": 256,
+      "size": "57 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Seawater_Pump.png",
+      "url": "https://wiki.coigame.com/images/f/fa/Seawater_Pump.png?20220112123131",
+      "file_page_url": "https://wiki.coigame.com/File:Seawater_Pump.png",
+      "width": 256,
+      "height": 256,
+      "size": "49 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Settling_Tank.png",
+      "url": "https://wiki.coigame.com/images/3/3d/Settling_Tank.png?20220112123134",
+      "file_page_url": "https://wiki.coigame.com/File:Settling_Tank.png",
+      "width": 256,
+      "height": 256,
+      "size": "63 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Shipyard.png",
+      "url": "https://wiki.coigame.com/images/0/0f/Shipyard.png?20220112123136",
+      "file_page_url": "https://wiki.coigame.com/File:Shipyard.png",
+      "width": 256,
+      "height": 256,
+      "size": "50 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Shredder.png",
+      "url": "https://wiki.coigame.com/images/6/6e/Shredder.png?20230522094154",
+      "file_page_url": "https://wiki.coigame.com/File:Shredder.png",
+      "width": 256,
+      "height": 256,
+      "size": "85 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Silicon_Crystallizer.png",
+      "url": "https://wiki.coigame.com/images/9/95/Silicon_Crystallizer.png?20220618083118",
+      "file_page_url": "https://wiki.coigame.com/File:Silicon_Crystallizer.png",
+      "width": 256,
+      "height": 256,
+      "size": "83 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Silicon_Reactor.png",
+      "url": "https://wiki.coigame.com/images/a/ae/Silicon_Reactor.png?20220112123139",
+      "file_page_url": "https://wiki.coigame.com/File:Silicon_Reactor.png",
+      "width": 256,
+      "height": 256,
+      "size": "69 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Smoke_Stack_(Large).png",
+      "url": "https://wiki.coigame.com/images/8/86/Smoke_Stack_%28Large%29.png?20220609075738",
+      "file_page_url": "https://wiki.coigame.com/File:Smoke_Stack_(Large).png",
+      "width": 256,
+      "height": 256,
+      "size": "32 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Smoke_Stack_(Old).png",
+      "url": "https://wiki.coigame.com/images/1/18/Smoke_Stack_%28Old%29.png?20220615000117",
+      "file_page_url": "https://wiki.coigame.com/File:Smoke_Stack_(Old).png",
+      "width": 256,
+      "height": 256,
+      "size": "23 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Smoke_Stack.png",
+      "url": "https://wiki.coigame.com/images/1/1b/Smoke_Stack.png?20220609075248",
+      "file_page_url": "https://wiki.coigame.com/File:Smoke_Stack.png",
+      "width": 256,
+      "height": 256,
+      "size": "31 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Solar_Panel_(Mono).png",
+      "url": "https://wiki.coigame.com/images/9/9e/Solar_Panel_%28Mono%29.png?20220617233631",
+      "file_page_url": "https://wiki.coigame.com/File:Solar_Panel_(Mono).png",
+      "width": 256,
+      "height": 256,
+      "size": "75 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Solar_Panel.png",
+      "url": "https://wiki.coigame.com/images/5/5d/Solar_Panel.png?20220112123145",
+      "file_page_url": "https://wiki.coigame.com/File:Solar_Panel.png",
+      "width": 256,
+      "height": 256,
+      "size": "67 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Sour_Water_Stripper.png",
+      "url": "https://wiki.coigame.com/images/e/e2/Sour_Water_Stripper.png?20220112123148",
+      "file_page_url": "https://wiki.coigame.com/File:Sour_Water_Stripper.png",
+      "width": 256,
+      "height": 256,
+      "size": "62 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Square_(Dark).png",
+      "url": "https://wiki.coigame.com/images/3/39/Square_%28Dark%29.png?20220704221327",
+      "file_page_url": "https://wiki.coigame.com/File:Square_(Dark).png",
+      "width": 256,
+      "height": 256,
+      "size": "64 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Square_(Light).png",
+      "url": "https://wiki.coigame.com/images/e/e1/Square_%28Light%29.png?20220704221224",
+      "file_page_url": "https://wiki.coigame.com/File:Square_(Light).png",
+      "width": 256,
+      "height": 256,
+      "size": "66 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Square_with_Column.png",
+      "url": "https://wiki.coigame.com/images/5/5d/Square_with_Column.png?20220704221239",
+      "file_page_url": "https://wiki.coigame.com/File:Square_with_Column.png",
+      "width": 256,
+      "height": 256,
+      "size": "63 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Square_with_Fountain.png",
+      "url": "https://wiki.coigame.com/images/d/de/Square_with_Fountain.png?20220704221355",
+      "file_page_url": "https://wiki.coigame.com/File:Square_with_Fountain.png",
+      "width": 256,
+      "height": 256,
+      "size": "63 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Storage_Fluid_II.png",
+      "url": "https://wiki.coigame.com/images/0/0e/Storage_Fluid_II.png?20220609080625",
+      "file_page_url": "https://wiki.coigame.com/File:Storage_Fluid_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "101 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Storage_Fluid.png",
+      "url": "https://wiki.coigame.com/images/b/b0/Storage_Fluid.png?20220609080603",
+      "file_page_url": "https://wiki.coigame.com/File:Storage_Fluid.png",
+      "width": 256,
+      "height": 256,
+      "size": "108 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Storage_Loose_II.png",
+      "url": "https://wiki.coigame.com/images/2/23/Storage_Loose_II.png?20220609080335",
+      "file_page_url": "https://wiki.coigame.com/File:Storage_Loose_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "75 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Storage_Loose.png",
+      "url": "https://wiki.coigame.com/images/5/53/Storage_Loose.png?20220609080357",
+      "file_page_url": "https://wiki.coigame.com/File:Storage_Loose.png",
+      "width": 256,
+      "height": 256,
+      "size": "79 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Storage_Unit_II.png",
+      "url": "https://wiki.coigame.com/images/a/a8/Storage_Unit_II.png?20220609080213",
+      "file_page_url": "https://wiki.coigame.com/File:Storage_Unit_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "114 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Storage_Unit.png",
+      "url": "https://wiki.coigame.com/images/9/9d/Storage_Unit.png?20220609080130",
+      "file_page_url": "https://wiki.coigame.com/File:Storage_Unit.png",
+      "width": 256,
+      "height": 256,
+      "size": "104 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Super-pressure_Turbine.png",
+      "url": "https://wiki.coigame.com/images/e/ea/Super-pressure_Turbine.png?20230522094651",
+      "file_page_url": "https://wiki.coigame.com/File:Super-pressure_Turbine.png",
+      "width": 256,
+      "height": 256,
+      "size": "78 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "The_Statue_of_Maintenance_(Golden).png",
+      "url": "https://wiki.coigame.com/images/a/ac/The_Statue_of_Maintenance_%28Golden%29.png?20220622185431",
+      "file_page_url": "https://wiki.coigame.com/File:The_Statue_of_Maintenance_(Golden).png",
+      "width": 256,
+      "height": 256,
+      "size": "55 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "The_Statue_of_Maintenance.png",
+      "url": "https://wiki.coigame.com/images/2/23/The_Statue_of_Maintenance.png?20220622185324",
+      "file_page_url": "https://wiki.coigame.com/File:The_Statue_of_Maintenance.png",
+      "width": 256,
+      "height": 256,
+      "size": "54 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Thermal_Desalinator.png",
+      "url": "https://wiki.coigame.com/images/4/4b/Thermal_Desalinator.png?20220112123206",
+      "file_page_url": "https://wiki.coigame.com/File:Thermal_Desalinator.png",
+      "width": 256,
+      "height": 256,
+      "size": "43 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Thermal_Storage.png",
+      "url": "https://wiki.coigame.com/images/e/e8/Thermal_Storage.png?20230522094928",
+      "file_page_url": "https://wiki.coigame.com/File:Thermal_Storage.png",
+      "width": 256,
+      "height": 256,
+      "size": "110 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Tomb_of_Captains.png",
+      "url": "https://wiki.coigame.com/images/7/7d/Tomb_of_Captains.png?20220628195553",
+      "file_page_url": "https://wiki.coigame.com/File:Tomb_of_Captains.png",
+      "width": 256,
+      "height": 256,
+      "size": "72 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Trading_Dock.png",
+      "url": "https://wiki.coigame.com/images/0/01/Trading_Dock.png?20220112123209",
+      "file_page_url": "https://wiki.coigame.com/File:Trading_Dock.png",
+      "width": 256,
+      "height": 256,
+      "size": "45 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Transformer.png",
+      "url": "https://wiki.coigame.com/images/1/18/Transformer.png?20220112123213",
+      "file_page_url": "https://wiki.coigame.com/File:Transformer.png",
+      "width": 256,
+      "height": 256,
+      "size": "51 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "U-shape_Balancer.png",
+      "url": "https://wiki.coigame.com/images/3/3f/U-shape_Balancer.png?20220715072211",
+      "file_page_url": "https://wiki.coigame.com/File:U-shape_Balancer.png",
+      "width": 256,
+      "height": 256,
+      "size": "86 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "U-shape_Conveyor_II.png",
+      "url": "https://wiki.coigame.com/images/8/84/U-shape_Conveyor_II.png?20220112123240",
+      "file_page_url": "https://wiki.coigame.com/File:U-shape_Conveyor_II.png",
+      "width": 256,
+      "height": 256,
+      "size": "37 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "U-shape_Conveyor_III.png",
+      "url": "https://wiki.coigame.com/images/5/54/U-shape_Conveyor_III.png?20220119101321",
+      "file_page_url": "https://wiki.coigame.com/File:U-shape_Conveyor_III.png",
+      "width": 256,
+      "height": 256,
+      "size": "38 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "U-shape_Conveyor.png",
+      "url": "https://wiki.coigame.com/images/d/dc/U-shape_Conveyor.png?20220112123243",
+      "file_page_url": "https://wiki.coigame.com/File:U-shape_Conveyor.png",
+      "width": 256,
+      "height": 256,
+      "size": "35 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Unit_Module_(L).png",
+      "url": "https://wiki.coigame.com/images/3/3e/Unit_Module_%28L%29.png?20220617233832",
+      "file_page_url": "https://wiki.coigame.com/File:Unit_Module_(L).png",
+      "width": 256,
+      "height": 256,
+      "size": "100 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Unit_Module_(M).png",
+      "url": "https://wiki.coigame.com/images/1/1c/Unit_Module_%28M%29.png?20220112123216",
+      "file_page_url": "https://wiki.coigame.com/File:Unit_Module_(M).png",
+      "width": 256,
+      "height": 256,
+      "size": "68 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Unit_Module_(S).png",
+      "url": "https://wiki.coigame.com/images/c/c0/Unit_Module_%28S%29.png?20220112123219",
+      "file_page_url": "https://wiki.coigame.com/File:Unit_Module_(S).png",
+      "width": 256,
+      "height": 256,
+      "size": "51 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Unit_Storage_III.png",
+      "url": "https://wiki.coigame.com/images/9/97/Unit_Storage_III.png?20220613110130",
+      "file_page_url": "https://wiki.coigame.com/File:Unit_Storage_III.png",
+      "width": 256,
+      "height": 256,
+      "size": "91 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Vehicle_Ramp_(Large).png",
+      "url": "https://wiki.coigame.com/images/2/24/Vehicle_Ramp_%28Large%29.png?20220123123057",
+      "file_page_url": "https://wiki.coigame.com/File:Vehicle_Ramp_(Large).png",
+      "width": 256,
+      "height": 256,
+      "size": "38 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Vehicle_Ramp_(Medium).png",
+      "url": "https://wiki.coigame.com/images/d/d5/Vehicle_Ramp_%28Medium%29.png?20220123123031",
+      "file_page_url": "https://wiki.coigame.com/File:Vehicle_Ramp_(Medium).png",
+      "width": 256,
+      "height": 256,
+      "size": "40 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Vehicle_Ramp_(Small).png",
+      "url": "https://wiki.coigame.com/images/e/ec/Vehicle_Ramp_%28Small%29.png?20220112123245",
+      "file_page_url": "https://wiki.coigame.com/File:Vehicle_Ramp_(Small).png",
+      "width": 256,
+      "height": 256,
+      "size": "46 KB",
+      "category": "Building_images"
+    },
+    {
+      "filename": "Vehicles_Depot.png",
+      "url": "https://wiki.coigame.com/images/3/3e/Vehicles_Depot.png?20220612111804",
+      "file_page_url": "https://wiki.coigame.com/File:Vehicles_Depot.png",
+      "width": 256,
+      "height": 256,
+      "size": "96 KB",
+      "category": "index.php?title=Building_images&filefrom=Vehicles+Depot.png#mw-category-media"
+    },
+    {
+      "filename": "Waste_Collection.png",
+      "url": "https://wiki.coigame.com/images/f/f7/Waste_Collection.png?20220617233852",
+      "file_page_url": "https://wiki.coigame.com/File:Waste_Collection.png",
+      "width": 256,
+      "height": 256,
+      "size": "80 KB",
+      "category": "index.php?title=Building_images&filefrom=Vehicles+Depot.png#mw-category-media"
+    },
+    {
+      "filename": "Waste_Sorting_Plant.png",
+      "url": "https://wiki.coigame.com/images/c/c7/Waste_Sorting_Plant.png?20220617233905",
+      "file_page_url": "https://wiki.coigame.com/File:Waste_Sorting_Plant.png",
+      "width": 256,
+      "height": 256,
+      "size": "86 KB",
+      "category": "index.php?title=Building_images&filefrom=Vehicles+Depot.png#mw-category-media"
+    },
+    {
+      "filename": "Wastewater_Treatment.png",
+      "url": "https://wiki.coigame.com/images/1/17/Wastewater_Treatment.png?20220112123251",
+      "file_page_url": "https://wiki.coigame.com/File:Wastewater_Treatment.png",
+      "width": 256,
+      "height": 256,
+      "size": "62 KB",
+      "category": "index.php?title=Building_images&filefrom=Vehicles+Depot.png#mw-category-media"
+    },
+    {
+      "filename": "Water_Chiller.png",
+      "url": "https://wiki.coigame.com/images/1/11/Water_Chiller.png?20220112123254",
+      "file_page_url": "https://wiki.coigame.com/File:Water_Chiller.png",
+      "width": 256,
+      "height": 256,
+      "size": "88 KB",
+      "category": "index.php?title=Building_images&filefrom=Vehicles+Depot.png#mw-category-media"
+    },
+    {
+      "filename": "Water_Facility.png",
+      "url": "https://wiki.coigame.com/images/f/f0/Water_Facility.png?20220112123256",
+      "file_page_url": "https://wiki.coigame.com/File:Water_Facility.png",
+      "width": 256,
+      "height": 256,
+      "size": "67 KB",
+      "category": "index.php?title=Building_images&filefrom=Vehicles+Depot.png#mw-category-media"
+    }
+  ],
+  "extraction_info": {
+    "extracted_at": "2025-06-16 18:18:42 UTC",
+    "source": "Captain of Industry Wiki (wiki.coigame.com)",
+    "note": "Images are subject to Creative Commons Attribution-NonCommercial-ShareAlike license",
+    "method": "Direct extraction from File: pages with URL correction"
+  }
+}

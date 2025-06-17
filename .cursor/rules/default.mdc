@@ -1,0 +1,161 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## Cursor Rule para Projeto Next.js + ReactFlow
+
+```markdown
+# Cursor Rule: Next.js + ReactFlow Project
+
+## 1. Stack & Versions
+
+- **Framework**: Next.js (latest LTS)
+- **UI Library**: ReactFlow (latest stable)
+- **Language**: TypeScript (strict mode)
+- **Styling**: Tailwind CSS (latest)
+- **Data**: Static, served by API (no database)
+- **Comments & Code**: English only
+
+---
+
+## 2. Componentization & Structure
+
+- Use only functional components.
+- All components must be in `components/`, each in its own folder.
+- Component file names: `PascalCase.tsx`.
+- Export components by name (never default).
+- Props interfaces must be defined in the same file, above the component.
+- Only expose minimal customization via props (color, size, visibility).
+- No enums or types for props, only interfaces.
+- No class components or legacy React patterns.
+
+---
+
+## 3. Styling
+
+- Use Tailwind CSS utility classes only.
+- No inline styles except for dynamic values (e.g., color, size).
+- No CSS modules or styled-components.
+
+---
+
+## 4. Cursor Component Rules
+
+- The custom cursor must be a self-contained component: `CustomCursor.tsx`.
+- Must not interfere with ReactFlow events or overlays.
+- Must use `pointer-events-none` for the cursor element.
+- Must support these props:
+  - `color?: string` (default: `#2563eb`)
+  - `size?: number` (default: `24`)
+  - `visible?: boolean` (default: `true`)
+- Cursor must disappear on touch/mobile devices.
+- Must be globally positioned (`fixed`, `z-50`).
+- Must not depend on any global state or context.
+- Must not require any external data or API calls.
+
+---
+
+## 5. Data Handling
+
+- All app data is static and served by API endpoints in `/pages/api/`.
+- Cursor component must not fetch or depend on API data.
+
+---
+
+## 6. Code Quality
+
+- All code and comments in English.
+- Validate TypeScript compilation (`tsc`), but do not run the app.
+- Use early returns for edge cases.
+- Add concise comments for all exported functions and props.
+- Do not use unnecessary hooks or abstractions.
+
+---
+
+## 7. Example Usage
+
+```
+// components/CustomCursor/CustomCursor.tsx
+
+import React, { useEffect, useRef } from "react";
+
+/**
+ * CustomCursorProps defines the customizable properties for the CustomCursor component.
+ */
+export interface CustomCursorProps {
+  color?: string; // Cursor color, defaults to Tailwind blue-600.
+  size?: number;  // Cursor diameter in pixels, defaults to 24.
+  visible?: boolean; // Whether the cursor is visible, defaults to true.
+}
+
+/**
+ * CustomCursor renders a custom mouse cursor that follows the user's pointer.
+ * It hides automatically on touch devices.
+ */
+export const CustomCursor: React.FC = ({
+  color = "#2563eb",
+  size = 24,
+  visible = true,
+}) => {
+  const cursorRef = useRef(null);
+
+  useEffect(() => {
+    // Hide cursor on touch devices
+    if ("ontouchstart" in window) {
+      if (cursorRef.current) cursorRef.current.style.display = "none";
+      return;
+    }
+
+    const moveCursor = (e: MouseEvent) => {
+      if (cursorRef.current) {
+        cursorRef.current.style.left = `${e.clientX - size / 2}px`;
+        cursorRef.current.style.top = `${e.clientY - size / 2}px`;
+      }
+    };
+
+    if (visible) {
+      document.addEventListener("mousemove", moveCursor);
+    }
+
+    return () => {
+      document.removeEventListener("mousemove", moveCursor);
+    };
+  }, [size, visible]);
+
+  if (!visible) return null;
+
+  return (
+    
+  );
+};
+```
+
+---
+
+## 8. Folder Structure Example
+
+```
+components/
+  CustomCursor/
+    CustomCursor.tsx
+```
+
+---
+
+## 9. Validation
+
+- Ensure TypeScript compiles:  
+  `npx tsc --noEmit`
+- No runtime execution required.
+
+---
+
+## 10. Notes
+
+- Do not add extra themes, animations, or context providers.
+- Keep the component minimal and focused.
+- All code and comments must remain in English.
+```
+
+Se precisar de ajustes ou mais exemplos, só avisar!

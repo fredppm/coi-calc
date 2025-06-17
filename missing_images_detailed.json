@@ -1,0 +1,366 @@
+{
+  "resources": [
+    {
+      "filename": "aluminahydrated.png",
+      "id": "hydrated_alumina",
+      "name": "Hydrated Alumina"
+    },
+    {
+      "filename": "aluminumscrappressed.png",
+      "id": "aluminum_scrap_pressed",
+      "name": "Aluminum Scrap Pressed"
+    },
+    {
+      "filename": "asteroidboosterparts.png",
+      "id": "asteroid_booster_parts",
+      "name": "Asteroid Booster Parts"
+    },
+    {
+      "filename": "biomass.png",
+      "id": "biomass",
+      "name": "Biomass"
+    },
+    {
+      "filename": "blanketfuel.png",
+      "id": "blanket_fuel",
+      "name": "Blanket Fuel"
+    },
+    {
+      "filename": "blanketfuelenriched.png",
+      "id": "blanket_fuel_enriched",
+      "name": "Blanket Fuel (Enriched)"
+    },
+    {
+      "filename": "chemicalfuel.png",
+      "id": "chemical_fuel",
+      "name": "Chemical Fuel"
+    },
+    {
+      "filename": "compactreactor.png",
+      "id": "compact_reactor",
+      "name": "Compact Reactor"
+    },
+    {
+      "filename": "compositecore1.png",
+      "id": "composite_core_basic",
+      "name": "Composite Core Basic"
+    },
+    {
+      "filename": "compositecore2.png",
+      "id": "composite_core",
+      "name": "Composite Core"
+    },
+    {
+      "filename": "compositepanel.png",
+      "id": "composite_panel",
+      "name": "Composite Panel"
+    },
+    {
+      "filename": "computing.png",
+      "id": "computing",
+      "name": "Computing"
+    },
+    {
+      "filename": "corefuel.png",
+      "id": "core_fuel",
+      "name": "Core Fuel"
+    },
+    {
+      "filename": "crewsupplies.png",
+      "id": "crew_supplies",
+      "name": "Crew Supplies"
+    },
+    {
+      "filename": "depleteduranium.png",
+      "id": "depleted_uranium",
+      "name": "Depleted Uranium"
+    },
+    {
+      "filename": "diamond.png",
+      "id": "diamond",
+      "name": "Diamond"
+    },
+    {
+      "filename": "diamondpaste.png",
+      "id": "diamond_paste",
+      "name": "Diamond Paste"
+    },
+    {
+      "filename": "disinfectant.png",
+      "id": "disinfectant",
+      "name": "Disinfectant"
+    },
+    {
+      "filename": "eggs.png",
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "filename": "ethanol.png",
+      "id": "ethanol",
+      "name": "Ethanol"
+    },
+    {
+      "filename": "fertilizerorganic.png",
+      "id": "fertilizer_organic",
+      "name": "Fertilizer (Organic)"
+    },
+    {
+      "filename": "fissionproduct.png",
+      "id": "fission_product",
+      "name": "Fission Product"
+    },
+    {
+      "filename": "importedgoods.png",
+      "id": "imported_goods",
+      "name": "Imported Goods"
+    },
+    {
+      "filename": "lens.png",
+      "id": "lens",
+      "name": "Lens"
+    },
+    {
+      "filename": "luxurygoods.png",
+      "id": "luxury_goods",
+      "name": "Luxury Goods"
+    },
+    {
+      "filename": "meattrimmings.png",
+      "id": "meat_trimmings",
+      "name": "Meat Trimmings"
+    },
+    {
+      "filename": "monowafer.png",
+      "id": "silicon_wafer",
+      "name": "Silicon Wafer"
+    },
+    {
+      "filename": "moxrod.png",
+      "id": "mox_rod",
+      "name": "MOX Rod"
+    },
+    {
+      "filename": "officesupplies.png",
+      "id": "office_supplies",
+      "name": "Office Supplies"
+    },
+    {
+      "filename": "plutonium.png",
+      "id": "plutonium",
+      "name": "Plutonium"
+    },
+    {
+      "filename": "quartzcrushed.png",
+      "id": "quartz_crushed",
+      "name": "Quartz Crushed"
+    },
+    {
+      "filename": "railparts.png",
+      "id": "rail_parts",
+      "name": "Rail Parts"
+    },
+    {
+      "filename": "redmud.png",
+      "id": "red_mud",
+      "name": "Red Mud"
+    },
+    {
+      "filename": "reprocesseduranium.png",
+      "id": "reprocessed_uranium_1",
+      "name": "Reprocessed Uranium (1%)"
+    },
+    {
+      "filename": "sapphirewafer.png",
+      "id": "sapphire_wafer",
+      "name": "Sapphire Wafer"
+    },
+    {
+      "filename": "soybean.png",
+      "id": "soybean",
+      "name": "Soybean"
+    },
+    {
+      "filename": "spaceprobeparts.png",
+      "id": "space_probe_parts",
+      "name": "Space Probe Parts"
+    },
+    {
+      "filename": "spacestationparts1.png",
+      "id": "station_parts_basic",
+      "name": "Station Parts (Basic)"
+    },
+    {
+      "filename": "spacestationparts2.png",
+      "id": "station_parts",
+      "name": "Station Parts"
+    },
+    {
+      "filename": "spentmox.png",
+      "id": "spent_mox",
+      "name": "Spent MOX"
+    },
+    {
+      "filename": "steamhp.png",
+      "id": "steam_high",
+      "name": "Steam (High)"
+    },
+    {
+      "filename": "steamsp.png",
+      "id": "steam_super",
+      "name": "Steam (Super)"
+    },
+    {
+      "filename": "titanium.png",
+      "id": "titanium_alloy",
+      "name": "Titanium Alloy"
+    },
+    {
+      "filename": "titaniumalloymolten.png",
+      "id": "molten_titanium_alloy",
+      "name": "Molten Titanium Alloy"
+    },
+    {
+      "filename": "titaniumchloride.png",
+      "id": "titanium_chloride",
+      "name": "Titanium Chloride"
+    },
+    {
+      "filename": "titaniumchloridepure.png",
+      "id": "titanium_chloride_pure",
+      "name": "Titanium Chloride (Pure)"
+    },
+    {
+      "filename": "titaniummolten.png",
+      "id": "molten_titanium",
+      "name": "Molten Titanium"
+    },
+    {
+      "filename": "titaniumslag.png",
+      "id": "titanium_slag",
+      "name": "Titanium Slag"
+    },
+    {
+      "filename": "titaniumsponge.png",
+      "id": "titanium_sponge",
+      "name": "Titanium Sponge"
+    },
+    {
+      "filename": "treesapling.png",
+      "id": "tree_sapling",
+      "name": "Tree Sapling"
+    },
+    {
+      "filename": "uraniumenriched20perc.png",
+      "id": "enriched_uranium_20",
+      "name": "Enriched Uranium (20%)"
+    },
+    {
+      "filename": "uraniumenriched4perc.png",
+      "id": "enriched_uranium_4",
+      "name": "Enriched Uranium (4%)"
+    },
+    {
+      "filename": "wastepressed.png",
+      "id": "waste_pressed",
+      "name": "Waste Pressed"
+    },
+    {
+      "filename": "woodchips.png",
+      "id": "woodchips",
+      "name": "Woodchips"
+    }
+  ],
+  "buildings": [
+    {
+      "filename": "aluminumcell.png",
+      "id": "aluminum_cell",
+      "name": "Aluminum Cell"
+    },
+    {
+      "filename": "bricksmaker.png",
+      "id": "kiln",
+      "name": "Kiln"
+    },
+    {
+      "filename": "burner.png",
+      "id": "burner_solid",
+      "name": "Burner (Solid)"
+    },
+    {
+      "filename": "castercooled.png",
+      "id": "cooled_caster",
+      "name": "Cooled Caster"
+    },
+    {
+      "filename": "castercooledt2.png",
+      "id": "cooled_caster_ii",
+      "name": "Cooled Caster II"
+    },
+    {
+      "filename": "foodmill.png",
+      "id": "mill",
+      "name": "Mill"
+    },
+    {
+      "filename": "foodprocessor.png",
+      "id": "food_processor",
+      "name": "Food Processor"
+    },
+    {
+      "filename": "hydrocrackert1.png",
+      "id": "cracking_unit",
+      "name": "Cracking Unit"
+    },
+    {
+      "filename": "industrialmixer.png",
+      "id": "mixer",
+      "name": "Mixer"
+    },
+    {
+      "filename": "industrialmixert2.png",
+      "id": "mixer_ii",
+      "name": "Mixer II"
+    },
+    {
+      "filename": "smeltingfurnacet1.png",
+      "id": "blast_furnace",
+      "name": "Blast Furnace"
+    },
+    {
+      "filename": "smeltingfurnacet2.png",
+      "id": "blast_furnace_ii",
+      "name": "Blast Furnace II"
+    },
+    {
+      "filename": "turbinehighpress.png",
+      "id": "highpressure_turbine",
+      "name": "High-Pressure Turbine"
+    },
+    {
+      "filename": "turbinehighpresst2.png",
+      "id": "highpressure_turbine_ii",
+      "name": "High-Pressure Turbine II"
+    },
+    {
+      "filename": "turbinelowpress.png",
+      "id": "lowpressure_turbine",
+      "name": "Low-Pressure Turbine"
+    },
+    {
+      "filename": "turbinelowpresst2.png",
+      "id": "lowpressure_turbine_ii",
+      "name": "Low-Pressure Turbine II"
+    },
+    {
+      "filename": "turbinesuperpress.png",
+      "id": "superpressure_turbine",
+      "name": "Super-Pressure Turbine"
+    },
+    {
+      "filename": "wastedump.png",
+      "id": "liquid_dump",
+      "name": "Liquid Dump"
+    }
+  ]
+}
