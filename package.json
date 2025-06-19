@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:github": "next build -p next.config.github.js",
     "export": "next build && next export",
+    "generate:static": "node scripts/generate_static_api.js",
+    "deploy:github": "npm run generate:static && next build -p next.config.github.js && touch out/.nojekyll",
     "deploy": "next build && touch out/.nojekyll && echo 'coi-calc.github.io' > out/CNAME",
     "start": "next start",
     "lint": "next lint",

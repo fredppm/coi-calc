@@ -1,0 +1,24 @@
+# File rename mapping
+GreenManure.png -> green_manure.png
+AlloyMixer.png -> alloy_mixer.png
+AluminumCell.png -> aluminum_cell.png
+Boiler_%28Coal%29.png -> boiler_%28_coal%29.png
+Boiler_%28Electric%29.png -> boiler_%28_electric%29.png
+Boiler_%28Gas%29.png -> boiler_%28_gas%29.png
+Burner_%28Solid%29.png -> burner_%28_solid%29.png
+Cooling_Tower_%28Large%29.png -> cooling_tower_%28_large%29.png
+Crusher_%28Large%29.png -> crusher_%28_large%29.png
+Distillation_%28Stage_I%29.png -> distillation_%28_stage_i%29.png
+Distillation_%28Stage_II%29.png -> distillation_%28_stage_ii%29.png
+Distillation_%28Stage_III%29.png -> distillation_%28_stage_iii%29.png
+Evaporation_Pond_%28Heated%29.png -> evaporation_pond_%28_heated%29.png
+GlassMakerT2.png -> glass_maker_t2.png
+High-Pressure_Turbine.png -> high_pressure_turbine.png
+High-Pressure_Turbine_II.png -> high_pressure_turbine_ii.png
+Low-Pressure_Turbine.png -> low_pressure_turbine.png
+Low-Pressure_Turbine_II.png -> low_pressure_turbine_ii.png
+Maintenance_Depot_%28Basic%29.png -> maintenance_depot_%28_basic%29.png
+Power_Generator_%28Large%29.png -> power_generator_%28_large%29.png
+Seawater_Pump_%28Tall%29.png -> seawater_pump_%28_tall%29.png
+Smoke_Stack_%28Large%29.png -> smoke_stack_%28_large%29.png
+Super-pressure_Turbine.png -> super_pressure_turbine.png

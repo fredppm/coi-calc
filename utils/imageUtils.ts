@@ -16,58 +16,9 @@ export const getImageUrl = (imagePath: string): string => {
 };
 
 /**
- * Convert snake_case to Title_Case for filenames (matches actual file naming convention)
- * Special handling for Roman numerals (ii, iii, iv, v) which should be uppercase
- */
-const snakeToTitleCase = (str: string): string => {
-  return str
-    .split('_')
-    .map(word => {
-      // Handle Roman numerals - should be uppercase
-      if (/^(ii|iii|iv|v)$/i.test(word)) {
-        return word.toUpperCase();
-      }
-      // Regular title case for other words
-      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-    })
-    .join('_');
-};
-
-/**
- * Convert single lowercase word to Title Case
- */
-const toTitleCase = (str: string): string => {
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-};
-
-/**
- * Process image path from data to ensure it works correctly across environments
- * Automatically handles case mismatches between data and actual file names
+ * Process image path from data - now simply returns the URL without conversion
+ * since all files are normalized to snake_case
  */
 export const processImagePath = (imagePath: string): string => {
-  // Extract filename from path
-  const pathParts = imagePath.split('/');
-  const fileName = pathParts[pathParts.length - 1];
-  const basePath = pathParts.slice(0, -1).join('/');
-  
-  // If filename has underscores and is in snake_case (all lowercase), convert to Title_Case
-  if (fileName.includes('_') && fileName === fileName.toLowerCase()) {
-    const fileNameWithoutExt = fileName.replace('.png', '');
-    const titleCaseFileName = snakeToTitleCase(fileNameWithoutExt) + '.png';
-    const titleCasePath = `${basePath}/${titleCaseFileName}`;
-    
-    return getImageUrl(titleCasePath);
-  }
-  
-  // If filename is a single word in lowercase (no underscores), convert to Title Case
-  if (!fileName.includes('_') && fileName === fileName.toLowerCase()) {
-    const fileNameWithoutExt = fileName.replace('.png', '');
-    const titleCaseFileName = toTitleCase(fileNameWithoutExt) + '.png';
-    const titleCasePath = `${basePath}/${titleCaseFileName}`;
-    
-    return getImageUrl(titleCasePath);
-  }
-  
-  // For files that are already properly cased, use as-is
   return getImageUrl(imagePath);
 }; 

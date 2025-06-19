@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "acid",
+    "name": "Acid",
+    "description": "Acid resource for production chains",
+    "image": "/images/resources/acid.png",
+    "color": "#a41818"
+  },
+  {
+    "id": "alumina",
+    "name": "Alumina",
+    "description": "Alumina resource for production chains",
+    "image": "/images/resources/alumina.png",
+    "color": "#dfdfdf"
+  },
+  {
+    "id": "aluminum",
+    "name": "Aluminum",
+    "description": "Aluminum resource for production chains",
+    "image": "/images/resources/aluminum.png",
+    "color": "#eeeeec"
+  },
+  {
+    "id": "aluminum_scrap",
+    "name": "Aluminum Scrap",
+    "description": "Aluminum Scrap resource for production chains",
+    "image": "/images/resources/aluminum_scrap.png",
+    "color": "#8a3c28"
+  },
+  {
+    "id": "aluminum_scrap_pressed",
+    "name": "Aluminum Scrap Pressed",
+    "description": "Aluminum Scrap Pressed resource for production chains",
+    "image": "/images/resources/aluminum_scrap_pressed.png",
+    "color": "#3d813d"
+  },
+  {
+    "id": "ammonia",
+    "name": "Ammonia",
+    "description": "Ammonia resource for production chains",
+    "image": "/images/resources/ammonia.png",
+    "color": "#7c9bb5"
+  },
+  {
+    "id": "anesthetics",
+    "name": "Anesthetics",
+    "description": "Anesthetics resource for production chains",
+    "image": "/images/resources/anesthetics.png",
+    "color": "#dbe9ee"
+  },
+  {
+    "id": "animal_feed",
+    "name": "Animal Feed",
+    "description": "Animal Feed resource for production chains",
+    "image": "/images/resources/animal_feed.png",
+    "color": "#3b66c1"
+  },
+  {
+    "id": "antibiotics",
+    "name": "Antibiotics",
+    "description": "Antibiotics resource for production chains",
+    "image": "/images/resources/antibiotics.png",
+    "color": "#24f2dc"
+  },
+  {
+    "id": "asteroid_booster_parts",
+    "name": "Asteroid Booster Parts",
+    "description": "Asteroid Booster Parts resource for production chains",
+    "image": "/images/resources/asteroid_booster_parts.png",
+    "color": "#4c9ec3"
+  },
+  {
+    "id": "bauxite",
+    "name": "Bauxite",
+    "description": "Bauxite resource for production chains",
+    "image": "/images/resources/bauxite.png",
+    "color": "#c85d35"
+  },
+  {
+    "id": "bauxite_powder",
+    "name": "Bauxite Powder",
+    "description": "Bauxite Powder resource for production chains",
+    "image": "/images/resources/bauxite_powder.png",
+    "color": "#3d4966"
+  },
+  {
+    "id": "biomass",
+    "name": "Biomass",
+    "description": "Biomass resource for production chains",
+    "image": "/images/resources/biomass.png",
+    "color": "#d0d24b"
+  },
+  {
+    "id": "blanket_fuel",
+    "name": "Blanket Fuel",
+    "description": "Blanket Fuel resource for production chains",
+    "image": "/images/resources/blanket_fuel.png",
+    "color": "#297cc9"
+  },
+  {
+    "id": "blanket_fuel_enriched",
+    "name": "Blanket Fuel (Enriched)",
+    "description": "Blanket Fuel (Enriched) resource for production chains",
+    "image": "/images/resources/blanket_fuel_enriched.png",
+    "color": "#689ac9"
+  },
+  {
+    "id": "bread",
+    "name": "Bread",
+    "description": "Bread resource for production chains",
+    "image": "/images/resources/bread.png",
+    "color": "#f0a346"
+  },
+  {
+    "id": "brine",
+    "name": "Brine",
+    "description": "Brine resource for production chains",
+    "image": "/images/resources/brine.png",
+    "color": "#d0e7ee"
+  },
+  {
+    "id": "cake",
+    "name": "Cake",
+    "description": "Cake resource for production chains",
+    "image": "/images/resources/cake.png",
+    "color": "#ffeda4"
+  },
+  {
+    "id": "canola",
+    "name": "Canola",
+    "description": "Canola resource for production chains",
+    "image": "/images/resources/canola.png",
+    "color": "#ecca2e"
+  },
+  {
+    "id": "carbon_dioxide",
+    "name": "Carbon Dioxide",
+    "description": "Carbon Dioxide resource for production chains",
+    "image": "/images/resources/carbon_dioxide.png",
+    "color": "#2f2f2f"
+  },
+  {
+    "id": "cement",
+    "name": "Cement",
+    "description": "Cement resource for production chains",
+    "image": "/images/resources/cement.png",
+    "color": "#dfa775"
+  },
+  {
+    "id": "chemical_fuel",
+    "name": "Chemical Fuel",
+    "description": "Chemical Fuel resource for production chains",
+    "image": "/images/resources/chemical_fuel.png",
+    "color": "#ff4823"
+  },
+  {
+    "id": "chicken_carcass",
+    "name": "Chicken Carcass",
+    "description": "Chicken Carcass resource for production chains",
+    "image": "/images/resources/chicken_carcass.png",
+    "color": "#fde7cc"
+  },
+  {
+    "id": "chilled_water",
+    "name": "Chilled Water",
+    "description": "Chilled Water resource for production chains",
+    "image": "/images/resources/chilled_water.png",
+    "color": "#25c0ee"
+  },
+  {
+    "id": "chlorine",
+    "name": "Chlorine",
+    "description": "Chlorine resource for production chains",
+    "image": "/images/resources/chlorine.png",
+    "color": "#b9c646"
+  },
+  {
+    "id": "coal",
+    "name": "Coal",
+    "description": "Coal resource for production chains",
+    "image": "/images/resources/coal.png",
+    "color": "#494545"
+  },
+  {
+    "id": "compact_reactor",
+    "name": "Compact Reactor",
+    "description": "Compact Reactor resource for production chains",
+    "image": "/images/resources/compact_reactor.png",
+    "color": "#85bb40"
+  },
+  {
+    "id": "composite_core",
+    "name": "Composite Core",
+    "description": "Composite Core resource for production chains",
+    "image": "/images/resources/composite_core.png",
+    "color": "#c09b00"
+  },
+  {
+    "id": "composite_core_basic",
+    "name": "Composite Core Basic",
+    "description": "Composite Core Basic resource for production chains",
+    "image": "/images/resources/composite_core_basic.png",
+    "color": "#767677"
+  },
+  {
+    "id": "composite_panel",
+    "name": "Composite Panel",
+    "description": "Composite Panel resource for production chains",
+    "image": "/images/resources/composite_panel.png",
+    "color": "#8e9dc2"
+  },
+  {
+    "id": "compost",
+    "name": "Compost",
+    "description": "Compost resource for production chains",
+    "image": "/images/resources/compost.png",
+    "color": "#ae8962"
+  },
+  {
+    "id": "computing",
+    "name": "Computing",
+    "description": "Computing resource for production chains",
+    "image": "/images/resources/computing.png",
+    "color": "#535353"
+  },
+  {
+    "id": "concrete_slab",
+    "name": "Concrete Slab",
+    "description": "Concrete Slab resource for production chains",
+    "image": "/images/resources/concrete_slab.png",
+    "color": "#999ea2"
+  },
+  {
+    "id": "construction_parts",
+    "name": "Construction Parts",
+    "description": "Construction Parts resource for production chains",
+    "image": "/images/resources/construction_parts.png",
+    "color": "#d0d0d0"
+  },
+  {
+    "id": "construction_parts_ii",
+    "name": "Construction Parts II",
+    "description": "Construction Parts II resource for production chains",
+    "image": "/images/resources/construction_parts_ii.png",
+    "color": "#bb9f31"
+  },
+  {
+    "id": "construction_parts_iii",
+    "name": "Construction Parts III",
+    "description": "Construction Parts III resource for production chains",
+    "image": "/images/resources/construction_parts_iii.png",
+    "color": "#ff5544"
+  },
+  {
+    "id": "construction_parts_iv",
+    "name": "Construction Parts IV",
+    "description": "Construction Parts IV resource for production chains",
+    "image": "/images/resources/construction_parts_iv.png",
+    "color": "#7254b1"
+  },
+  {
+    "id": "consumer_electronics",
+    "name": "Consumer Electronics",
+    "description": "Consumer Electronics resource for production chains",
+    "image": "/images/resources/consumer_electronics.png",
+    "color": "#41a9f6"
+  },
+  {
+    "id": "cooking_oil",
+    "name": "Cooking Oil",
+    "description": "Cooking Oil resource for production chains",
+    "image": "/images/resources/cooking_oil.png",
+    "color": "#ea9f26"
+  },
+  {
+    "id": "copper",
+    "name": "Copper",
+    "description": "Copper resource for production chains",
+    "image": "/images/resources/copper.png",
+    "color": "#c98454"
+  },
+  {
+    "id": "copper_ore",
+    "name": "Copper Ore",
+    "description": "Copper Ore resource for production chains",
+    "image": "/images/resources/copper_ore.png",
+    "color": "#295627"
+  },
+  {
+    "id": "copper_ore_crushed",
+    "name": "Copper Ore Crushed",
+    "description": "Copper Ore Crushed resource for production chains",
+    "image": "/images/resources/copper_ore_crushed.png",
+    "color": "#3b7c38"
+  },
+  {
+    "id": "copper_scrap",
+    "name": "Copper Scrap",
+    "description": "Copper Scrap resource for production chains",
+    "image": "/images/resources/copper_scrap.png",
+    "color": "#e2945d"
+  },
+  {
+    "id": "copper_scrap_pressed",
+    "name": "Copper Scrap Pressed",
+    "description": "Copper Scrap Pressed resource for production chains",
+    "image": "/images/resources/copper_scrap_pressed.png",
+    "color": "#e2945d"
+  },
+  {
+    "id": "core_fuel",
+    "name": "Core Fuel",
+    "description": "Core Fuel resource for production chains",
+    "image": "/images/resources/core_fuel.png",
+    "color": "#a1a1a1"
+  },
+  {
+    "id": "core_fuel_spent",
+    "name": "Core Fuel (Spent)",
+    "description": "Core Fuel (Spent) resource for production chains",
+    "image": "/images/resources/core_fuel_spent.png",
+    "color": "#8a6a0a"
+  },
+  {
+    "id": "corn",
+    "name": "Corn",
+    "description": "Corn resource for production chains",
+    "image": "/images/resources/corn.png",
+    "color": "#88c057"
+  },
+  {
+    "id": "corn_mash",
+    "name": "Corn Mash",
+    "description": "Corn Mash resource for production chains",
+    "image": "/images/resources/corn_mash.png",
+    "color": "#d8cf4b"
+  },
+  {
+    "id": "crew_supplies",
+    "name": "Crew Supplies",
+    "description": "Crew Supplies resource for production chains",
+    "image": "/images/resources/crew_supplies.png",
+    "color": "#dbae11"
+  },
+  {
+    "id": "crude_oil",
+    "name": "Crude Oil",
+    "description": "Crude Oil resource for production chains",
+    "image": "/images/resources/crude_oil.png",
+    "color": "#404851"
+  },
+  {
+    "id": "depleted_uranium",
+    "name": "Depleted Uranium",
+    "description": "Depleted Uranium resource for production chains",
+    "image": "/images/resources/depleted_uranium.png",
+    "color": "#3d4966"
+  },
+  {
+    "id": "diamond",
+    "name": "Diamond",
+    "description": "Diamond resource for production chains",
+    "image": "/images/resources/diamond.png",
+    "color": "#d7e2e7"
+  },
+  {
+    "id": "diamond_paste",
+    "name": "Diamond Paste",
+    "description": "Diamond Paste resource for production chains",
+    "image": "/images/resources/diamond_paste.png",
+    "color": "#dca418"
+  },
+  {
+    "id": "diesel",
+    "name": "Diesel",
+    "description": "Diesel resource for production chains",
+    "image": "/images/resources/diesel.png",
+    "color": "#e75f4b"
+  },
+  {
+    "id": "dirt",
+    "name": "Dirt",
+    "description": "Dirt resource for production chains",
+    "image": "/images/resources/dirt.png",
+    "color": "#cb8252"
+  },
+  {
+    "id": "disinfectant",
+    "name": "Disinfectant",
+    "description": "Disinfectant resource for production chains",
+    "image": "/images/resources/disinfectant.png",
+    "color": "#8388ef"
+  },
+  {
+    "id": "eggs",
+    "name": "Eggs",
+    "description": "Eggs resource for production chains",
+    "image": "/images/resources/eggs.png",
+    "color": "#b79e94"
+  },
+  {
+    "id": "electronics",
+    "name": "Electronics",
+    "description": "Electronics resource for production chains",
+    "image": "/images/resources/electronics.png",
+    "color": "#f3a845"
+  },
+  {
+    "id": "electronics_ii",
+    "name": "Electronics II",
+    "description": "Electronics II resource for production chains",
+    "image": "/images/resources/electronics_ii.png",
+    "color": "#029250"
+  },
+  {
+    "id": "electronics_iii",
+    "name": "Electronics III",
+    "description": "Electronics III resource for production chains",
+    "image": "/images/resources/electronics_iii.png",
+    "color": "#8d2000"
+  },
+  {
+    "id": "electronics_iv",
+    "name": "Electronics IV",
+    "description": "Electronics IV resource for production chains",
+    "image": "/images/resources/electronics_iv.png",
+    "color": "#7e4fc4"
+  },
+  {
+    "id": "enriched_uranium_20",
+    "name": "Enriched Uranium (20%)",
+    "description": "Enriched Uranium (20%) resource for production chains",
+    "image": "/images/resources/enriched_uranium_20.png",
+    "color": "#78ca78"
+  },
+  {
+    "id": "enriched_uranium_4",
+    "name": "Enriched Uranium (4%)",
+    "description": "Enriched Uranium (4%) resource for production chains",
+    "image": "/images/resources/enriched_uranium_4.png",
+    "color": "#6f7d81"
+  },
+  {
+    "id": "ethanol",
+    "name": "Ethanol",
+    "description": "Ethanol resource for production chains",
+    "image": "/images/resources/ethanol.png",
+    "color": "#d0d6e1"
+  },
+  {
+    "id": "fertilizer_organic",
+    "name": "Fertilizer (Organic)",
+    "description": "Fertilizer (Organic) resource for production chains",
+    "image": "/images/resources/fertilizer_organic.png",
+    "color": "#eaffbd"
+  },
+  {
+    "id": "fertilizer_i",
+    "name": "Fertilizer I",
+    "description": "Fertilizer I resource for production chains",
+    "image": "/images/resources/fertilizer_i.png",
+    "color": "#ab8a58"
+  },
+  {
+    "id": "fertilizer_ii",
+    "name": "Fertilizer II",
+    "description": "Fertilizer II resource for production chains",
+    "image": "/images/resources/fertilizer_ii.png",
+    "color": "#cbc62a"
+  },
+  {
+    "id": "filter_media",
+    "name": "Filter Media",
+    "description": "Filter Media resource for production chains",
+    "image": "/images/resources/filter_media.png",
+    "color": "#de8919"
+  },
+  {
+    "id": "flour",
+    "name": "Flour",
+    "description": "Flour resource for production chains",
+    "image": "/images/resources/flour.png",
+    "color": "#fed22b"
+  },
+  {
+    "id": "flowers",
+    "name": "Flowers",
+    "description": "Flowers resource for production chains",
+    "image": "/images/resources/flowers.png",
+    "color": "#ffd42a"
+  },
+  {
+    "id": "food_pack",
+    "name": "Food Pack",
+    "description": "Food Pack resource for production chains",
+    "image": "/images/resources/food_pack.png",
+    "color": "#f29c1f"
+  },
+  {
+    "id": "fruit",
+    "name": "Fruit",
+    "description": "Fruit resource for production chains",
+    "image": "/images/resources/fruit.png",
+    "color": "#ff3b6a"
+  },
+  {
+    "id": "fuel_gas",
+    "name": "Fuel Gas",
+    "description": "Fuel Gas resource for production chains",
+    "image": "/images/resources/fuel_gas.png",
+    "color": "#e57e25"
+  },
+  {
+    "id": "glass",
+    "name": "Glass",
+    "description": "Glass resource for production chains",
+    "image": "/images/resources/glass.png",
+    "color": "#77b4b0"
+  },
+  {
+    "id": "glass_mix",
+    "name": "Glass Mix",
+    "description": "Glass Mix resource for production chains",
+    "image": "/images/resources/glass_mix.png",
+    "color": "#bf9a56"
+  },
+  {
+    "id": "gold",
+    "name": "Gold",
+    "description": "Gold resource for production chains",
+    "image": "/images/resources/gold.png",
+    "color": "#e88604"
+  },
+  {
+    "id": "gold_ore",
+    "name": "Gold Ore",
+    "description": "Gold Ore resource for production chains",
+    "image": "/images/resources/gold_ore.png",
+    "color": "#6c581f"
+  },
+  {
+    "id": "gold_ore_concentrate",
+    "name": "Gold Ore Concentrate",
+    "description": "Gold Ore Concentrate resource for production chains",
+    "image": "/images/resources/gold_ore_concentrate.png",
+    "color": "#3d4966"
+  },
+  {
+    "id": "gold_ore_crushed",
+    "name": "Gold Ore Crushed",
+    "description": "Gold Ore Crushed resource for production chains",
+    "image": "/images/resources/gold_ore_crushed.png",
+    "color": "#3d4966"
+  },
+  {
+    "id": "gold_ore_powder",
+    "name": "Gold Ore Powder",
+    "description": "Gold Ore Powder resource for production chains",
+    "image": "/images/resources/gold_ore_powder.png",
+    "color": "#3d4966"
+  },
+  {
+    "id": "gold_scrap",
+    "name": "Gold Scrap",
+    "description": "Gold Scrap resource for production chains",
+    "image": "/images/resources/gold_scrap.png",
+    "color": "#8a3c28"
+  },
+  {
+    "id": "gold_scrap_pressed",
+    "name": "Gold Scrap Pressed",
+    "description": "Gold Scrap Pressed resource for production chains",
+    "image": "/images/resources/gold_scrap_pressed.png",
+    "color": "#3d813d"
+  },
+  {
+    "id": "graphite",
+    "name": "Graphite",
+    "description": "Graphite resource for production chains",
+    "image": "/images/resources/graphite.png",
+    "color": "#827f7f"
+  },
+  {
+    "id": "gravel",
+    "name": "Gravel",
+    "description": "Gravel resource for production chains",
+    "image": "/images/resources/gravel.png",
+    "color": "#8f827b"
+  },
+  {
+    "id": "heavy_oil",
+    "name": "Heavy Oil",
+    "description": "Heavy Oil resource for production chains",
+    "image": "/images/resources/heavy_oil.png",
+    "color": "#755a1c"
+  },
+  {
+    "id": "household_appliances",
+    "name": "Household Appliances",
+    "description": "Household Appliances resource for production chains",
+    "image": "/images/resources/household_appliances.png",
+    "color": "#3588a3"
+  },
+  {
+    "id": "household_goods",
+    "name": "Household Goods",
+    "description": "Household Goods resource for production chains",
+    "image": "/images/resources/household_goods.png",
+    "color": "#9ccc65"
+  },
+  {
+    "id": "hydrated_alumina",
+    "name": "Hydrated Alumina",
+    "description": "Hydrated Alumina resource for production chains",
+    "image": "/images/resources/hydrated_alumina.png",
+    "color": "#dfdfdf"
+  },
+  {
+    "id": "hydrogen",
+    "name": "Hydrogen",
+    "description": "Hydrogen resource for production chains",
+    "image": "/images/resources/hydrogen.png",
+    "color": "#4a4a56"
+  },
+  {
+    "id": "hydrogen_fluoride",
+    "name": "Hydrogen Fluoride",
+    "description": "Hydrogen Fluoride resource for production chains",
+    "image": "/images/resources/hydrogen_fluoride.png",
+    "color": "#b4b040"
+  },
+  {
+    "id": "imported_goods",
+    "name": "Imported Goods",
+    "description": "Imported Goods resource for production chains",
+    "image": "/images/resources/imported_goods.png",
+    "color": "#b07659"
+  },
+  {
+    "id": "impure_copper",
+    "name": "Impure Copper",
+    "description": "Impure Copper resource for production chains",
+    "image": "/images/resources/impure_copper.png",
+    "color": "#c16a46"
+  },
+  {
+    "id": "iron",
+    "name": "Iron",
+    "description": "Iron resource for production chains",
+    "image": "/images/resources/iron.png",
+    "color": "#7c7c7c"
+  },
+  {
+    "id": "iron_ore",
+    "name": "Iron Ore",
+    "description": "Iron Ore resource for production chains",
+    "image": "/images/resources/iron_ore.png",
+    "color": "#823019"
+  },
+  {
+    "id": "iron_ore_crushed",
+    "name": "Iron Ore Crushed",
+    "description": "Iron Ore Crushed resource for production chains",
+    "image": "/images/resources/iron_ore_crushed.png",
+    "color": "#3d4966"
+  },
+  {
+    "id": "iron_scrap",
+    "name": "Iron Scrap",
+    "description": "Iron Scrap resource for production chains",
+    "image": "/images/resources/iron_scrap.png",
+    "color": "#8a3c28"
+  },
+  {
+    "id": "iron_scrap_pressed",
+    "name": "Iron Scrap Pressed",
+    "description": "Iron Scrap Pressed resource for production chains",
+    "image": "/images/resources/iron_scrap_pressed.png",
+    "color": "#3d813d"
+  },
+  {
+    "id": "lab_equipment",
+    "name": "Lab Equipment",
+    "description": "Lab Equipment resource for production chains",
+    "image": "/images/resources/lab_equipment.png",
+    "color": "#e5e5e5"
+  },
+  {
+    "id": "lab_equipment_ii",
+    "name": "Lab Equipment II",
+    "description": "Lab Equipment II resource for production chains",
+    "image": "/images/resources/lab_equipment_ii.png",
+    "color": "#cfae36"
+  },
+  {
+    "id": "lab_equipment_iii",
+    "name": "Lab Equipment III",
+    "description": "Lab Equipment III resource for production chains",
+    "image": "/images/resources/lab_equipment_iii.png",
+    "color": "#ff5544"
+  },
+  {
+    "id": "lab_equipment_iv",
+    "name": "Lab Equipment IV",
+    "description": "Lab Equipment IV resource for production chains",
+    "image": "/images/resources/lab_equipment_iv.png",
+    "color": "#7659bb"
+  },
+  {
+    "id": "lens",
+    "name": "Lens",
+    "description": "Lens resource for production chains",
+    "image": "/images/resources/lens.png",
+    "color": "#6698bd"
+  },
+  {
+    "id": "light_oil",
+    "name": "Light Oil",
+    "description": "Light Oil resource for production chains",
+    "image": "/images/resources/light_oil.png",
+    "color": "#8f9e4c"
+  },
+  {
+    "id": "limestone",
+    "name": "Limestone",
+    "description": "Limestone resource for production chains",
+    "image": "/images/resources/limestone.png",
+    "color": "#b3b397"
+  },
+  {
+    "id": "luxury_goods",
+    "name": "Luxury Goods",
+    "description": "Luxury Goods resource for production chains",
+    "image": "/images/resources/luxury_goods.png",
+    "color": "#726d7b"
+  },
+  {
+    "id": "mox_rod",
+    "name": "MOX Rod",
+    "description": "MOX Rod resource for production chains",
+    "image": "/images/resources/mox_rod.png",
+    "color": "#beb661"
+  },
+  {
+    "id": "maintenance_i",
+    "name": "Maintenance I",
+    "description": "Maintenance I resource for production chains",
+    "image": "/images/resources/maintenance_i.png",
+    "color": "#373737"
+  },
+  {
+    "id": "maintenance_ii",
+    "name": "Maintenance II",
+    "description": "Maintenance II resource for production chains",
+    "image": "/images/resources/maintenance_ii.png",
+    "color": "#b59a30"
+  },
+  {
+    "id": "maintenance_iii",
+    "name": "Maintenance III",
+    "description": "Maintenance III resource for production chains",
+    "image": "/images/resources/maintenance_iii.png",
+    "color": "#ff5544"
+  },
+  {
+    "id": "manufactured_sand",
+    "name": "Manufactured Sand",
+    "description": "Manufactured Sand resource for production chains",
+    "image": "/images/resources/manufactured_sand.png",
+    "color": "#a7a7a7"
+  },
+  {
+    "id": "meat",
+    "name": "Meat",
+    "description": "Meat resource for production chains",
+    "image": "/images/resources/meat.png",
+    "color": "#e5646e"
+  },
+  {
+    "id": "meat_trimmings",
+    "name": "Meat Trimmings",
+    "description": "Meat Trimmings resource for production chains",
+    "image": "/images/resources/meat_trimmings.png",
+    "color": "#eb4a78"
+  },
+  {
+    "id": "mechanical_parts",
+    "name": "Mechanical Parts",
+    "description": "Mechanical Parts resource for production chains",
+    "image": "/images/resources/mechanical_parts.png",
+    "color": "#776d79"
+  },
+  {
+    "id": "medical_equipment",
+    "name": "Medical Equipment",
+    "description": "Medical Equipment resource for production chains",
+    "image": "/images/resources/medical_equipment.png",
+    "color": "#4188ff"
+  },
+  {
+    "id": "medical_supplies",
+    "name": "Medical Supplies",
+    "description": "Medical Supplies resource for production chains",
+    "image": "/images/resources/medical_supplies.png",
+    "color": "#d1d1d1"
+  },
+  {
+    "id": "medical_supplies_ii",
+    "name": "Medical Supplies II",
+    "description": "Medical Supplies II resource for production chains",
+    "image": "/images/resources/medical_supplies_ii.png",
+    "color": "#d1b237"
+  },
+  {
+    "id": "medical_supplies_iii",
+    "name": "Medical Supplies III",
+    "description": "Medical Supplies III resource for production chains",
+    "image": "/images/resources/medical_supplies_iii.png",
+    "color": "#ff5544"
+  },
+  {
+    "id": "medium_oil",
+    "name": "Medium Oil",
+    "description": "Medium Oil resource for production chains",
+    "image": "/images/resources/medium_oil.png",
+    "color": "#e6d6ff"
+  },
+  {
+    "id": "microchips",
+    "name": "Microchips",
+    "description": "Microchips resource for production chains",
+    "image": "/images/resources/microchips.png",
+    "color": "#114378"
+  },
+  {
+    "id": "microchips_stage_1_a",
+    "name": "Microchips Stage 1 A",
+    "description": "Microchips Stage 1 A resource for production chains",
+    "image": "/images/resources/microchips_stage_1_a.png",
+    "color": "#f5caff"
+  },
+  {
+    "id": "microchips_stage_1_b",
+    "name": "Microchips Stage 1 B",
+    "description": "Microchips Stage 1 B resource for production chains",
+    "image": "/images/resources/microchips_stage_1_b.png",
+    "color": "#ffe0cc"
+  },
+  {
+    "id": "microchips_stage_1_c",
+    "name": "Microchips Stage 1 C",
+    "description": "Microchips Stage 1 C resource for production chains",
+    "image": "/images/resources/microchips_stage_1_c.png",
+    "color": "#ffe0cc"
+  },
+  {
+    "id": "microchips_stage_2_a",
+    "name": "Microchips Stage 2 A",
+    "description": "Microchips Stage 2 A resource for production chains",
+    "image": "/images/resources/microchips_stage_2_a.png",
+    "color": "#f1b2ff"
+  },
+  {
+    "id": "microchips_stage_2_b",
+    "name": "Microchips Stage 2 B",
+    "description": "Microchips Stage 2 B resource for production chains",
+    "image": "/images/resources/microchips_stage_2_b.png",
+    "color": "#ffd0b2"
+  },
+  {
+    "id": "microchips_stage_2_c",
+    "name": "Microchips Stage 2 C",
+    "description": "Microchips Stage 2 C resource for production chains",
+    "image": "/images/resources/microchips_stage_2_c.png",
+    "color": "#ffd0b2"
+  },
+  {
+    "id": "microchips_stage_3_a",
+    "name": "Microchips Stage 3 A",
+    "description": "Microchips Stage 3 A resource for production chains",
+    "image": "/images/resources/microchips_stage_3_a.png",
+    "color": "#ec99ff"
+  },
+  {
+    "id": "microchips_stage_3_b",
+    "name": "Microchips Stage 3 B",
+    "description": "Microchips Stage 3 B resource for production chains",
+    "image": "/images/resources/microchips_stage_3_b.png",
+    "color": "#cc9b7a"
+  },
+  {
+    "id": "microchips_stage_3_c",
+    "name": "Microchips Stage 3 C",
+    "description": "Microchips Stage 3 C resource for production chains",
+    "image": "/images/resources/microchips_stage_3_c.png",
+    "color": "#cb7aae"
+  },
+  {
+    "id": "microchips_stage_4_a",
+    "name": "Microchips Stage 4 A",
+    "description": "Microchips Stage 4 A resource for production chains",
+    "image": "/images/resources/microchips_stage_4_a.png",
+    "color": "#e780ff"
+  },
+  {
+    "id": "microchips_stage_4_b",
+    "name": "Microchips Stage 4 B",
+    "description": "Microchips Stage 4 B resource for production chains",
+    "image": "/images/resources/microchips_stage_4_b.png",
+    "color": "#cc8f66"
+  },
+  {
+    "id": "molten_aluminum",
+    "name": "Molten Aluminum",
+    "description": "Molten Aluminum resource for production chains",
+    "image": "/images/resources/molten_aluminum.png",
+    "color": "#fed72a"
+  },
+  {
+    "id": "molten_copper",
+    "name": "Molten Copper",
+    "description": "Molten Copper resource for production chains",
+    "image": "/images/resources/molten_copper.png",
+    "color": "#fed72a"
+  },
+  {
+    "id": "molten_glass",
+    "name": "Molten Glass",
+    "description": "Molten Glass resource for production chains",
+    "image": "/images/resources/molten_glass.png",
+    "color": "#febd41"
+  },
+  {
+    "id": "molten_iron",
+    "name": "Molten Iron",
+    "description": "Molten Iron resource for production chains",
+    "image": "/images/resources/molten_iron.png",
+    "color": "#fea62a"
+  },
+  {
+    "id": "molten_silicon",
+    "name": "Molten Silicon",
+    "description": "Molten Silicon resource for production chains",
+    "image": "/images/resources/molten_silicon.png",
+    "color": "#fed72a"
+  },
+  {
+    "id": "molten_steel",
+    "name": "Molten Steel",
+    "description": "Molten Steel resource for production chains",
+    "image": "/images/resources/molten_steel.png",
+    "color": "#fed72a"
+  },
+  {
+    "id": "molten_titanium",
+    "name": "Molten Titanium",
+    "description": "Molten Titanium resource for production chains",
+    "image": "/images/resources/molten_titanium.png",
+    "color": "#fea62a"
+  },
+  {
+    "id": "molten_titanium_alloy",
+    "name": "Molten Titanium Alloy",
+    "description": "Molten Titanium Alloy resource for production chains",
+    "image": "/images/resources/molten_titanium_alloy.png",
+    "color": "#fea62a"
+  },
+  {
+    "id": "morphine",
+    "name": "Morphine",
+    "description": "Morphine resource for production chains",
+    "image": "/images/resources/morphine.png",
+    "color": "#9ce6fb"
+  },
+  {
+    "id": "naphtha",
+    "name": "Naphtha",
+    "description": "Naphtha resource for production chains",
+    "image": "/images/resources/naphtha.png",
+    "color": "#d8cf4b"
+  },
+  {
+    "id": "nitrogen",
+    "name": "Nitrogen",
+    "description": "Nitrogen resource for production chains",
+    "image": "/images/resources/nitrogen.png",
+    "color": "#5388d1"
+  },
+  {
+    "id": "office_supplies",
+    "name": "Office Supplies",
+    "description": "Office Supplies resource for production chains",
+    "image": "/images/resources/office_supplies.png",
+    "color": "#266868"
+  },
+  {
+    "id": "oxygen",
+    "name": "Oxygen",
+    "description": "Oxygen resource for production chains",
+    "image": "/images/resources/oxygen.png",
+    "color": "#d24646"
+  },
+  {
+    "id": "pcb",
+    "name": "PCB",
+    "description": "PCB resource for production chains",
+    "image": "/images/resources/pcb.png",
+    "color": "#029250"
+  },
+  {
+    "id": "paper",
+    "name": "Paper",
+    "description": "Paper resource for production chains",
+    "image": "/images/resources/paper.png",
+    "color": "#e2e2e3"
+  },
+  {
+    "id": "plastic",
+    "name": "Plastic",
+    "description": "Plastic resource for production chains",
+    "image": "/images/resources/plastic.png",
+    "color": "#3ec2ab"
+  },
+  {
+    "id": "plutonium",
+    "name": "Plutonium",
+    "description": "Plutonium resource for production chains",
+    "image": "/images/resources/plutonium.png",
+    "color": "#6dc658"
+  },
+  {
+    "id": "poppy",
+    "name": "Poppy",
+    "description": "Poppy resource for production chains",
+    "image": "/images/resources/poppy.png",
+    "color": "#00bc37"
+  },
+  {
+    "id": "potato",
+    "name": "Potato",
+    "description": "Potato resource for production chains",
+    "image": "/images/resources/potato.png",
+    "color": "#734414"
+  },
+  {
+    "id": "quartz",
+    "name": "Quartz",
+    "description": "Quartz resource for production chains",
+    "image": "/images/resources/quartz.png",
+    "color": "#77582c"
+  },
+  {
+    "id": "quartz_crushed",
+    "name": "Quartz Crushed",
+    "description": "Quartz Crushed resource for production chains",
+    "image": "/images/resources/quartz_crushed.png",
+    "color": "#3d4966"
+  },
+  {
+    "id": "rail_parts",
+    "name": "Rail Parts",
+    "description": "Rail Parts resource for production chains",
+    "image": "/images/resources/rail_parts.png",
+    "color": "#99a7ab"
+  },
+  {
+    "id": "recyclables",
+    "name": "Recyclables",
+    "description": "Recyclables resource for production chains",
+    "image": "/images/resources/recyclables.png",
+    "color": "#423831"
+  },
+  {
+    "id": "recyclables_pressed",
+    "name": "Recyclables Pressed",
+    "description": "Recyclables Pressed resource for production chains",
+    "image": "/images/resources/recyclables_pressed.png",
+    "color": "#3d813d"
+  },
+  {
+    "id": "reprocessed_uranium_1",
+    "name": "Reprocessed Uranium (1%)",
+    "description": "Reprocessed Uranium (1%) resource for production chains",
+    "image": "/images/resources/reprocessed_uranium_1.png",
+    "color": "#397e37"
+  },
+  {
+    "id": "rock",
+    "name": "Rock",
+    "description": "Rock resource for production chains",
+    "image": "/images/resources/rock.png",
+    "color": "#8f827b"
+  },
+  {
+    "id": "rubber",
+    "name": "Rubber",
+    "description": "Rubber resource for production chains",
+    "image": "/images/resources/rubber.png",
+    "color": "#5d4a27"
+  },
+  {
+    "id": "salt",
+    "name": "Salt",
+    "description": "Salt resource for production chains",
+    "image": "/images/resources/salt.png",
+    "color": "#e9edf5"
+  },
+  {
+    "id": "sand",
+    "name": "Sand",
+    "description": "Sand resource for production chains",
+    "image": "/images/resources/sand.png",
+    "color": "#bf9a56"
+  },
+  {
+    "id": "sapphire_wafer",
+    "name": "Sapphire Wafer",
+    "description": "Sapphire Wafer resource for production chains",
+    "image": "/images/resources/sapphire_wafer.png",
+    "color": "#657fef"
+  },
+  {
+    "id": "sausage",
+    "name": "Sausage",
+    "description": "Sausage resource for production chains",
+    "image": "/images/resources/sausage.png",
+    "color": "#ea7b44"
+  },
+  {
+    "id": "seawater",
+    "name": "Seawater",
+    "description": "Seawater resource for production chains",
+    "image": "/images/resources/seawater.png",
+    "color": "#17bcfe"
+  },
+  {
+    "id": "server",
+    "name": "Server",
+    "description": "Server resource for production chains",
+    "image": "/images/resources/server.png",
+    "color": "#64798a"
+  },
+  {
+    "id": "silicon_poly",
+    "name": "Silicon (Poly)",
+    "description": "Silicon (Poly) resource for production chains",
+    "image": "/images/resources/silicon_poly.png",
+    "color": "#9daeb2"
+  },
+  {
+    "id": "silicon_wafer",
+    "name": "Silicon Wafer",
+    "description": "Silicon Wafer resource for production chains",
+    "image": "/images/resources/silicon_wafer.png",
+    "color": "#d2ccc9"
+  },
+  {
+    "id": "slag_crushed",
+    "name": "Slag Crushed",
+    "description": "Slag Crushed resource for production chains",
+    "image": "/images/resources/slag_crushed.png",
+    "color": "#3d4966"
+  },
+  {
+    "id": "snack",
+    "name": "Snack",
+    "description": "Snack resource for production chains",
+    "image": "/images/resources/snack.png",
+    "color": "#d4483f"
+  },
+  {
+    "id": "solar_cell",
+    "name": "Solar Cell",
+    "description": "Solar Cell resource for production chains",
+    "image": "/images/resources/solar_cell.png",
+    "color": "#26abff"
+  },
+  {
+    "id": "solar_cell_mono",
+    "name": "Solar Cell Mono",
+    "description": "Solar Cell Mono resource for production chains",
+    "image": "/images/resources/solar_cell_mono.png",
+    "color": "#115279"
+  },
+  {
+    "id": "soybean",
+    "name": "Soybean",
+    "description": "Soybean resource for production chains",
+    "image": "/images/resources/soybean.png",
+    "color": "#719b56"
+  },
+  {
+    "id": "space_probe_parts",
+    "name": "Space Probe Parts",
+    "description": "Space Probe Parts resource for production chains",
+    "image": "/images/resources/space_probe_parts.png",
+    "color": "#ebb149"
+  },
+  {
+    "id": "station_parts",
+    "name": "Station Parts",
+    "description": "Station Parts resource for production chains",
+    "image": "/images/resources/station_parts.png",
+    "color": "#56ace1"
+  },
+  {
+    "id": "station_parts_basic",
+    "name": "Station Parts (Basic)",
+    "description": "Station Parts (Basic) resource for production chains",
+    "image": "/images/resources/station_parts_basic.png",
+    "color": "#56ace1"
+  },
+  {
+    "id": "steel",
+    "name": "Steel",
+    "description": "Steel resource for production chains",
+    "image": "/images/resources/steel.png",
+    "color": "#cecece"
+  },
+  {
+    "id": "sugar",
+    "name": "Sugar",
+    "description": "Sugar resource for production chains",
+    "image": "/images/resources/sugar.png",
+    "color": "#d89668"
+  },
+  {
+    "id": "sugar_cane",
+    "name": "Sugar Cane",
+    "description": "Sugar Cane resource for production chains",
+    "image": "/images/resources/sugar_cane.png",
+    "color": "#69aa55"
+  },
+  {
+    "id": "sulfur",
+    "name": "Sulfur",
+    "description": "Sulfur resource for production chains",
+    "image": "/images/resources/sulfur.png",
+    "color": "#3d4966"
+  },
+  {
+    "id": "titanium_alloy",
+    "name": "Titanium Alloy",
+    "description": "Titanium Alloy resource for production chains",
+    "image": "/images/resources/titanium_alloy.png",
+    "color": "#8c8b83"
+  },
+  {
+    "id": "titanium_chloride",
+    "name": "Titanium Chloride",
+    "description": "Titanium Chloride resource for production chains",
+    "image": "/images/resources/titanium_chloride.png",
+    "color": "#c38b3a"
+  },
+  {
+    "id": "titanium_chloride_pure",
+    "name": "Titanium Chloride (Pure)",
+    "description": "Titanium Chloride (Pure) resource for production chains",
+    "image": "/images/resources/titanium_chloride_pure.png",
+    "color": "#c3c33a"
+  },
+  {
+    "id": "titanium_ore",
+    "name": "Titanium Ore",
+    "description": "Titanium Ore resource for production chains",
+    "image": "/images/resources/titanium_ore.png",
+    "color": "#798795"
+  },
+  {
+    "id": "titanium_ore_crushed",
+    "name": "Titanium Ore Crushed",
+    "description": "Titanium Ore Crushed resource for production chains",
+    "image": "/images/resources/titanium_ore_crushed.png",
+    "color": "#3d4966"
+  },
+  {
+    "id": "titanium_slag",
+    "name": "Titanium Slag",
+    "description": "Titanium Slag resource for production chains",
+    "image": "/images/resources/titanium_slag.png",
+    "color": "#515151"
+  },
+  {
+    "id": "titanium_sponge",
+    "name": "Titanium Sponge",
+    "description": "Titanium Sponge resource for production chains",
+    "image": "/images/resources/titanium_sponge.png",
+    "color": "#797d82"
+  },
+  {
+    "id": "tofu",
+    "name": "Tofu",
+    "description": "Tofu resource for production chains",
+    "image": "/images/resources/tofu.png",
+    "color": "#ffe1ba"
+  },
+  {
+    "id": "tree_sapling",
+    "name": "Tree Sapling",
+    "description": "Tree Sapling resource for production chains",
+    "image": "/images/resources/tree_sapling.png",
+    "color": "#7ac1a3"
+  },
+  {
+    "id": "uranium_ore",
+    "name": "Uranium Ore",
+    "description": "Uranium Ore resource for production chains",
+    "image": "/images/resources/uranium_ore.png",
+    "color": "#82d082"
+  },
+  {
+    "id": "uranium_ore_powder",
+    "name": "Uranium Ore Powder",
+    "description": "Uranium Ore Powder resource for production chains",
+    "image": "/images/resources/uranium_ore_powder.png",
+    "color": "#3d4966"
+  },
+  {
+    "id": "uranium_rod",
+    "name": "Uranium Rod",
+    "description": "Uranium Rod resource for production chains",
+    "image": "/images/resources/uranium_rod.png",
+    "color": "#828282"
+  },
+  {
+    "id": "vegetables",
+    "name": "Vegetables",
+    "description": "Vegetables resource for production chains",
+    "image": "/images/resources/vegetables.png",
+    "color": "#81c83d"
+  },
+  {
+    "id": "vehicle_parts",
+    "name": "Vehicle Parts",
+    "description": "Vehicle Parts resource for production chains",
+    "image": "/images/resources/vehicle_parts.png",
+    "color": "#cdcdcd"
+  },
+  {
+    "id": "vehicle_parts_ii",
+    "name": "Vehicle Parts II",
+    "description": "Vehicle Parts II resource for production chains",
+    "image": "/images/resources/vehicle_parts_ii.png",
+    "color": "#bb9f31"
+  },
+  {
+    "id": "vehicle_parts_iii",
+    "name": "Vehicle Parts III",
+    "description": "Vehicle Parts III resource for production chains",
+    "image": "/images/resources/vehicle_parts_iii.png",
+    "color": "#ff5544"
+  },
+  {
+    "id": "waste",
+    "name": "Waste",
+    "description": "Waste resource for production chains",
+    "image": "/images/resources/waste.png",
+    "color": "#01afea"
+  },
+  {
+    "id": "waste_pressed",
+    "name": "Waste Pressed",
+    "description": "Waste Pressed resource for production chains",
+    "image": "/images/resources/waste_pressed.png",
+    "color": "#3d813d"
+  },
+  {
+    "id": "water",
+    "name": "Water",
+    "description": "Water resource for production chains",
+    "image": "/images/resources/water.png",
+    "color": "#25c0ee"
+  },
+  {
+    "id": "wheat",
+    "name": "Wheat",
+    "description": "Wheat resource for production chains",
+    "image": "/images/resources/wheat.png",
+    "color": "#f3c432"
+  },
+  {
+    "id": "wood",
+    "name": "Wood",
+    "description": "Wood resource for production chains",
+    "image": "/images/resources/wood.png",
+    "color": "#8b5016"
+  },
+  {
+    "id": "woodchips",
+    "name": "Woodchips",
+    "description": "Woodchips resource for production chains",
+    "image": "/images/resources/woodchips.png",
+    "color": "#bc9a5e"
+  },
+  {
+    "id": "yellowcake",
+    "name": "Yellowcake",
+    "description": "Yellowcake resource for production chains",
+    "image": "/images/resources/yellowcake.png",
+    "color": "#b5ba4c"
+  }
+]

@@ -130,7 +130,7 @@ export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
             <button
               key={recipe.id}
               onClick={() => onRecipeSelect(recipe)}
-              className="flex flex-col group bg-white rounded-lg shadow-lg border w-full max-w-[400px] hover:shadow-xl transition-all duration-200 hover:scale-[1.02] text-left overflow-hidden"
+              className="flex flex-col group bg-white rounded-lg shadow-lg border w-full hover:shadow-xl transition-all duration-200 hover:scale-[1.02] text-left overflow-hidden"
             >
               {/* Building Header - EXACTLY like RecipeNode */}
               <div className="flex items-center justify-between p-3 border-b bg-gray-50 rounded-t-lg">
