@@ -17,11 +17,19 @@ export const getImageUrl = (imagePath: string): string => {
 
 /**
  * Convert snake_case to Title_Case for filenames (matches actual file naming convention)
+ * Special handling for Roman numerals (ii, iii, iv, v) which should be uppercase
  */
 const snakeToTitleCase = (str: string): string => {
   return str
     .split('_')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .map(word => {
+      // Handle Roman numerals - should be uppercase
+      if (/^(ii|iii|iv|v)$/i.test(word)) {
+        return word.toUpperCase();
+      }
+      // Regular title case for other words
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
     .join('_');
 };
 
