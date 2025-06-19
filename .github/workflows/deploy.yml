@@ -31,8 +31,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Generate static API files
+        run: npm run generate:static
+
       - name: Build project
         run: npm run build
+
+      - name: Create .nojekyll file
+        run: touch out/.nojekyll
+
+      - name: Debug - List build output
+        run: |
+          echo "Contents of current directory:"
+          ls -la
+          echo "Checking if out directory exists:"
+          ls -la out/ || echo "out directory does not exist"
+          echo "Contents of out directory:"
+          ls -la out/ || echo "Cannot list out directory contents"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

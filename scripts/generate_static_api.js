@@ -10,7 +10,7 @@ const path = require('path');
 
 function main() {
   console.log('🛠️  Static API Generator for GitHub Pages');
-  console.log('=' * 50);
+  console.log('='.repeat(50));
 
   try {
     // Read the TypeScript data file
@@ -72,8 +72,8 @@ function main() {
 
     console.log('\n✅ Static API generation complete!');
     console.log('📁 Files created:');
-    console.log(`  - ${path.relative(process.cwd(), resourcesOutput)}`);
-    console.log(`  - ${path.relative(process.cwd(), recipesOutput)}`);
+    console.log(`  - public/api/resources.json`);
+    console.log(`  - public/api/recipes.json`);
     console.log('\n📝 Note: Recipe conversion needs manual implementation');
     console.log('   The recipe API logic is complex and requires proper building/resource lookups');
 

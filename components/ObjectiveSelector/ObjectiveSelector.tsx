@@ -27,33 +27,7 @@ const convertResource = (coiResource: CoiResource): Resource => {
 
 // Get resources directly from data
 const getResources = (): Resource[] => {
-  const resources = coiResources.map(convertResource);
-  
-  // Filter out some resources that might not be good objectives
-  const excludedResources = [
-    'air_pollution',
-    'water_pollution',
-    'mechanical_power',
-    'electricity',
-    'steam_high',
-    'steam_low',
-    'steam_super',
-    'steam_depleted',
-    'exhaust',
-    'waste_water',
-    'sour_water',
-    'toxic_slurry',
-    'fission_product',
-    'spent_fuel',
-    'spent_mox',
-    'retired_waste',
-    'broken_glass',
-    'red_mud',
-    'slag',
-    'sludge',
-  ];
-  
-  return resources.filter(resource => !excludedResources.includes(resource.id));
+  return coiResources.map(convertResource);
 };
 
 /**

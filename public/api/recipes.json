@@ -1,14 +1,1 @@
-[
-  {
-    "id": "example_recipe",
-    "name": "Example Recipe",
-    "building": {
-      "id": "example",
-      "name": "Example Building",
-      "image": "/images/buildings/example.png"
-    },
-    "inputs": [],
-    "outputs": [],
-    "time": 60
-  }
-]
+[]

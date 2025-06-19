@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Recipe } from '../../pages/api/recipes';
+import { fetchRecipes } from '../../utils/dataFetcher';
 
 /**
  * RecipeConnectionModalProps defines the properties for the RecipeConnectionModal component.
@@ -32,14 +33,13 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
   useEffect(() => {
     if (!isOpen || !resourceId) return;
 
-    const fetchRecipes = async () => {
+    const fetchRecipesData = async () => {
       try {
         setLoading(true);
         
         // If connectionType is 'input', we want recipes that produce this resource
         // If connectionType is 'output', we want recipes that consume this resource
-        const response = await fetch('/api/recipes');
-        const allRecipes = await response.json();
+        const allRecipes = await fetchRecipes();
         
         const filteredRecipes = allRecipes.filter((recipe: Recipe) => {
           if (connectionType === 'input') {
@@ -59,7 +59,7 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
       }
     };
 
-    fetchRecipes();
+    fetchRecipesData();
   }, [isOpen, resourceId, connectionType]);
 
   // Filter existing recipes that can connect to this resource

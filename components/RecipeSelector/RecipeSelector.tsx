@@ -6,6 +6,7 @@ import { Recipe, getRecipesByResource } from '../../utils/recipes';
  */
 export interface RecipeSelectorProps {
   selectedResource: string;
+  selectedResourceName?: string;
   onRecipeSelect: (recipe: Recipe) => void;
 }
 
@@ -14,10 +15,13 @@ export interface RecipeSelectorProps {
  */
 export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
   selectedResource,
+  selectedResourceName,
   onRecipeSelect,
 }) => {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [loading, setLoading] = useState(false);
+
+  const displayName = selectedResourceName || selectedResource;
 
   useEffect(() => {
     if (!selectedResource) {
@@ -96,7 +100,7 @@ export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
         </div>
         <div className="text-center text-gray-500 relative z-10">
           <span className="text-8xl mb-4 block">🏭</span>
-          <p className="text-xl">No recipes found for {selectedResource}</p>
+          <p className="text-xl">No recipes found for {displayName}</p>
         </div>
       </div>
     );
@@ -119,7 +123,7 @@ export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
       {/* Simple Header - No Search */}
       <div className="flex-shrink-0 py-4 px-6 bg-white border-b border-gray-200 relative z-10">
         <h1 className="text-2xl font-bold text-gray-800">
-          Recipes for {selectedResource}
+          Recipes for {displayName}
         </h1>
       </div>
 

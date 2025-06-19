@@ -71,6 +71,7 @@ export default function Home() {
                 </div>
                 <RecipeSelector 
                   selectedResource={selectedResource.id}
+                  selectedResourceName={selectedResource.name}
                   onRecipeSelect={handleRecipeSelect}
                 />
               </div>

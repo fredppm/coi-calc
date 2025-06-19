@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export',          // Commented out for local development
-  // trailingSlash: true,       // Not needed for local dev
-  // basePath: '/coi-calc',     // Not needed for local dev
-  // assetPrefix: '/coi-calc/', // Not needed for local dev
+  // Enable static export only for GitHub Pages deployment
+  ...(process.env.GITHUB_ACTIONS && {
+    output: 'export',
+    trailingSlash: true,
+    basePath: '/coi-calc',
+    assetPrefix: '/coi-calc/',
+  }),
   images: {
     unoptimized: true
   }
