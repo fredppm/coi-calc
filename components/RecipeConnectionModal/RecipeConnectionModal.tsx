@@ -166,26 +166,34 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                               {recipe.inputs.length === 0 ? (
                                 <p className="text-xs text-gray-400 text-center italic">No inputs</p>
                               ) : (
-                                recipe.inputs.map((input) => (
-                                  <div 
-                                    key={input.id} 
-                                    className={`flex items-center justify-between text-xs p-1 rounded ${
-                                      input.id === resourceId ? 'bg-blue-100 border border-blue-300' : 'bg-gray-50'
-                                    }`}
-                                  >
-                                    <div className="flex items-center space-x-1">
-                                      <div className="w-4 h-4 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
-                                        <img 
-                                          src={input.icon} 
-                                          alt={input.name}
-                                          className="w-full h-full object-contain"
-                                        />
+                                recipe.inputs.map((input) => {
+                                  // Normalize values to per minute (60s) for easier comparison
+                                  const normalizedAmount = Math.round((input.amount * 60 / recipe.time) * 100) / 100;
+                                  const displayAmount = `${normalizedAmount}/min`;
+                                  
+                                  return (
+                                    <div 
+                                      key={input.id} 
+                                      className={`flex items-center justify-between text-xs p-1 rounded ${
+                                        input.id === resourceId ? 'bg-blue-100 border border-blue-300' : 'bg-gray-50'
+                                      }`}
+                                    >
+                                      <div className="flex items-center space-x-1">
+                                        <div className="w-4 h-4 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
+                                          <img 
+                                            src={input.icon} 
+                                            alt={input.name}
+                                            className="w-full h-full object-contain"
+                                          />
+                                        </div>
+                                        <span className="truncate">{input.name}</span>
                                       </div>
-                                      <span className="truncate">{input.name}</span>
+                                      <span className="text-gray-500 font-medium ml-1" title={`${input.amount} per ${recipe.time}s cycle`}>
+                                        {displayAmount}
+                                      </span>
                                     </div>
-                                    <span className="text-gray-500 font-medium ml-1">{input.amount}</span>
-                                  </div>
-                                ))
+                                  );
+                                })
                               )}
                             </div>
                           </div>
@@ -201,26 +209,34 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                               {recipe.outputs.length === 0 ? (
                                 <p className="text-xs text-gray-400 text-center italic">No outputs</p>
                               ) : (
-                                recipe.outputs.map((output) => (
-                                  <div 
-                                    key={output.id} 
-                                    className={`flex items-center justify-between text-xs p-1 rounded ${
-                                      output.id === resourceId ? 'bg-green-100 border border-green-300' : 'bg-gray-50'
-                                    }`}
-                                  >
-                                    <span className="text-gray-500 font-medium mr-1">{output.amount}</span>
-                                    <div className="flex items-center space-x-1">
-                                      <span className="truncate">{output.name}</span>
-                                      <div className="w-4 h-4 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
-                                        <img 
-                                          src={output.icon} 
-                                          alt={output.name}
-                                          className="w-full h-full object-contain"
-                                        />
+                                recipe.outputs.map((output) => {
+                                  // Normalize values to per minute (60s) for easier comparison
+                                  const normalizedAmount = Math.round((output.amount * 60 / recipe.time) * 100) / 100;
+                                  const displayAmount = `${normalizedAmount}/min`;
+                                  
+                                  return (
+                                    <div 
+                                      key={output.id} 
+                                      className={`flex items-center justify-between text-xs p-1 rounded ${
+                                        output.id === resourceId ? 'bg-green-100 border border-green-300' : 'bg-gray-50'
+                                      }`}
+                                    >
+                                      <span className="text-gray-500 font-medium mr-1" title={`${output.amount} per ${recipe.time}s cycle`}>
+                                        {displayAmount}
+                                      </span>
+                                      <div className="flex items-center space-x-1">
+                                        <span className="truncate">{output.name}</span>
+                                        <div className="w-4 h-4 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
+                                          <img 
+                                            src={output.icon} 
+                                            alt={output.name}
+                                            className="w-full h-full object-contain"
+                                          />
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                ))
+                                  );
+                                })
                               )}
                             </div>
                           </div>
