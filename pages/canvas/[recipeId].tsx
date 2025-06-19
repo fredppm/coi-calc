@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/router';
 import { Flow } from '../../components/Flow/Flow';
-import { Recipe } from '../api/recipes';
+import { Recipe, getRecipeById } from '../../utils/recipes';
 import { Node, Edge } from 'reactflow';
 import { DebugPanel } from '../../components/DebugPanel/DebugPanel';
 import { ProductionSummaryDrawer } from '../../components/ProductionSummaryDrawer/ProductionSummaryDrawer';
@@ -224,16 +224,13 @@ export default function CanvasPage() {
   useEffect(() => {
     if (!recipeId || typeof recipeId !== 'string') return;
 
-    const fetchRecipe = async () => {
+    const fetchRecipe = () => {
       try {
         setLoading(true);
         setError(null);
         
-        // Fetch all recipes and find the one with matching ID
-        const response = await fetch('/api/recipes');
-        const recipes: Recipe[] = await response.json();
-        
-        const foundRecipe = recipes.find(r => r.id === recipeId);
+        // Get recipe by ID directly from data
+        const foundRecipe = getRecipeById(recipeId);
         
         if (!foundRecipe) {
           setError('Recipe not found');
@@ -246,19 +243,18 @@ export default function CanvasPage() {
         if (state && typeof state === 'string') {
           const savedState = decodeCanvasState(state);
           if (savedState) {
-            // Hydrate nodes with complete data from recipes database
+            // Use the found recipe to hydrate nodes
             const hydratedNodes = savedState.nodes.map(node => {
-              // Find the complete recipe data
-              const completeRecipe = recipes.find(r => r.building.id === node.data.building.id && r.name === node.data.name);
-              if (completeRecipe) {
+              // Use the found recipe if it matches, otherwise keep existing data
+              if (foundRecipe && foundRecipe.building.id === node.data.building.id && foundRecipe.name === node.data.name) {
                 return {
                   ...node,
                   data: {
                     ...node.data,
-                    building: completeRecipe.building,
-                    inputs: completeRecipe.inputs,
-                    outputs: completeRecipe.outputs,
-                    time: completeRecipe.time,
+                    building: foundRecipe.building,
+                    inputs: foundRecipe.inputs,
+                    outputs: foundRecipe.outputs,
+                    time: foundRecipe.time,
                   }
                 };
               }

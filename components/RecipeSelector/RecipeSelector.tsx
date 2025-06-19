@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Recipe } from '../../pages/api/recipes';
+import { Recipe, getRecipesByResource } from '../../utils/recipes';
 
 /**
  * RecipeSelectorProps defines the properties for the RecipeSelector component.
@@ -26,16 +26,14 @@ export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
     }
 
     setLoading(true);
-    fetch(`/api/recipes?resource=${encodeURIComponent(selectedResource)}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setRecipes(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching recipes:', error);
-        setLoading(false);
-      });
+    try {
+      const data = getRecipesByResource(selectedResource);
+      setRecipes(data);
+    } catch (error) {
+      console.error('Error loading recipes:', error);
+    } finally {
+      setLoading(false);
+    }
   }, [selectedResource]);
 
   if (!selectedResource) {

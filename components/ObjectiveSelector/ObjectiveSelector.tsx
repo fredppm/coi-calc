@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { coiResources } from '../../data/coi';
+import { Resource as CoiResource } from '../../types';
 
 /**
  * Resource represents a possible objective in the system.
@@ -10,6 +12,48 @@ export interface Resource {
   image: string;
   color: string;
 }
+
+// Convert COI resource to our Resource format
+const convertResource = (coiResource: CoiResource): Resource => {
+  return {
+    id: coiResource.id,
+    name: coiResource.name,
+    description: `${coiResource.name} resource for production chains`,
+    image: coiResource.image,
+    color: coiResource.color,
+  };
+};
+
+// Get resources directly from data
+const getResources = (): Resource[] => {
+  const resources = coiResources.map(convertResource);
+  
+  // Filter out some resources that might not be good objectives
+  const excludedResources = [
+    'air_pollution',
+    'water_pollution',
+    'mechanical_power',
+    'electricity',
+    'steam_high',
+    'steam_low',
+    'steam_super',
+    'steam_depleted',
+    'exhaust',
+    'waste_water',
+    'sour_water',
+    'toxic_slurry',
+    'fission_product',
+    'spent_fuel',
+    'spent_mox',
+    'retired_waste',
+    'broken_glass',
+    'red_mud',
+    'slag',
+    'sludge',
+  ];
+  
+  return resources.filter(resource => !excludedResources.includes(resource.id));
+};
 
 /**
  * ObjectiveSelectorProps defines the properties for the ObjectiveSelector component.
@@ -29,21 +73,20 @@ export const ObjectiveSelector: React.FC<ObjectiveSelectorProps> = ({ onSelect }
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchResources = async () => {
+    const loadResources = () => {
       try {
         setLoading(true);
-        const response = await fetch('/api/resources');
-        const data = await response.json();
+        const data = getResources();
         setAvailableResources(data);
         setFilteredResources(data);
       } catch (error) {
-        console.error('Error fetching resources:', error);
+        console.error('Error loading resources:', error);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchResources();
+    loadResources();
   }, []);
 
   // Filter resources based on search term
