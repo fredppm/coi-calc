@@ -422,7 +422,7 @@ export const coiBuildings: Building[] = [
   {
     id: "boiler",
     name: "Boiler",
-    image: "/images/buildings/boiler_(_coal).png",
+    image: "/images/buildings/boiler_coal.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "4" },
@@ -878,7 +878,7 @@ export const coiBuildings: Building[] = [
     name: "Fast Breeder Reactor",
     image: "/images/buildings/fast_breeder_reactor.png",
     metadata: [
-      { key: "construction", value: "1500+File:Titanium Alloy.png200+200" },
+      { key: "construction", value: "1500" },
       { key: "workers", value: "200" },
       { key: "electricity", value: "None" },
       { key: "maintenance", value: "43.0 / 60" },
@@ -954,7 +954,7 @@ export const coiBuildings: Building[] = [
   {
     id: "glass_maker_ii",
     name: "Glass Maker II",
-    image: "/images/buildings/glass_maker_t2.png",
+    image: "/images/buildings/glass_maker_ii.png",
     metadata: [
       { key: "construction", value: "120" },
       { key: "workers", value: "14" },
