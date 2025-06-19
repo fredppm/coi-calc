@@ -3,11 +3,13 @@
 
 import { coiRecipes, coiBuildings, coiResources } from '../data/coi';
 import { Recipe as CoiRecipe, Resource as CoiResource, Building } from '../types';
+import { coiFormatter } from './nameFormatter';
 
 // This is the Recipe format expected by the RecipeConnectionModal (from pages/api/recipes.ts)
 export interface Recipe {
   id: string;
   name: string;
+  humanizedName?: string; // Add humanized name field
   building: {
     id: string;
     name: string;
@@ -76,9 +78,13 @@ const convertRecipe = (coiRecipe: CoiRecipe): Recipe | null => {
     return null;
   }
 
+  // Generate humanized name
+  const humanizedName = coiFormatter.humanize(coiRecipe.name, building.name);
+
   return {
     id: coiRecipe.id,
-    name: coiRecipe.name,
+    name: coiRecipe.name, // Keep original technical name
+    humanizedName, // Add human-readable name
     building: {
       id: building.id,
       name: building.name,
