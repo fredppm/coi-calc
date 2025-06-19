@@ -1,0 +1,273 @@
+{
+  "resources": [
+    {
+      "id": "alumina",
+      "name": "Alumina"
+    },
+    {
+      "id": "carbon_dioxide",
+      "name": "Carbon Dioxide"
+    },
+    {
+      "id": "compost",
+      "name": "Compost"
+    },
+    {
+      "id": "corn",
+      "name": "Corn"
+    },
+    {
+      "id": "fruit",
+      "name": "Fruit"
+    },
+    {
+      "id": "fuel_gas",
+      "name": "Fuel Gas"
+    },
+    {
+      "id": "graphite",
+      "name": "Graphite"
+    },
+    {
+      "id": "molten_aluminum",
+      "name": "Molten Aluminum"
+    },
+    {
+      "id": "molten_titanium",
+      "name": "Molten Titanium"
+    },
+    {
+      "id": "molten_titanium_alloy",
+      "name": "Molten Titanium Alloy"
+    },
+    {
+      "id": "nitrogen",
+      "name": "Nitrogen"
+    },
+    {
+      "id": "oxygen",
+      "name": "Oxygen"
+    },
+    {
+      "id": "poppy",
+      "name": "Poppy"
+    },
+    {
+      "id": "potato",
+      "name": "Potato"
+    },
+    {
+      "id": "sludge",
+      "name": "Sludge"
+    },
+    {
+      "id": "vegetables",
+      "name": "Vegetables"
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat"
+    }
+  ],
+  "recipes": [
+    {
+      "building": "Air Separator",
+      "recipeId": "AirSeparation",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "Oxygen",
+          "quantity": "12"
+        },
+        {
+          "name": "Nitrogen",
+          "quantity": "12"
+        }
+      ]
+    },
+    {
+      "building": "Alloy Mixer",
+      "recipeId": "TitaniumAlloyMixing",
+      "inputs": [
+        {
+          "name": "Molten Titanium",
+          "quantity": "32"
+        },
+        {
+          "name": "Molten Aluminum",
+          "quantity": "4"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Molten Titanium Alloy",
+          "quantity": "36"
+        }
+      ]
+    },
+    {
+      "building": "Aluminum Cell",
+      "recipeId": "AluminumElectrolysis",
+      "inputs": [
+        {
+          "name": "Alumina",
+          "quantity": "16"
+        },
+        {
+          "name": "Graphite",
+          "quantity": "4"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Molten Aluminum",
+          "quantity": "16"
+        },
+        {
+          "name": "Carbon Dioxide",
+          "quantity": "12"
+        }
+      ]
+    },
+    {
+      "building": "Anaerobic Digester",
+      "recipeId": "SludgeDigestion",
+      "inputs": [
+        {
+          "name": "Sludge",
+          "quantity": "18"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Fuel Gas",
+          "quantity": "8"
+        },
+        {
+          "name": "Compost",
+          "quantity": "3"
+        }
+      ]
+    },
+    {
+      "building": "Anaerobic Digester",
+      "recipeId": "PotatoDigestion",
+      "inputs": [
+        {
+          "name": "Potato",
+          "quantity": "14"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Fuel Gas",
+          "quantity": "8"
+        },
+        {
+          "name": "Compost",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "building": "Anaerobic Digester",
+      "recipeId": "VegetablesDigestion",
+      "inputs": [
+        {
+          "name": "Vegetables",
+          "quantity": "14"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Fuel Gas",
+          "quantity": "8"
+        },
+        {
+          "name": "Compost",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "building": "Anaerobic Digester",
+      "recipeId": "FruitDigestion",
+      "inputs": [
+        {
+          "name": "Fruit",
+          "quantity": "12"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Fuel Gas",
+          "quantity": "12"
+        },
+        {
+          "name": "Compost",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "building": "Anaerobic Digester",
+      "recipeId": "PoppyDigestion",
+      "inputs": [
+        {
+          "name": "Poppy",
+          "quantity": "14"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Fuel Gas",
+          "quantity": "8"
+        },
+        {
+          "name": "Compost",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "building": "Anaerobic Digester",
+      "recipeId": "WheatDigestion",
+      "inputs": [
+        {
+          "name": "Wheat",
+          "quantity": "12"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Fuel Gas",
+          "quantity": "12"
+        },
+        {
+          "name": "Compost",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "building": "Anaerobic Digester",
+      "recipeId": "CornDigestion",
+      "inputs": [
+        {
+          "name": "Corn",
+          "quantity": "14"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Fuel Gas",
+          "quantity": "14"
+        },
+        {
+          "name": "Compost",
+          "quantity": "1"
+        }
+      ]
+    }
+  ]
+}

@@ -13,6 +13,7 @@ import { RecipeNode } from '../RecipeNode/RecipeNode';
 import { AnimatedEdge } from './AnimatedEdge';
 import { RecipeConnectionModal } from '../RecipeConnectionModal/RecipeConnectionModal';
 import { RemoveRecipeModal, ConnectionImpact } from '../RemoveRecipeModal/RemoveRecipeModal';
+import { SettingsPanel } from '../SettingsPanel/SettingsPanel';
 import { Recipe } from '../../pages/api/recipes';
 import { coiResources } from '../../data/coi';
 import 'reactflow/dist/style.css';
@@ -39,6 +40,8 @@ export interface FlowProps {
   initialNodes?: Node[];
   initialEdges?: Edge[];
   onStateChange?: (nodes: Node[], edges: Edge[]) => void;
+  normalizeToSixtySeconds?: boolean;
+  onNormalizeToggle?: (enabled: boolean) => void;
 }
 
 /**
@@ -48,6 +51,8 @@ export const Flow: React.FC<FlowProps> = ({
   initialNodes = [],
   initialEdges = [],
   onStateChange,
+  normalizeToSixtySeconds = false,
+  onNormalizeToggle,
 }) => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
@@ -77,12 +82,26 @@ export const Flow: React.FC<FlowProps> = ({
     impactedConnections: [],
   });
 
+  // Settings panel state
+  const [settingsPanelOpen, setSettingsPanelOpen] = useState(false);
+
   // Notify parent of state changes
   useEffect(() => {
     if (onStateChange) {
       onStateChange(nodes, edges);
     }
   }, [nodes, edges, onStateChange]);
+
+  // Update all nodes when normalization setting changes
+  useEffect(() => {
+    setNodes((nds) => nds.map(node => ({
+      ...node,
+      data: {
+        ...node.data,
+        normalizeToSixtySeconds,
+      },
+    })));
+  }, [normalizeToSixtySeconds, setNodes]);
 
   const onConnect = useCallback((params: any) => {
     // Get resource color from the source handle
@@ -245,6 +264,7 @@ export const Flow: React.FC<FlowProps> = ({
             handleResourceClick(resId, resName, resType, targetNodeId),
           onRemove: handleRemoveClick,
           onMultiplierChange: handleMultiplierChange,
+          normalizeToSixtySeconds,
         },
       };
 
@@ -374,7 +394,7 @@ export const Flow: React.FC<FlowProps> = ({
 
   return (
     <>
-      <div className="w-full h-full">
+      <div className="w-full h-full relative">
         <ReactFlow
           nodes={nodesWithHandlers}
           edges={edgesWithColors}
@@ -389,6 +409,13 @@ export const Flow: React.FC<FlowProps> = ({
           <Controls />
           <MiniMap />
         </ReactFlow>
+
+        <SettingsPanel
+          normalizeToSixtySeconds={normalizeToSixtySeconds}
+          onNormalizeToggle={onNormalizeToggle || (() => {})}
+          isOpen={settingsPanelOpen}
+          onToggle={() => setSettingsPanelOpen(!settingsPanelOpen)}
+        />
       </div>
 
       <RecipeConnectionModal

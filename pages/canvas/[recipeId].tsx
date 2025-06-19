@@ -180,6 +180,21 @@ export default function CanvasPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [initialLoadComplete, setInitialLoadComplete] = useState(false);
+  const [normalizeToSixtySeconds, setNormalizeToSixtySeconds] = useState(false);
+
+  // Load normalization setting from localStorage on mount
+  useEffect(() => {
+    const savedSetting = localStorage.getItem('normalizeToSixtySeconds');
+    if (savedSetting !== null) {
+      setNormalizeToSixtySeconds(JSON.parse(savedSetting));
+    }
+  }, []);
+
+  // Handle normalization toggle with persistence
+  const handleNormalizeToggle = useCallback((enabled: boolean) => {
+    setNormalizeToSixtySeconds(enabled);
+    localStorage.setItem('normalizeToSixtySeconds', JSON.stringify(enabled));
+  }, []);
 
   // Debounced URL update function
   const updateURLState = useCallback((newNodes: Node[], newEdges: Edge[]) => {
@@ -332,16 +347,16 @@ export default function CanvasPage() {
         
       </div>
       
-      {/* Debug Panel - Right Side */}
-      <div className="absolute top-0 right-0 z-[11]">
-        <DebugPanel nodes={nodes} edges={edges} />
-      </div>
+      {/* Debug Panel */}
+      <DebugPanel nodes={nodes} edges={edges} />
 
       {/* Flow Canvas */}
       <Flow 
         initialNodes={nodes} 
         initialEdges={edges}
         onStateChange={handleStateChange}
+        normalizeToSixtySeconds={normalizeToSixtySeconds}
+        onNormalizeToggle={handleNormalizeToggle}
       />
 
       {/* Production Summary Drawer - Bottom */}

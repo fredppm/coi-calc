@@ -26,6 +26,7 @@ export interface RecipeNodeData {
     sourceNodeData?: any;
     targetNodeData?: any;
   }[];
+  normalizeToSixtySeconds?: boolean;
 }
 
 /**
@@ -41,6 +42,9 @@ export interface RecipeNodeProps {
  */
 export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
   const [multiplier, setMultiplier] = useState(data.multiplier || 1);
+
+  // Calculate normalization factor for 60s if enabled
+  const normalizationFactor = data.normalizeToSixtySeconds ? 60 / data.time : 1;
 
   const handleResourceClick = (resourceId: string, resourceName: string, type: 'input' | 'output') => {
     if (data.onResourceClick) {
@@ -78,6 +82,30 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
   };
 
   // Calculate connection status for each resource considering multiplier and balance
+  const hasTimeDifference = (resourceId: string, type: 'input' | 'output') => {
+    if (!data.connectedEdges) return false;
+    
+    // If normalization is enabled, all recipes show 60s, so no time difference is visible
+    if (data.normalizeToSixtySeconds) return false;
+    
+    const handleId = `${type}-${resourceId}`;
+    const connectedEdges = data.connectedEdges.filter(edge => {
+      if (type === 'input') {
+        return edge.target === id && edge.targetHandle === handleId;
+      } else {
+        return edge.source === id && edge.sourceHandle === handleId;
+      }
+    });
+
+    if (connectedEdges.length === 0) return false;
+
+    // Check if any connected recipe has different time
+    return connectedEdges.some(edge => {
+      const connectedNodeData = type === 'input' ? edge.sourceNodeData : edge.targetNodeData;
+      return connectedNodeData && connectedNodeData.time !== data.time;
+    });
+  };
+
   const getResourceConnectionStatus = (resourceId: string, type: 'input' | 'output') => {
     if (!data.connectedEdges) return 'unconnected';
     
@@ -99,7 +127,8 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
     
     if (!currentResource) return 'unconnected';
 
-    const currentAmount = currentResource.amount * multiplier;
+    // Always normalize current amount for balance calculation
+    const currentAmountForBalance = currentResource.amount * multiplier * (60 / data.time);
 
     if (type === 'input') {
       // For INPUTS: Calculate total supply from all connected producers
@@ -112,18 +141,20 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
           const sourceResource = sourceNodeData.outputs?.find((output: any) => output.id === sourceResourceId);
           if (sourceResource) {
             const sourceMultiplier = sourceNodeData.multiplier || 1;
-            totalSuppliedAmount += sourceResource.amount * sourceMultiplier;
+            // Always normalize for balance calculation
+            const sourceNormalizationFactor = 60 / sourceNodeData.time;
+            totalSuppliedAmount += sourceResource.amount * sourceMultiplier * sourceNormalizationFactor;
           }
         }
       });
 
       // Debug log
-      console.log(`INPUT ${currentResource.name}: needs ${currentAmount}, gets ${totalSuppliedAmount}`);
+      console.log(`INPUT ${currentResource.name}: needs ${currentAmountForBalance}, gets ${totalSuppliedAmount}`);
 
       // Simple comparison: production vs consumption
-      if (totalSuppliedAmount < currentAmount) {
+      if (totalSuppliedAmount < currentAmountForBalance) {
         return 'critical-shortage'; // Red - not enough supply
-      } else if (totalSuppliedAmount > currentAmount) {
+      } else if (totalSuppliedAmount > currentAmountForBalance) {
         return 'excess-supply'; // Blue - more than enough
       } else {
         return 'connected'; // Blue - balanced
@@ -140,18 +171,20 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
           const targetResource = targetNodeData.inputs?.find((input: any) => input.id === targetResourceId);
           if (targetResource) {
             const targetMultiplier = targetNodeData.multiplier || 1;
-            totalDemandAmount += targetResource.amount * targetMultiplier;
+            // Always normalize for balance calculation
+            const targetNormalizationFactor = 60 / targetNodeData.time;
+            totalDemandAmount += targetResource.amount * targetMultiplier * targetNormalizationFactor;
           }
         }
       });
 
       // Debug log
-      console.log(`OUTPUT ${currentResource.name}: produces ${currentAmount}, demand is ${totalDemandAmount}`);
+      console.log(`OUTPUT ${currentResource.name}: produces ${currentAmountForBalance}, demand is ${totalDemandAmount}`);
 
       // Simple comparison: production vs demand
-      if (currentAmount < totalDemandAmount) {
+      if (currentAmountForBalance < totalDemandAmount) {
         return 'insufficient-production'; // Yellow - can't meet demand
-      } else if (currentAmount > totalDemandAmount) {
+      } else if (currentAmountForBalance > totalDemandAmount) {
         return 'excess-production'; // Yellow - overproducing
       } else {
         return 'connected'; // Blue - balanced
@@ -196,6 +229,21 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
     }
   };
 
+  // Get background color for time difference indicator based on connection status
+  const getTimeDifferenceColor = (resourceId: string, type: 'input' | 'output') => {
+    const status = getResourceConnectionStatus(resourceId, type);
+    
+    if (status === 'connected' || status === 'excess-supply') {
+      return 'bg-blue-500'; // Blue for balanced connections
+    } else if (status === 'critical-shortage') {
+      return 'bg-red-500'; // Red for critical shortage
+    } else if (status === 'insufficient-production' || status === 'excess-production') {
+      return 'bg-yellow-500'; // Yellow for production issues
+    } else {
+      return 'bg-gray-500'; // Gray for unconnected
+    }
+  };
+
   return (
     <div className="bg-white rounded-lg shadow-lg border min-w-[400px] relative">
       {/* Building Header */}
@@ -211,7 +259,9 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
           </div>
           <div>
             <h3 className="font-semibold text-sm leading-tight">{data.name}</h3>
-            <p className="text-xs text-gray-500">{data.building.name} • {data.time}s</p>
+            <p className="text-xs text-gray-500">
+              {data.building.name} • {data.normalizeToSixtySeconds ? '60s (normalized)' : `${data.time}s`}
+            </p>
           </div>
         </div>
 
@@ -261,9 +311,10 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
         <div className="flex-1 p-4 relative">
           <div className="space-y-2">
             {data.inputs.map((input, index) => {
-              const adjustedAmount = input.amount * multiplier;
+              const adjustedAmount = input.amount * multiplier * normalizationFactor;
               const styling = getResourceStyling(input.id, 'input');
               const status = getResourceConnectionStatus(input.id, 'input');
+              const hasDifferentTime = hasTimeDifference(input.id, 'input');
               
               return (
                 <div key={input.id} className="relative">
@@ -283,10 +334,19 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
                   <button
                     onClick={() => handleResourceClick(input.id, input.name, 'input')}
                     className={`w-full flex items-center justify-between text-xs p-2 rounded hover:opacity-80 transition-all ${styling}`}
-                    title={status === 'connected' ? 'Balanced connection' : status === 'critical-shortage' ? 'Critical shortage' : status === 'excess-supply' ? 'Excess supply' : 'Needs supply connection'}
+                    title={`${status === 'connected' ? 'Balanced connection' : status === 'critical-shortage' ? 'Critical shortage' : status === 'excess-supply' ? 'Excess supply' : 'Needs supply connection'}${hasDifferentTime ? ' ⏰ Time difference detected' : ''}`}
                   >
                     <div className="flex items-center space-x-2">
-                      <div className="w-6 h-6 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
+                                             {hasDifferentTime && (
+                         <div className={`absolute -top-1 -left-1 w-[16px] h-[16px] ${getTimeDifferenceColor(input.id, 'input')} rounded-full flex items-center justify-center`}>
+                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1"/>
+                            <line x1="7" y1="7" x2="7" y2="3" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                            <line x1="7" y1="7" x2="5" y2="5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                          </svg>
+                         </div>
+                       )}
+                      <div className="w-6 h-6 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0 relative">
                         <img 
                           src={input.icon} 
                           alt={input.name}
@@ -296,7 +356,7 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
                       <span className="text-left truncate flex-1">{input.name}</span>
                     </div>
                     <span className={`font-medium ml-2 ${status === 'connected' ? 'text-blue-600' : status === 'critical-shortage' ? 'text-red-600' : status === 'excess-supply' ? 'text-blue-600' : 'text-gray-600'}`}>
-                      {adjustedAmount}
+                      {Math.round(adjustedAmount * 100) / 100}
                     </span>
                   </button>
                 </div>
@@ -316,9 +376,10 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
         <div className="flex-1 p-4 relative">
           <div className="space-y-2">
             {data.outputs.map((output, index) => {
-              const adjustedAmount = output.amount * multiplier;
+              const adjustedAmount = output.amount * multiplier * normalizationFactor;
               const styling = getResourceStyling(output.id, 'output');
               const status = getResourceConnectionStatus(output.id, 'output');
+              const hasDifferentTime = hasTimeDifference(output.id, 'output');
               
               return (
                 <div key={output.id} className="relative">
@@ -339,10 +400,10 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
                   <button
                     onClick={() => handleResourceClick(output.id, output.name, 'output')}
                     className={`w-full flex items-center justify-between text-xs p-2 rounded hover:opacity-80 transition-all ${styling}`}
-                    title={status === 'connected' ? 'Balanced connection' : status === 'insufficient-production' ? 'Insufficient production' : status === 'excess-production' ? 'Excess production' : 'Excess supply'}
+                    title={`${status === 'connected' ? 'Balanced connection' : status === 'insufficient-production' ? 'Insufficient production' : status === 'excess-production' ? 'Excess production' : 'Excess supply'}${hasDifferentTime ? ' 🕐 Time difference detected' : ''}`}
                   >
                     <div className="flex items-center space-x-2">
-                      <div className="w-6 h-6 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
+                      <div className="w-6 h-6 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0 relative">
                         <img 
                           src={output.icon} 
                           alt={output.name}
@@ -350,9 +411,18 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
                         />
                       </div>
                       <span className="text-left truncate flex-1">{output.name}</span>
+                                              {hasDifferentTime && (
+                          <div className={`absolute -top-1 -right-1 w-[16px] h-[16px] ${getTimeDifferenceColor(output.id, 'output')} rounded-full flex items-center justify-center`}>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1"/>
+                              <line x1="7" y1="7" x2="7" y2="3" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                              <line x1="7" y1="7" x2="5" y2="5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                            </svg>
+                          </div>
+                        )}
                     </div>
                     <span className={`font-medium ml-2 ${status === 'connected' ? 'text-blue-600' : status === 'insufficient-production' ? 'text-yellow-600' : status === 'excess-production' ? 'text-yellow-600' : 'text-gray-600'}`}>
-                      {adjustedAmount}
+                      {Math.round(adjustedAmount * 100) / 100}
                     </span>
                   </button>
                 </div>

@@ -1,0 +1,25 @@
+{
+  "item_info": {
+    "name": "Space Probe Parts",
+    "id": "space_probe_parts",
+    "type": "Crafted material",
+    "state": "Unit"
+  },
+  "recipes": [
+    {
+      "id": "space_probe_parts_recipe_1",
+      "name": "Space Probe Parts Production 2",
+      "building": "Unknown",
+      "inputs": [
+        {
+          "name": "page is in the middle of an expansion or major revamping",
+          "quantity": 1,
+          "image_src": "/images/thumb/e/e1/Ambox_warning_blue_construction.svg/46px-Ambox_warning_blue_construction.svg.png"
+        }
+      ],
+      "outputs": [],
+      "time": null
+    }
+  ],
+  "raw_html_snippet": "<div class=\"mw-body-content\" id=\"mw-content-text\"><div class=\"mw-content-ltr mw-parser-output\" dir=\"ltr\" lang=\"en\"><style data-mw-deduplicate=\"TemplateStyles:r2692\">.mw-parser-output .infobox-wrapper{float:right;clear:right}.mw-parser-output .outer-box{display:inline-block;min-width:250px;max-width:375px;border:3px solid rgba(255,153,0,1);border-radius:15px;margin:10px;font-size:14px;background-color:rgba(46,46,46,1)}.mw-parser-output .inner-header{width:100%;vertical-align:middle;text-align:center;background-color:rgba(34,34,34,1);font-size:20px;color:rgba(255,164,22,1);font-family:Georgia,Liberation Serif,Times,serif;border-radius:15px 15px 0 0;border-bottom:3px solid rgba(252,162,58,1);padding:10px 0;display:flex;height:48px;line-height:48px}.mw-parser-output .designation,.mw-parser-output .tier{display:inline-block;min-width:48px}.mw-parser-output .designation{padding-left:5px}.mw-parser-output .title{width:100%;text-shadow:0 0 10px rgba(255,162,58,0.7)}.mw-parser-output .tier{text-align:right;padding-right:8px;font-size:18px;color:rgba(255,255,255,1)}.mw-parser-output .inner-main{text-align:center;padding:10px 10px 0}.mw-parser-output .description{padding:10px 0px 0px 0px}.mw-parser-output .inner-table{padding:10px}.mw-parser-output .inner-inner-table{vertical-align:top;width:100%}.mw-parser-output .table{border-collapse:collapse;border-spacing:0 8px;flex-grow:1;line-height:16px;white-space:nowrap;width:100%}.mw-parser-output .table-tr{border-top:1px solid white;vertical-align:top}.mw-parser-output .table-td-left{text-align:right;font-weight:bold;padding:5px 5px 5px 0}.mw-parser-output .table-td-right{padding:5px 0 5px 5px}</style><div class=\"infobox-wrapper\"><div class=\"outer-box\"><div class=\"inner-header\"><div class=\"title\">Space Probe Parts</div></div><div class=\"inner-main\"><span typeof=\"mw:File\"><a class=\"mw-file-description\" href=\"/File:SpaceProbeParts.png\"><img class=\"mw-file-element\" data-file-height=\"128\" data-file-width=\"128\" decoding=\"async\" height=\""
+}

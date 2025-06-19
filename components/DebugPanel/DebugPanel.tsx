@@ -21,21 +21,21 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({ nodes, edges }) => {
   };
 
   return (
-    <div className="m-4">
+    <div className="absolute top-4 right-[3.5rem] z-50">
       {/* Bug Button */}
       {!isOpen && (
         <button
           onClick={togglePanel}
-          className="bg-white rounded-lg shadow-lg p-2 hover:bg-gray-50 transition-colors border-2 border-gray-200 hover:border-gray-300"
+          className="bg-white rounded-lg shadow-lg p-2 hover:bg-gray-50 transition-colors border-2 border-gray-200 hover:border-gray-300 flex items-center justify-center h-10 w-10"
           title="Toggle Debug Panel"
         >
-          <span className="text-xl">🐛</span>
+          <span className="text-lg">🐛</span>
         </button>
       )}
 
       {/* Collapsible Panel */}
       {isOpen && (
-        <div className="absolute top-4 right-4 bg-white rounded-lg shadow-lg border-2 border-gray-200 w-80 max-h-[calc(100vh-5rem)] flex flex-col">
+        <div className="bg-white rounded-lg shadow-lg border-2 border-gray-200 w-80 max-h-[calc(100vh-5rem)] flex flex-col">
           {/* Panel Header - Fixed */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200 flex-shrink-0">
             <div className="flex items-center space-x-2">
