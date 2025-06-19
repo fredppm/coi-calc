@@ -148,8 +148,8 @@ export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
                     />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-sm leading-tight">{recipe.name}</h3>
-                    <p className="text-xs text-gray-500">{recipe.building.name} • {recipe.time}s</p>
+                    <h3 className="font-semibold text-sm leading-tight">{recipe.building.name}</h3>
+                    <p className="text-xs text-gray-500">{recipe.time}s</p>
                   </div>
                 </div>
 

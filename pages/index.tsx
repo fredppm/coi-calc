@@ -3,14 +3,10 @@ import { useRouter } from 'next/router';
 import { ObjectiveSelector, Resource } from '../components/ObjectiveSelector/ObjectiveSelector';
 import { RecipeSelector } from '../components/RecipeSelector/RecipeSelector';
 import { Recipe } from '../utils/recipes';
-import NameFormatterTest from '../components/NameFormatterTest/NameFormatterTest';
-import NameDisplaySettings from '../components/NameDisplaySettings/NameDisplaySettings';
 
 export default function Home() {
   const router = useRouter();
   const [selectedResource, setSelectedResource] = useState<Resource | null>(null);
-  const [showNameTest, setShowNameTest] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
 
   const handleResourceSelect = (resource: Resource) => {
     setSelectedResource(resource);
@@ -32,34 +28,6 @@ export default function Home() {
           <h1 className="text-3xl font-bold text-center mb-8 text-gray-900">
             Captain of Industry - Recipe Planner
           </h1>
-          
-          {/* Demo and Settings */}
-          <div className="mb-8 text-center space-x-4">
-            <button
-              onClick={() => setShowNameTest(!showNameTest)}
-              className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-            >
-              {showNameTest ? '✨ Hide Demo' : '🎮 Show Demo'}
-            </button>
-            <button
-              onClick={() => setShowSettings(!showSettings)}
-              className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
-            >
-              {showSettings ? '⚙️ Hide Settings' : '⚙️ Name Settings'}
-            </button>
-          </div>
-          
-          {showSettings && (
-            <div className="mb-8">
-              <NameDisplaySettings />
-            </div>
-          )}
-          
-          {showNameTest && (
-            <div className="mb-8">
-              <NameFormatterTest />
-            </div>
-          )}
           
           {!selectedResource ? (
             // Show objective selector

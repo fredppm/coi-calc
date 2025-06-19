@@ -66,8 +66,8 @@ export const RemoveRecipeModal: React.FC<RemoveRecipeModalProps> = ({
               />
             </div>
             <div>
-              <h4 className="font-semibold text-red-800">{recipeNode.data.name}</h4>
-              <p className="text-sm text-red-600">{recipeNode.data.building.name}</p>
+              <h4 className="font-semibold text-red-800">{recipeNode.data.building.name}</h4>
+              <p className="text-sm text-red-600">{recipeNode.data.time}s</p>
             </div>
           </div>
         </div>

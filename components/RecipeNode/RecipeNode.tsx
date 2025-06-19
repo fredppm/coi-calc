@@ -258,9 +258,9 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
             />
           </div>
           <div>
-            <h3 className="font-semibold text-sm leading-tight">{data.name}</h3>
+            <h3 className="font-semibold text-sm leading-tight">{data.building.name}</h3>
             <p className="text-xs text-gray-500">
-              {data.building.name} • {data.normalizeToSixtySeconds ? '60s (normalized)' : `${data.time}s`}
+              {data.normalizeToSixtySeconds ? '60s (normalized)' : `${data.time}s`}
             </p>
           </div>
         </div>

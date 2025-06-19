@@ -65,10 +65,10 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({ nodes, edges }) => {
                   recipeNodes.map((node, index) => (
                     <div key={node.id} className="text-xs bg-gray-50 p-2 rounded border">
                       <div className="font-medium text-gray-800">
-                        #{index + 1}: {node.data.name}
+                        #{index + 1}: {node.data.building.name}
                       </div>
                       <div className="text-gray-600">
-                        Building: {node.data.building.name}
+                        Time: {node.data.time}s
                       </div>
                       <div className="text-gray-500">
                         Position: ({Math.round(node.position.x)}, {Math.round(node.position.y)})
@@ -101,7 +101,7 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({ nodes, edges }) => {
                           Connection #{index + 1}
                         </div>
                         <div className="text-blue-700">
-                          {sourceNode?.data.name || 'Unknown'} → {targetNode?.data.name || 'Unknown'}
+                          {sourceNode?.data.building.name || 'Unknown'} → {targetNode?.data.building.name || 'Unknown'}
                         </div>
                         <div className="text-blue-600">
                           Resource: {edge.label || 'Unknown'}
@@ -259,7 +259,7 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({ nodes, edges }) => {
                     return (
                       <div key={node.id} className="text-xs bg-gray-50 p-3 rounded border">
                         <div className="font-medium text-gray-800 mb-2">
-                          {node.data.name} (x{node.data.multiplier || 1})
+                          {node.data.building.name} (x{node.data.multiplier || 1})
                         </div>
                         
                         {/* Inputs */}

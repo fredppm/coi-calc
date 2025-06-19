@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Recipe } from '../../utils/dataFetcher';
+import { Recipe } from '../../pages/api/recipes';
 import { fetchRecipes } from '../../utils/dataFetcher';
-import { useNameDisplay } from '../../hooks/useNameDisplay';
 
 /**
  * RecipeConnectionModalProps defines the properties for the RecipeConnectionModal component.
@@ -30,7 +29,6 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
 }) => {
   const [newRecipes, setNewRecipes] = useState<Recipe[]>([]);
   const [loading, setLoading] = useState(false);
-  const { getDisplayName } = useNameDisplay();
 
   useEffect(() => {
     if (!isOpen || !resourceId) return;
@@ -153,10 +151,10 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                             </div>
                             <div>
                               <h4 className="font-semibold text-sm leading-tight">
-                                {getDisplayName(recipe.name, recipe.humanizedName)}
+                                {recipe.building.name}
                                 {isExisting && <span className="text-blue-600 ml-1 text-xs">(reuse)</span>}
                               </h4>
-                              <p className="text-xs text-gray-500">{recipe.building.name} • {recipe.time}s</p>
+                              <p className="text-xs text-gray-500">{recipe.time}s</p>
                             </div>
                           </div>
                         </div>
