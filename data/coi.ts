@@ -422,7 +422,7 @@ export const coiBuildings: Building[] = [
   {
     id: "boiler",
     name: "Boiler",
-    image: "/images/buildings/boiler.png",
+    image: "/images/buildings/boiler_(_coal).png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "4" },
@@ -954,7 +954,7 @@ export const coiBuildings: Building[] = [
   {
     id: "glass_maker_ii",
     name: "Glass Maker II",
-    image: "/images/buildings/glass_maker_ii.png",
+    image: "/images/buildings/glass_maker_t2.png",
     metadata: [
       { key: "construction", value: "120" },
       { key: "workers", value: "14" },
@@ -1018,7 +1018,7 @@ export const coiBuildings: Building[] = [
   {
     id: "high-pressure_turbine",
     name: "High-Pressure Turbine",
-    image: "/images/buildings/high-pressure_turbine.png",
+    image: "/images/buildings/high_pressure_turbine.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "2" },
@@ -1031,7 +1031,7 @@ export const coiBuildings: Building[] = [
   {
     id: "high-pressure_turbine_ii",
     name: "High-Pressure Turbine II",
-    image: "/images/buildings/high-pressure_turbine_ii.png",
+    image: "/images/buildings/high_pressure_turbine_ii.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "2" },
@@ -1082,7 +1082,7 @@ export const coiBuildings: Building[] = [
   {
     id: "kiln",
     name: "Kiln",
-    image: "/images/buildings/kiln.png",
+    image: "/images/buildings/rotary_kiln.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "6" },
@@ -1121,7 +1121,7 @@ export const coiBuildings: Building[] = [
   {
     id: "low-pressure_turbine",
     name: "Low-Pressure Turbine",
-    image: "/images/buildings/low-pressure_turbine.png",
+    image: "/images/buildings/low_pressure_turbine.png",
     metadata: [
       { key: "construction", value: "60" },
       { key: "workers", value: "2" },
@@ -1134,7 +1134,7 @@ export const coiBuildings: Building[] = [
   {
     id: "low-pressure_turbine_ii",
     name: "Low-Pressure Turbine II",
-    image: "/images/buildings/low-pressure_turbine_ii.png",
+    image: "/images/buildings/low_pressure_turbine_ii.png",
     metadata: [
       { key: "construction", value: "60" },
       { key: "workers", value: "2" },
@@ -1420,7 +1420,7 @@ export const coiBuildings: Building[] = [
   {
     id: "research_lab_i",
     name: "Research Lab I",
-    image: "/images/buildings/research_lab_i.png",
+    image: "/images/buildings/research_lab.png",
     metadata: [
       { key: "construction", value: "30" },
       { key: "workers", value: "4" },
@@ -1615,7 +1615,7 @@ export const coiBuildings: Building[] = [
   {
     id: "super-pressure_turbine",
     name: "Super-Pressure Turbine",
-    image: "/images/buildings/super-pressure_turbine.png",
+    image: "/images/buildings/super_pressure_turbine.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "1" },

@@ -20,12 +20,18 @@ Para deploy no GitHub Pages, use arquivos JSON estáticos:
 
 ### 1. Gerar arquivos estáticos
 ```bash
+# Certifique-se que o servidor dev está rodando
+npm run dev
+
+# Em outro terminal, gere os arquivos estáticos
 npm run generate:static
 ```
 
 Isso cria:
 - `public/api/resources.json`
-- `public/api/recipes.json` 
+- `public/api/recipes.json`
+
+**Nota**: É necessário que o servidor dev esteja rodando (`npm run dev`) para que os comandos curl funcionem. 
 
 ### 2. Build para GitHub Pages
 ```bash
