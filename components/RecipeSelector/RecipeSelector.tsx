@@ -166,31 +166,25 @@ export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
                 {/* Left Side - Inputs */}
                 <div className="flex-1 p-4 relative">
                   <div className="space-y-2">
-                    {recipe.inputs.map((input, index) => {
-                      // Normalize values to per minute (60s) for easier comparison
-                      const normalizedAmount = Math.round((input.amount * 60 / recipe.time) * 100) / 100;
-                      const displayAmount = `${normalizedAmount}/min`;
-                      
-                      return (
-                        <div key={input.id} className="relative">
-                          <div className="w-full flex items-center justify-between text-xs p-2 rounded border border-gray-300">
-                            <div className="flex items-center space-x-2">
-                              <div className="w-6 h-6 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
-                                <img 
-                                  src={input.icon} 
-                                  alt={input.name}
-                                  className="w-full h-full object-contain"
-                                />
-                              </div>
-                              <span className="text-left truncate flex-1">{input.name}</span>
+                    {recipe.inputs.map((input, index) => (
+                      <div key={input.id} className="relative">
+                        <div className="w-full flex items-center justify-between text-xs p-2 rounded border border-gray-300">
+                          <div className="flex items-center space-x-2">
+                            <div className="w-6 h-6 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
+                              <img 
+                                src={input.icon} 
+                                alt={input.name}
+                                className="w-full h-full object-contain"
+                              />
                             </div>
-                            <span className="font-medium ml-2 text-gray-600" title={`${input.amount} per ${recipe.time}s cycle`}>
-                              {displayAmount}
-                            </span>
+                            <span className="text-left truncate flex-1">{input.name}</span>
                           </div>
+                          <span className="font-medium ml-2 text-gray-600">
+                            {input.amount}
+                          </span>
                         </div>
-                      );
-                    })}
+                      </div>
+                    ))}
                   </div>
                 </div>
 
@@ -204,31 +198,25 @@ export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
                 {/* Right Side - Outputs */}
                 <div className="flex-1 p-4 relative">
                   <div className="space-y-2">
-                    {recipe.outputs.map((output, index) => {
-                      // Normalize values to per minute (60s) for easier comparison
-                      const normalizedAmount = Math.round((output.amount * 60 / recipe.time) * 100) / 100;
-                      const displayAmount = `${normalizedAmount}/min`;
-                      
-                      return (
-                        <div key={output.id} className="relative">
-                          <div className="w-full flex items-center justify-between text-xs p-2 rounded border border-gray-300">
-                            <div className="flex items-center space-x-2">
-                              <div className="w-6 h-6 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
-                                <img 
-                                  src={output.icon} 
-                                  alt={output.name}
-                                  className="w-full h-full object-contain"
-                                />
-                              </div>
-                              <span className="text-left truncate flex-1">{output.name}</span>
+                    {recipe.outputs.map((output, index) => (
+                      <div key={output.id} className="relative">
+                        <div className="w-full flex items-center justify-between text-xs p-2 rounded border border-gray-300">
+                          <div className="flex items-center space-x-2">
+                            <div className="w-6 h-6 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
+                              <img 
+                                src={output.icon} 
+                                alt={output.name}
+                                className="w-full h-full object-contain"
+                              />
                             </div>
-                            <span className="font-medium ml-2 text-gray-600" title={`${output.amount} per ${recipe.time}s cycle`}>
-                              {displayAmount}
-                            </span>
+                            <span className="text-left truncate flex-1">{output.name}</span>
                           </div>
+                          <span className="font-medium ml-2 text-gray-600">
+                            {output.amount}
+                          </span>
                         </div>
-                      );
-                    })}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
