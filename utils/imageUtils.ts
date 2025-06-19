@@ -34,6 +34,13 @@ const snakeToTitleCase = (str: string): string => {
 };
 
 /**
+ * Convert single lowercase word to Title Case
+ */
+const toTitleCase = (str: string): string => {
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+};
+
+/**
  * Process image path from data to ensure it works correctly across environments
  * Automatically handles case mismatches between data and actual file names
  */
@@ -43,10 +50,19 @@ export const processImagePath = (imagePath: string): string => {
   const fileName = pathParts[pathParts.length - 1];
   const basePath = pathParts.slice(0, -1).join('/');
   
-  // If filename is in snake_case (all lowercase with underscores), convert to Title_Case
+  // If filename has underscores and is in snake_case (all lowercase), convert to Title_Case
   if (fileName.includes('_') && fileName === fileName.toLowerCase()) {
     const fileNameWithoutExt = fileName.replace('.png', '');
     const titleCaseFileName = snakeToTitleCase(fileNameWithoutExt) + '.png';
+    const titleCasePath = `${basePath}/${titleCaseFileName}`;
+    
+    return getImageUrl(titleCasePath);
+  }
+  
+  // If filename is a single word in lowercase (no underscores), convert to Title Case
+  if (!fileName.includes('_') && fileName === fileName.toLowerCase()) {
+    const fileNameWithoutExt = fileName.replace('.png', '');
+    const titleCaseFileName = toTitleCase(fileNameWithoutExt) + '.png';
     const titleCasePath = `${basePath}/${titleCaseFileName}`;
     
     return getImageUrl(titleCasePath);
