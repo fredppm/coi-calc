@@ -1,62 +1,123 @@
 // utils/dataFetcher.ts
-// Utility to fetch data from either API routes (dev) or static JSON (production/GitHub Pages)
+// Utility to provide data either from direct imports (recommended) or API routes (legacy)
 
-const isStaticExport = process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_STATIC_EXPORT === 'true';
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+import { coiRecipes, coiBuildings, coiResources } from '../data/coi';
+import { Recipe as CoiRecipe, Resource as CoiResource, Building } from '../types';
 
-export async function fetchResources() {
+// This is the Recipe format expected by the RecipeConnectionModal (from pages/api/recipes.ts)
+export interface Recipe {
+  id: string;
+  name: string;
+  building: {
+    id: string;
+    name: string;
+    image: string;
+  };
+  time: number;
+  inputs: {
+    id: string;
+    name: string;
+    amount: number;
+    icon: string;
+  }[];
+  outputs: {
+    id: string;
+    name: string;
+    amount: number;
+    icon: string;
+  }[];
+}
+
+// Helper function to find building by ID
+const findBuilding = (buildingId: string): Building | undefined => {
+  return coiBuildings.find(building => building.id === buildingId);
+};
+
+// Helper function to find resource by ID
+const findResource = (resourceId: string): CoiResource | undefined => {
+  return coiResources.find(resource => resource.id === resourceId);
+};
+
+// Helper function to get time from metadata
+const getTimeFromMetadata = (metadata: { key: string; value: string }[]): number => {
+  const timeMetadata = metadata.find(m => m.key === 'time');
+  return timeMetadata ? parseFloat(timeMetadata.value) : 10; // Default to 10 seconds
+};
+
+// Convert COI recipe to API Recipe format
+const convertRecipe = (coiRecipe: CoiRecipe): Recipe | null => {
+  const building = findBuilding(coiRecipe.buildingId);
+  if (!building) return null;
+
+  const inputs = coiRecipe.inputs.map(input => {
+    const resource = findResource(input.resourceId);
+    if (!resource) return null;
+    return {
+      id: resource.id,
+      name: resource.name,
+      amount: input.amount,
+      icon: resource.image,
+    };
+  }).filter(Boolean);
+
+  const outputs = coiRecipe.outputs.map(output => {
+    const resource = findResource(output.resourceId);
+    if (!resource) return null;
+    return {
+      id: resource.id,
+      name: resource.name,
+      amount: output.amount,
+      icon: resource.image,
+    };
+  }).filter(Boolean);
+
+  // Skip recipes with missing resources
+  if (inputs.length !== coiRecipe.inputs.length || outputs.length !== coiRecipe.outputs.length) {
+    return null;
+  }
+
+  return {
+    id: coiRecipe.id,
+    name: coiRecipe.name,
+    building: {
+      id: building.id,
+      name: building.name,
+      image: building.image,
+    },
+    time: getTimeFromMetadata(coiRecipe.metadata),
+    inputs: inputs as any[],
+    outputs: outputs as any[],
+  };
+};
+
+export async function fetchResources(): Promise<CoiResource[]> {
   try {
-    if (isStaticExport) {
-      // In production with static export, load from static JSON
-      const response = await fetch(`${basePath}/api/resources.json`);
-      if (!response.ok) {
-        throw new Error(`Failed to fetch resources: ${response.statusText}`);
-      }
-      return response.json();
-    } else {
-      // In development or regular production, use API route
-      const response = await fetch('/api/resources');
-      if (!response.ok) {
-        throw new Error(`Failed to fetch resources: ${response.statusText}`);
-      }
-      return response.json();
-    }
+    // Return resources directly from coi data
+    return coiResources;
   } catch (error) {
-    console.error('Error fetching resources:', error);
+    console.error('Error loading resources:', error);
     // Fallback to empty array
     return [];
   }
 }
 
-export async function fetchRecipes(resourceId?: string) {
+export async function fetchRecipes(resourceId?: string): Promise<Recipe[]> {
   try {
-    if (isStaticExport) {
-      // In production with static export, load from static JSON
-      const response = await fetch(`${basePath}/api/recipes.json`);
-      if (!response.ok) {
-        throw new Error(`Failed to fetch recipes: ${response.statusText}`);
-      }
-      const recipes = await response.json();
-      
-      // Filter by resource if specified
-      if (resourceId) {
-        return recipes.filter((recipe: any) =>
-          recipe.outputs.some((output: any) => output.id === resourceId)
-        );
-      }
-      
-      return recipes;
-    } else {
-      // In development or regular production, use API route
-      const url = resourceId ? `/api/recipes?resource=${resourceId}` : '/api/recipes';
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error(`Failed to fetch recipes: ${response.statusText}`);
-      }
-      return response.json();
+    // Convert all COI recipes to API format
+    const recipes = coiRecipes
+      .map(convertRecipe)
+      .filter(Boolean) as Recipe[];
+    
+    // Filter by resource if specified
+    if (resourceId) {
+      return recipes.filter((recipe: Recipe) =>
+        recipe.outputs.some((output) => output.id === resourceId)
+      );
     }
+    
+    return recipes;
   } catch (error) {
-    console.error('Error fetching recipes:', error);
+    console.error('Error loading recipes:', error);
     // Fallback to empty array
     return [];
   }
