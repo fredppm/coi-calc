@@ -2,6 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: '/coi-calc',
+  assetPrefix: '/coi-calc/',
   images: {
     unoptimized: true
   }

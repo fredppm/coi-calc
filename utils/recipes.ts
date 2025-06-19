@@ -1,5 +1,6 @@
 import { coiRecipes, coiBuildings, coiResources } from '../data/coi';
 import { Recipe as CoiRecipe, Building, Resource } from '../types';
+import { processImagePath } from './imageUtils';
 
 export interface Recipe {
   id: string;
@@ -52,7 +53,7 @@ const convertRecipe = (coiRecipe: CoiRecipe): Recipe | null => {
       id: resource.id,
       name: resource.name,
       amount: input.amount,
-      icon: resource.image,
+      icon: processImagePath(resource.image),
     };
   }).filter(Boolean);
 
@@ -63,7 +64,7 @@ const convertRecipe = (coiRecipe: CoiRecipe): Recipe | null => {
       id: resource.id,
       name: resource.name,
       amount: output.amount,
-      icon: resource.image,
+      icon: processImagePath(resource.image),
     };
   }).filter(Boolean);
 
@@ -78,7 +79,7 @@ const convertRecipe = (coiRecipe: CoiRecipe): Recipe | null => {
     building: {
       id: building.id,
       name: building.name,
-      image: building.image,
+      image: processImagePath(building.image),
     },
     time: getTimeFromMetadata(coiRecipe.metadata),
     inputs: inputs as any[],

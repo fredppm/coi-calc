@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { coiResources } from '../../data/coi';
 import { Resource as CoiResource } from '../../types';
+import { processImagePath } from '../../utils/imageUtils';
 
 /**
  * Resource represents a possible objective in the system.
@@ -19,7 +20,7 @@ const convertResource = (coiResource: CoiResource): Resource => {
     id: coiResource.id,
     name: coiResource.name,
     description: `${coiResource.name} resource for production chains`,
-    image: coiResource.image,
+    image: processImagePath(coiResource.image),
     color: coiResource.color,
   };
 };
