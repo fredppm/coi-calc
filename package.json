@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build && next export",
+    "deploy": "next build && touch out/.nojekyll && echo 'coi-calc.github.io' > out/CNAME",
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit"
