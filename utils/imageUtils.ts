@@ -16,8 +16,34 @@ export const getImageUrl = (imagePath: string): string => {
 };
 
 /**
+ * Convert snake_case to Title_Case for filenames (matches actual file naming convention)
+ */
+const snakeToTitleCase = (str: string): string => {
+  return str
+    .split('_')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join('_');
+};
+
+/**
  * Process image path from data to ensure it works correctly across environments
+ * Automatically handles case mismatches between data and actual file names
  */
 export const processImagePath = (imagePath: string): string => {
+  // Extract filename from path
+  const pathParts = imagePath.split('/');
+  const fileName = pathParts[pathParts.length - 1];
+  const basePath = pathParts.slice(0, -1).join('/');
+  
+  // If filename is in snake_case (all lowercase with underscores), convert to Title_Case
+  if (fileName.includes('_') && fileName === fileName.toLowerCase()) {
+    const fileNameWithoutExt = fileName.replace('.png', '');
+    const titleCaseFileName = snakeToTitleCase(fileNameWithoutExt) + '.png';
+    const titleCasePath = `${basePath}/${titleCaseFileName}`;
+    
+    return getImageUrl(titleCasePath);
+  }
+  
+  // For files that are already properly cased, use as-is
   return getImageUrl(imagePath);
 }; 
