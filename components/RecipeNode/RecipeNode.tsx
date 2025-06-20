@@ -1,6 +1,7 @@
 import { Handle, Position } from 'reactflow';
 import { useState } from 'react';
 import { getNormalizedAmount, getDisplayTime, clampMultiplier, getNormalizedAmountForBalance } from '../../utils/recipeCalculations';
+import { processImagePath } from '../../utils/imageUtils';
 
 /**
  * RecipeNodeData defines the data structure for a recipe node.
@@ -248,9 +249,9 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 bg-gray-100 rounded-full border-2 border-gray-200 flex items-center justify-center overflow-hidden flex-shrink-0">
             <img 
-              src={data.building.image} 
+              src={processImagePath(data.building.image)} 
               alt={data.building.name}
-              className="w-full h-full object-contain"
+              className="w-8 h-8 object-contain"
             />
           </div>
           <div>

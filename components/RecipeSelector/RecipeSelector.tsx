@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Recipe, getRecipesByResource } from '../../utils/recipes';
+import { processImagePath } from '../../utils/imageUtils';
 
 /**
  * RecipeSelectorProps defines the properties for the RecipeSelector component.
@@ -142,7 +143,7 @@ export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-gray-100 rounded-full border-2 border-gray-200 flex items-center justify-center overflow-hidden flex-shrink-0">
                     <img 
-                      src={recipe.building.image} 
+                                              src={processImagePath(recipe.building.image)} 
                       alt={recipe.building.name}
                       className="w-full h-full object-contain"
                     />

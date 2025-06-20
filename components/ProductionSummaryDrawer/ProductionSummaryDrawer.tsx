@@ -1,6 +1,7 @@
 import { Node, Edge } from 'reactflow';
 import { useState } from 'react';
 import { roundForDisplay, getNormalizedAmount } from '../../utils/recipeCalculations';
+import { processImagePath } from '../../utils/imageUtils';
 
 /**
  * ProductionSummaryDrawerProps defines the properties for the ProductionSummaryDrawer component.
@@ -274,7 +275,7 @@ export const ProductionSummaryDrawer: React.FC<ProductionSummaryDrawerProps> = (
                     {Object.entries(summary.buildingsRequired).map(([id, building]) => (
                       <div key={id} className="flex-shrink-0 flex items-center space-x-2 bg-gray-50 px-3 py-2 rounded text-sm">
                         <img 
-                          src={building.image} 
+                          src={processImagePath(building.image)} 
                           alt={building.name}
                           className="w-5 h-5 object-contain"
                         />

@@ -3,6 +3,7 @@ import { coiResources } from '../../data/coi';
 import { Resource as CoiResource } from '../../types';
 import { processImagePath } from '../../utils/imageUtils';
 
+
 /**
  * Resource represents a possible objective in the system.
  */
@@ -195,18 +196,9 @@ export const ObjectiveSelector: React.FC<ObjectiveSelectorProps> = ({ onSelect }
                       : 'group-group-hover:ring-1 group-hover:ring-gray-200'
                   }`}>
                     <img 
-                      src={resource.image} 
+                                              src={processImagePath(resource.image)} 
                       alt={resource.name}
-                      className="w-full h-full object-contain filter drop-shadow-sm transition-all duration-200 group-hover:scale-110"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.style.display = 'none';
-                        const fallback = target.nextElementSibling as HTMLElement;
-                        if (fallback) {
-                          fallback.style.display = 'flex';
-                          fallback.textContent = '📦';
-                        }
-                      }}
+                      className="w-8 h-8 object-contain"
                     />
                     <div className="hidden w-full h-full items-center justify-center text-2xl opacity-60">📦</div>
                   </div>
@@ -248,9 +240,9 @@ export const ObjectiveSelector: React.FC<ObjectiveSelectorProps> = ({ onSelect }
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center ring-2 ring-blue-200">
                 <img 
-                  src={selectedResource.image} 
+                                      src={processImagePath(selectedResource.image)} 
                   alt={selectedResource.name}
-                  className="w-8 h-8 object-contain"
+                  className="w-6 h-6 object-contain"
                 />
               </div>
               <div className="flex-1">

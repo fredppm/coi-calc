@@ -6,6 +6,7 @@ import { Node, Edge } from 'reactflow';
 import { ProductionSummaryDrawer } from '../../../components/ProductionSummaryDrawer/ProductionSummaryDrawer';
 import { DebugPanel } from '../../../components/DebugPanel/DebugPanel';
 import { coiResources } from '../../../data/coi';
+import { processImagePath } from '../../../utils/imageUtils';
 import 'reactflow/dist/style.css';
 
 // LZ-string compression functions (inline implementation for small bundle size)
@@ -346,7 +347,7 @@ export default function ObjectiveCanvasPage() {
           {objective ? (
             <>
               <img 
-                src={objective.image} 
+                src={processImagePath(objective.image)} 
                 alt={objective.name}
                 className="w-4 h-4 object-contain"
               />
