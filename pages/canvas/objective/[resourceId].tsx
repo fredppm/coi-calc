@@ -8,6 +8,7 @@ import { Recipe } from '../../../utils/recipes';
 import { ProductionSummaryDrawer } from '../../../components/ProductionSummaryDrawer/ProductionSummaryDrawer';
 import { DebugPanel } from '../../../components/DebugPanel/DebugPanel';
 import { coiResources } from '../../../data/coi';
+import { updateBrowserUrl } from '../../../utils/urlHelper';
 import 'reactflow/dist/style.css';
 
 // LZ-string compression functions (inline implementation for small bundle size)
@@ -205,10 +206,9 @@ export default function ObjectiveCanvasPage() {
     if (!initialLoadComplete) return;
     
     const stateParam = encodeCanvasState(newNodes, newEdges);
-    const url = `/canvas/objective/${resourceId}?state=${stateParam}`;
     
-    // Update URL without triggering navigation
-    window.history.replaceState(null, '', url);
+    // Use helper function that handles basePath correctly
+    updateBrowserUrl(`objective/${resourceId}`, stateParam);
   }, [resourceId, initialLoadComplete]);
 
   // Handle state changes from Flow component

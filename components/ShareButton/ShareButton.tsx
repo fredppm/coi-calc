@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getFullPath, getBasePath } from '../../utils/urlHelper';
 
 /**
  * ShareButtonProps defines the properties for the ShareButton component.
@@ -19,12 +20,21 @@ export const ShareButton: React.FC<ShareButtonProps> = () => {
       
       // If we're on an old recipe-based URL, convert to generic canvas URL for sharing
       const currentUrl = new URL(window.location.href);
-      const pathMatch = currentUrl.pathname.match(/^\/canvas\/([^\/]+)$/);
+      const basePath = getBasePath();
+      
+      // Remove basePath from pathname for pattern matching
+      let pathname = currentUrl.pathname;
+      if (basePath && pathname.startsWith(basePath)) {
+        pathname = pathname.slice(basePath.length);
+      }
+      
+      const pathMatch = pathname.match(/^\/canvas\/([^\/]+)$/);
       
       if (pathMatch && currentUrl.searchParams.get('state')) {
         // Convert from /canvas/recipeId?state=xyz to /canvas?state=xyz
         const state = currentUrl.searchParams.get('state');
-        urlToCopy = `${currentUrl.origin}/canvas?state=${state}`;
+        const fullPath = getFullPath('/canvas');
+        urlToCopy = `${currentUrl.origin}${fullPath}?state=${state}`;
       }
       
       // Copy URL to clipboard
@@ -39,11 +49,20 @@ export const ShareButton: React.FC<ShareButtonProps> = () => {
       
       // Apply same URL conversion logic for fallback
       const currentUrl = new URL(window.location.href);
-      const pathMatch = currentUrl.pathname.match(/^\/canvas\/([^\/]+)$/);
+      const basePath = getBasePath();
+      
+      // Remove basePath from pathname for pattern matching
+      let pathname = currentUrl.pathname;
+      if (basePath && pathname.startsWith(basePath)) {
+        pathname = pathname.slice(basePath.length);
+      }
+      
+      const pathMatch = pathname.match(/^\/canvas\/([^\/]+)$/);
       
       if (pathMatch && currentUrl.searchParams.get('state')) {
         const state = currentUrl.searchParams.get('state');
-        urlToCopy = `${currentUrl.origin}/canvas?state=${state}`;
+        const fullPath = getFullPath('/canvas');
+        urlToCopy = `${currentUrl.origin}${fullPath}?state=${state}`;
       }
       
       const textArea = document.createElement('textarea');
