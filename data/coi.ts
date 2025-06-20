@@ -1,233 +1,233 @@
 import { Resource, Building, Recipe } from '../types';
 
 export const coiResources: Resource[] = [
-  { id: "acid", name: "Acid", color: "#a41818", image: "images/resources/acid.png" },
-  { id: "air_pollution", name: "Air Pollution", color: "#eff6ff", image: "images/resources/air_pollution.png" },
-  { id: "alumina", name: "Alumina", color: "#dfdfdf", image: "images/resources/alumina.png" },
-  { id: "aluminum", name: "Aluminum", color: "#eeeeec", image: "images/resources/aluminum.png" },
-  { id: "aluminum_scrap", name: "Aluminum Scrap", color: "#8a3c28", image: "images/resources/aluminum_scrap.png" },
-  { id: "aluminum_scrap_pressed", name: "Aluminum Scrap Pressed", color: "#3d813d", image: "images/resources/aluminum_scrap_pressed.png" },
-  { id: "ammonia", name: "Ammonia", color: "#7c9bb5", image: "images/resources/ammonia.png" },
-  { id: "anesthetics", name: "Anesthetics", color: "#dbe9ee", image: "images/resources/anesthetics.png" },
-  { id: "animal_feed", name: "Animal Feed", color: "#3b66c1", image: "images/resources/animal_feed.png" },
-  { id: "antibiotics", name: "Antibiotics", color: "#24f2dc", image: "images/resources/antibiotics.png" },
-  { id: "asteroid_booster_parts", name: "Asteroid Booster Parts", color: "#4c9ec3", image: "images/resources/asteroid_booster_parts.png" },
-  { id: "bauxite", name: "Bauxite", color: "#c85d35", image: "images/resources/bauxite.png" },
-  { id: "bauxite_powder", name: "Bauxite Powder", color: "#3d4966", image: "images/resources/bauxite_powder.png" },
-  { id: "biomass", name: "Biomass", color: "#d0d24b", image: "images/resources/biomass.png" },
-  { id: "blanket_fuel", name: "Blanket Fuel", color: "#297cc9", image: "images/resources/blanket_fuel.png" },
-  { id: "blanket_fuel_enriched", name: "Blanket Fuel (Enriched)", color: "#689ac9", image: "images/resources/blanket_fuel_enriched.png" },
-  { id: "bread", name: "Bread", color: "#f0a346", image: "images/resources/bread.png" },
-  { id: "brine", name: "Brine", color: "#d0e7ee", image: "images/resources/brine.png" },
-  { id: "broken_glass", name: "Broken Glass", color: "#8a3c28", image: "images/resources/broken_glass.png" },
-  { id: "cake", name: "Cake", color: "#ffeda4", image: "images/resources/cake.png" },
-  { id: "canola", name: "Canola", color: "#ecca2e", image: "images/resources/canola.png" },
-  { id: "carbon_dioxide", name: "Carbon Dioxide", color: "#2f2f2f", image: "images/resources/carbon_dioxide.png" },
-  { id: "cement", name: "Cement", color: "#dfa775", image: "images/resources/cement.png" },
-  { id: "chemical_fuel", name: "Chemical Fuel", color: "#ff4823", image: "images/resources/chemical_fuel.png" },
-  { id: "chicken_carcass", name: "Chicken Carcass", color: "#fde7cc", image: "images/resources/chicken_carcass.png" },
-  { id: "chilled_water", name: "Chilled Water", color: "#25c0ee", image: "images/resources/chilled_water.png" },
-  { id: "chlorine", name: "Chlorine", color: "#b9c646", image: "images/resources/chlorine.png" },
-  { id: "coal", name: "Coal", color: "#494545", image: "images/resources/coal.png" },
-  { id: "compact_reactor", name: "Compact Reactor", color: "#85bb40", image: "images/resources/compact_reactor.png" },
-  { id: "composite_core", name: "Composite Core", color: "#c09b00", image: "images/resources/composite_core.png" },
-  { id: "composite_core_basic", name: "Composite Core Basic", color: "#767677", image: "images/resources/composite_core_basic.png" },
-  { id: "composite_panel", name: "Composite Panel", color: "#8e9dc2", image: "images/resources/composite_panel.png" },
-  { id: "compost", name: "Compost", color: "#ae8962", image: "images/resources/compost.png" },
-  { id: "computing", name: "Computing", color: "#535353", image: "images/resources/computing.png" },
-  { id: "concrete_slab", name: "Concrete Slab", color: "#999ea2", image: "images/resources/concrete_slab.png" },
-  { id: "construction_parts", name: "Construction Parts", color: "#d0d0d0", image: "images/resources/construction_parts.png" },
-  { id: "construction_parts_ii", name: "Construction Parts II", color: "#bb9f31", image: "images/resources/construction_parts_ii.png" },
-  { id: "construction_parts_iii", name: "Construction Parts III", color: "#ff5544", image: "images/resources/construction_parts_iii.png" },
-  { id: "construction_parts_iv", name: "Construction Parts IV", color: "#7254b1", image: "images/resources/construction_parts_iv.png" },
-  { id: "consumer_electronics", name: "Consumer Electronics", color: "#41a9f6", image: "images/resources/consumer_electronics.png" },
-  { id: "cooking_oil", name: "Cooking Oil", color: "#ea9f26", image: "images/resources/cooking_oil.png" },
-  { id: "copper", name: "Copper", color: "#c98454", image: "images/resources/copper.png" },
-  { id: "copper_ore", name: "Copper Ore", color: "#295627", image: "images/resources/copper_ore.png" },
-  { id: "copper_ore_crushed", name: "Copper Ore Crushed", color: "#3b7c38", image: "images/resources/copper_ore_crushed.png" },
-  { id: "copper_scrap", name: "Copper Scrap", color: "#e2945d", image: "images/resources/copper_scrap.png" },
-  { id: "copper_scrap_pressed", name: "Copper Scrap Pressed", color: "#e2945d", image: "images/resources/copper_scrap_pressed.png" },
-  { id: "core_fuel", name: "Core Fuel", color: "#a1a1a1", image: "images/resources/core_fuel.png" },
-  { id: "core_fuel_spent", name: "Core Fuel (Spent)", color: "#8a6a0a", image: "images/resources/core_fuel_spent.png" },
-  { id: "corn", name: "Corn", color: "#88c057", image: "images/resources/corn.png" },
-  { id: "corn_mash", name: "Corn Mash", color: "#d8cf4b", image: "images/resources/corn_mash.png" },
-  { id: "crew_supplies", name: "Crew Supplies", color: "#dbae11", image: "images/resources/crew_supplies.png" },
-  { id: "crude_oil", name: "Crude Oil", color: "#404851", image: "images/resources/crude_oil.png" },
-  { id: "depleted_uranium", name: "Depleted Uranium", color: "#3d4966", image: "images/resources/depleted_uranium.png" },
-  { id: "diamond", name: "Diamond", color: "#d7e2e7", image: "images/resources/diamond.png" },
-  { id: "diamond_paste", name: "Diamond Paste", color: "#dca418", image: "images/resources/diamond_paste.png" },
-  { id: "diesel", name: "Diesel", color: "#e75f4b", image: "images/resources/diesel.png" },
-  { id: "dirt", name: "Dirt", color: "#cb8252", image: "images/resources/dirt.png" },
-  { id: "disinfectant", name: "Disinfectant", color: "#8388ef", image: "images/resources/disinfectant.png" },
-  { id: "eggs", name: "Eggs", color: "#b79e94", image: "images/resources/eggs.png" },
-  { id: "electricity", name: "Electricity", color: "#fdbf00", image: "images/resources/electricity.png" },
-  { id: "electronics", name: "Electronics", color: "#f3a845", image: "images/resources/electronics.png" },
-  { id: "electronics_ii", name: "Electronics II", color: "#029250", image: "images/resources/electronics_ii.png" },
-  { id: "electronics_iii", name: "Electronics III", color: "#8d2000", image: "images/resources/electronics_iii.png" },
-  { id: "electronics_iv", name: "Electronics IV", color: "#7e4fc4", image: "images/resources/electronics_iv.png" },
-  { id: "enriched_uranium_20", name: "Enriched Uranium (20%)", color: "#78ca78", image: "images/resources/enriched_uranium_20.png" },
-  { id: "enriched_uranium_4", name: "Enriched Uranium (4%)", color: "#6f7d81", image: "images/resources/enriched_uranium_4.png" },
-  { id: "ethanol", name: "Ethanol", color: "#d0d6e1", image: "images/resources/ethanol.png" },
-  { id: "exhaust", name: "Exhaust", color: "#68513d", image: "images/resources/exhaust.png" },
-  { id: "fertilizer_organic", name: "Fertilizer (Organic)", color: "#eaffbd", image: "images/resources/fertilizer_organic.png" },
-  { id: "fertilizer_i", name: "Fertilizer I", color: "#ab8a58", image: "images/resources/fertilizer_i.png" },
-  { id: "fertilizer_ii", name: "Fertilizer II", color: "#cbc62a", image: "images/resources/fertilizer_ii.png" },
-  { id: "filter_media", name: "Filter Media", color: "#de8919", image: "images/resources/filter_media.png" },
-  { id: "fission_product", name: "Fission Product", color: "#457ecd", image: "images/resources/fission_product.png" },
-  { id: "flour", name: "Flour", color: "#fed22b", image: "images/resources/flour.png" },
-  { id: "flowers", name: "Flowers", color: "#ffd42a", image: "images/resources/flowers.png" },
-  { id: "food_pack", name: "Food Pack", color: "#f29c1f", image: "images/resources/food_pack.png" },
-  { id: "fruit", name: "Fruit", color: "#ff3b6a", image: "images/resources/fruit.png" },
-  { id: "fuel_gas", name: "Fuel Gas", color: "#e57e25", image: "images/resources/fuel_gas.png" },
-  { id: "glass", name: "Glass", color: "#77b4b0", image: "images/resources/glass.png" },
-  { id: "glass_mix", name: "Glass Mix", color: "#bf9a56", image: "images/resources/glass_mix.png" },
-  { id: "gold", name: "Gold", color: "#e88604", image: "images/resources/gold.png" },
-  { id: "gold_ore", name: "Gold Ore", color: "#6c581f", image: "images/resources/gold_ore.png" },
-  { id: "gold_ore_concentrate", name: "Gold Ore Concentrate", color: "#3d4966", image: "images/resources/gold_ore_concentrate.png" },
-  { id: "gold_ore_crushed", name: "Gold Ore Crushed", color: "#3d4966", image: "images/resources/gold_ore_crushed.png" },
-  { id: "gold_ore_powder", name: "Gold Ore Powder", color: "#3d4966", image: "images/resources/gold_ore_powder.png" },
-  { id: "gold_scrap", name: "Gold Scrap", color: "#8a3c28", image: "images/resources/gold_scrap.png" },
-  { id: "gold_scrap_pressed", name: "Gold Scrap Pressed", color: "#3d813d", image: "images/resources/gold_scrap_pressed.png" },
-  { id: "graphite", name: "Graphite", color: "#827f7f", image: "images/resources/graphite.png" },
-  { id: "gravel", name: "Gravel", color: "#8f827b", image: "images/resources/gravel.png" },
-  { id: "heavy_oil", name: "Heavy Oil", color: "#755a1c", image: "images/resources/heavy_oil.png" },
-  { id: "household_appliances", name: "Household Appliances", color: "#3588a3", image: "images/resources/household_appliances.png" },
-  { id: "household_goods", name: "Household Goods", color: "#9ccc65", image: "images/resources/household_goods.png" },
-  { id: "hydrated_alumina", name: "Hydrated Alumina", color: "#dfdfdf", image: "images/resources/hydrated_alumina.png" },
-  { id: "hydrogen", name: "Hydrogen", color: "#4a4a56", image: "images/resources/hydrogen.png" },
-  { id: "hydrogen_fluoride", name: "Hydrogen Fluoride", color: "#b4b040", image: "images/resources/hydrogen_fluoride.png" },
-  { id: "imported_goods", name: "Imported Goods", color: "#b07659", image: "images/resources/imported_goods.png" },
-  { id: "impure_copper", name: "Impure Copper", color: "#c16a46", image: "images/resources/impure_copper.png" },
-  { id: "iron", name: "Iron", color: "#7c7c7c", image: "images/resources/iron.png" },
-  { id: "iron_ore", name: "Iron Ore", color: "#823019", image: "images/resources/iron_ore.png" },
-  { id: "iron_ore_crushed", name: "Iron Ore Crushed", color: "#3d4966", image: "images/resources/iron_ore_crushed.png" },
-  { id: "iron_scrap", name: "Iron Scrap", color: "#8a3c28", image: "images/resources/iron_scrap.png" },
-  { id: "iron_scrap_pressed", name: "Iron Scrap Pressed", color: "#3d813d", image: "images/resources/iron_scrap_pressed.png" },
-  { id: "lab_equipment", name: "Lab Equipment", color: "#e5e5e5", image: "images/resources/lab_equipment.png" },
-  { id: "lab_equipment_ii", name: "Lab Equipment II", color: "#cfae36", image: "images/resources/lab_equipment_ii.png" },
-  { id: "lab_equipment_iii", name: "Lab Equipment III", color: "#ff5544", image: "images/resources/lab_equipment_iii.png" },
-  { id: "lab_equipment_iv", name: "Lab Equipment IV", color: "#7659bb", image: "images/resources/lab_equipment_iv.png" },
-  { id: "lens", name: "Lens", color: "#6698bd", image: "images/resources/lens.png" },
-  { id: "light_oil", name: "Light Oil", color: "#8f9e4c", image: "images/resources/light_oil.png" },
-  { id: "limestone", name: "Limestone", color: "#b3b397", image: "images/resources/limestone.png" },
-  { id: "luxury_goods", name: "Luxury Goods", color: "#726d7b", image: "images/resources/luxury_goods.png" },
-  { id: "mox_rod", name: "MOX Rod", color: "#beb661", image: "images/resources/mox_rod.png" },
-  { id: "maintenance_i", name: "Maintenance I", color: "#373737", image: "images/resources/maintenance_i.png" },
-  { id: "maintenance_ii", name: "Maintenance II", color: "#b59a30", image: "images/resources/maintenance_ii.png" },
-  { id: "maintenance_iii", name: "Maintenance III", color: "#ff5544", image: "images/resources/maintenance_iii.png" },
-  { id: "manufactured_sand", name: "Manufactured Sand", color: "#a7a7a7", image: "images/resources/manufactured_sand.png" },
-  { id: "meat", name: "Meat", color: "#e5646e", image: "images/resources/meat.png" },
-  { id: "meat_trimmings", name: "Meat Trimmings", color: "#eb4a78", image: "images/resources/meat_trimmings.png" },
-  { id: "mechanical_parts", name: "Mechanical Parts", color: "#776d79", image: "images/resources/mechanical_parts.png" },
-  { id: "mechanical_power", name: "Mechanical Power", color: "#e4c059", image: "images/resources/mechanical_power.png" },
-  { id: "medical_equipment", name: "Medical Equipment", color: "#4188ff", image: "images/resources/medical_equipment.png" },
-  { id: "medical_supplies", name: "Medical Supplies", color: "#d1d1d1", image: "images/resources/medical_supplies.png" },
-  { id: "medical_supplies_ii", name: "Medical Supplies II", color: "#d1b237", image: "images/resources/medical_supplies_ii.png" },
-  { id: "medical_supplies_iii", name: "Medical Supplies III", color: "#ff5544", image: "images/resources/medical_supplies_iii.png" },
-  { id: "medium_oil", name: "Medium Oil", color: "#e6d6ff", image: "images/resources/medium_oil.png" },
-  { id: "microchips", name: "Microchips", color: "#114378", image: "images/resources/microchips.png" },
-  { id: "microchips_stage_1_a", name: "Microchips Stage 1 A", color: "#f5caff", image: "images/resources/microchips_stage_1_a.png" },
-  { id: "microchips_stage_1_b", name: "Microchips Stage 1 B", color: "#ffe0cc", image: "images/resources/microchips_stage_1_b.png" },
-  { id: "microchips_stage_1_c", name: "Microchips Stage 1 C", color: "#ffe0cc", image: "images/resources/microchips_stage_1_c.png" },
-  { id: "microchips_stage_2_a", name: "Microchips Stage 2 A", color: "#f1b2ff", image: "images/resources/microchips_stage_2_a.png" },
-  { id: "microchips_stage_2_b", name: "Microchips Stage 2 B", color: "#ffd0b2", image: "images/resources/microchips_stage_2_b.png" },
-  { id: "microchips_stage_2_c", name: "Microchips Stage 2 C", color: "#ffd0b2", image: "images/resources/microchips_stage_2_c.png" },
-  { id: "microchips_stage_3_a", name: "Microchips Stage 3 A", color: "#ec99ff", image: "images/resources/microchips_stage_3_a.png" },
-  { id: "microchips_stage_3_b", name: "Microchips Stage 3 B", color: "#cc9b7a", image: "images/resources/microchips_stage_3_b.png" },
-  { id: "microchips_stage_3_c", name: "Microchips Stage 3 C", color: "#cb7aae", image: "images/resources/microchips_stage_3_c.png" },
-  { id: "microchips_stage_4_a", name: "Microchips Stage 4 A", color: "#e780ff", image: "images/resources/microchips_stage_4_a.png" },
-  { id: "microchips_stage_4_b", name: "Microchips Stage 4 B", color: "#cc8f66", image: "images/resources/microchips_stage_4_b.png" },
-  { id: "molten_aluminum", name: "Molten Aluminum", color: "#fed72a", image: "images/resources/molten_aluminum.png" },
-  { id: "molten_copper", name: "Molten Copper", color: "#fed72a", image: "images/resources/molten_copper.png" },
-  { id: "molten_glass", name: "Molten Glass", color: "#febd41", image: "images/resources/molten_glass.png" },
-  { id: "molten_iron", name: "Molten Iron", color: "#fea62a", image: "images/resources/molten_iron.png" },
-  { id: "molten_silicon", name: "Molten Silicon", color: "#fed72a", image: "images/resources/molten_silicon.png" },
-  { id: "molten_steel", name: "Molten Steel", color: "#fed72a", image: "images/resources/molten_steel.png" },
-  { id: "molten_titanium", name: "Molten Titanium", color: "#fea62a", image: "images/resources/molten_titanium.png" },
-  { id: "molten_titanium_alloy", name: "Molten Titanium Alloy", color: "#fea62a", image: "images/resources/molten_titanium_alloy.png" },
-  { id: "morphine", name: "Morphine", color: "#9ce6fb", image: "images/resources/morphine.png" },
-  { id: "naphtha", name: "Naphtha", color: "#d8cf4b", image: "images/resources/naphtha.png" },
-  { id: "nitrogen", name: "Nitrogen", color: "#5388d1", image: "images/resources/nitrogen.png" },
-  { id: "office_supplies", name: "Office Supplies", color: "#266868", image: "images/resources/office_supplies.png" },
-  { id: "oxygen", name: "Oxygen", color: "#d24646", image: "images/resources/oxygen.png" },
-  { id: "pcb", name: "PCB", color: "#029250", image: "images/resources/pcb.png" },
-  { id: "paper", name: "Paper", color: "#e2e2e3", image: "images/resources/paper.png" },
-  { id: "plastic", name: "Plastic", color: "#3ec2ab", image: "images/resources/plastic.png" },
-  { id: "plutonium", name: "Plutonium", color: "#6dc658", image: "images/resources/plutonium.png" },
-  { id: "poppy", name: "Poppy", color: "#00bc37", image: "images/resources/poppy.png" },
-  { id: "potato", name: "Potato", color: "#734414", image: "images/resources/potato.png" },
-  { id: "quartz", name: "Quartz", color: "#77582c", image: "images/resources/quartz.png" },
-  { id: "quartz_crushed", name: "Quartz Crushed", color: "#3d4966", image: "images/resources/quartz_crushed.png" },
-  { id: "rail_parts", name: "Rail Parts", color: "#99a7ab", image: "images/resources/rail_parts.png" },
-  { id: "recyclables", name: "Recyclables", color: "#423831", image: "images/resources/recyclables.png" },
-  { id: "recyclables_pressed", name: "Recyclables Pressed", color: "#3d813d", image: "images/resources/recyclables_pressed.png" },
-  { id: "red_mud", name: "Red Mud", color: "#8e2319", image: "images/resources/red_mud.png" },
-  { id: "reprocessed_uranium_1", name: "Reprocessed Uranium (1%)", color: "#397e37", image: "images/resources/reprocessed_uranium_1.png" },
-  { id: "retired_waste", name: "Retired Waste", color: "#95A5A6", image: "images/resources/retired_waste.png" },
-  { id: "rock", name: "Rock", color: "#8f827b", image: "images/resources/rock.png" },
-  { id: "rubber", name: "Rubber", color: "#5d4a27", image: "images/resources/rubber.png" },
-  { id: "salt", name: "Salt", color: "#e9edf5", image: "images/resources/salt.png" },
-  { id: "sand", name: "Sand", color: "#bf9a56", image: "images/resources/sand.png" },
-  { id: "sapphire_wafer", name: "Sapphire Wafer", color: "#657fef", image: "images/resources/sapphire_wafer.png" },
-  { id: "sausage", name: "Sausage", color: "#ea7b44", image: "images/resources/sausage.png" },
-  { id: "seawater", name: "Seawater", color: "#17bcfe", image: "images/resources/seawater.png" },
-  { id: "server", name: "Server", color: "#64798a", image: "images/resources/server.png" },
-  { id: "silicon_poly", name: "Silicon (Poly)", color: "#9daeb2", image: "images/resources/silicon_poly.png" },
-  { id: "silicon_wafer", name: "Silicon Wafer", color: "#d2ccc9", image: "images/resources/silicon_wafer.png" },
-  { id: "slag", name: "Slag", color: "#959390", image: "images/resources/slag.png" },
-  { id: "slag_crushed", name: "Slag Crushed", color: "#3d4966", image: "images/resources/slag_crushed.png" },
-  { id: "sludge", name: "Sludge", color: "#452e1c", image: "images/resources/sludge.png" },
-  { id: "snack", name: "Snack", color: "#d4483f", image: "images/resources/snack.png" },
-  { id: "solar_cell", name: "Solar Cell", color: "#26abff", image: "images/resources/solar_cell.png" },
-  { id: "solar_cell_mono", name: "Solar Cell Mono", color: "#115279", image: "images/resources/solar_cell_mono.png" },
-  { id: "sour_water", name: "Sour Water", color: "#5cd783", image: "images/resources/sour_water.png" },
-  { id: "soybean", name: "Soybean", color: "#719b56", image: "images/resources/soybean.png" },
-  { id: "space_probe_parts", name: "Space Probe Parts", color: "#ebb149", image: "images/resources/space_probe_parts.png" },
-  { id: "spent_fuel", name: "Spent Fuel", color: "#dbb356", image: "images/resources/spent_fuel.png" },
-  { id: "spent_mox", name: "Spent MOX", color: "#95A5A6", image: "images/resources/spent_mox.png" },
-  { id: "station_parts", name: "Station Parts", color: "#56ace1", image: "images/resources/station_parts.png" },
-  { id: "station_parts_basic", name: "Station Parts (Basic)", color: "#56ace1", image: "images/resources/station_parts_basic.png" },
-  { id: "steam_depleted", name: "Steam (Depleted)", color: "#bbdefb", image: "images/resources/steam_depleted.png" },
-  { id: "steam_high", name: "Steam (High)", color: "#a9d5f9", image: "images/resources/steam_high.png" },
-  { id: "steam_low", name: "Steam (Low)", color: "#9dcff9", image: "images/resources/steam_low.png" },
-  { id: "steam_super", name: "Steam (Super)", color: "#95A5A6", image: "images/resources/steam_super.png" },
-  { id: "steel", name: "Steel", color: "#cecece", image: "images/resources/steel.png" },
-  { id: "sugar", name: "Sugar", color: "#d89668", image: "images/resources/sugar.png" },
-  { id: "sugar_cane", name: "Sugar Cane", color: "#69aa55", image: "images/resources/sugar_cane.png" },
-  { id: "sulfur", name: "Sulfur", color: "#3d4966", image: "images/resources/sulfur.png" },
-  { id: "titanium_alloy", name: "Titanium Alloy", color: "#8c8b83", image: "images/resources/titanium_alloy.png" },
-  { id: "titanium_chloride", name: "Titanium Chloride", color: "#c38b3a", image: "images/resources/titanium_chloride.png" },
-  { id: "titanium_chloride_pure", name: "Titanium Chloride (Pure)", color: "#c3c33a", image: "images/resources/titanium_chloride_pure.png" },
-  { id: "titanium_ore", name: "Titanium Ore", color: "#798795", image: "images/resources/titanium_ore.png" },
-  { id: "titanium_ore_crushed", name: "Titanium Ore Crushed", color: "#3d4966", image: "images/resources/titanium_ore_crushed.png" },
-  { id: "titanium_slag", name: "Titanium Slag", color: "#515151", image: "images/resources/titanium_slag.png" },
-  { id: "titanium_sponge", name: "Titanium Sponge", color: "#797d82", image: "images/resources/titanium_sponge.png" },
-  { id: "tofu", name: "Tofu", color: "#ffe1ba", image: "images/resources/tofu.png" },
-  { id: "toxic_slurry", name: "Toxic Slurry", color: "#cbce17", image: "images/resources/toxic_slurry.png" },
-  { id: "tree_sapling", name: "Tree Sapling", color: "#7ac1a3", image: "images/resources/tree_sapling.png" },
-  { id: "uranium_ore", name: "Uranium Ore", color: "#82d082", image: "images/resources/uranium_ore.png" },
-  { id: "uranium_ore_powder", name: "Uranium Ore Powder", color: "#3d4966", image: "images/resources/uranium_ore_powder.png" },
-  { id: "uranium_rod", name: "Uranium Rod", color: "#828282", image: "images/resources/uranium_rod.png" },
-  { id: "vegetables", name: "Vegetables", color: "#81c83d", image: "images/resources/vegetables.png" },
-  { id: "vehicle_parts", name: "Vehicle Parts", color: "#cdcdcd", image: "images/resources/vehicle_parts.png" },
-  { id: "vehicle_parts_ii", name: "Vehicle Parts II", color: "#bb9f31", image: "images/resources/vehicle_parts_ii.png" },
-  { id: "vehicle_parts_iii", name: "Vehicle Parts III", color: "#ff5544", image: "images/resources/vehicle_parts_iii.png" },
-  { id: "waste", name: "Waste", color: "#01afea", image: "images/resources/waste.png" },
-  { id: "waste_pressed", name: "Waste Pressed", color: "#3d813d", image: "images/resources/waste_pressed.png" },
-  { id: "waste_water", name: "Waste Water", color: "#ce7f17", image: "images/resources/waste_water.png" },
-  { id: "water", name: "Water", color: "#25c0ee", image: "images/resources/water.png" },
-  { id: "water_pollution", name: "Water Pollution", color: "#eff6ff", image: "images/resources/water_pollution.png" },
-  { id: "wheat", name: "Wheat", color: "#f3c432", image: "images/resources/wheat.png" },
-  { id: "wood", name: "Wood", color: "#8b5016", image: "images/resources/wood.png" },
-  { id: "woodchips", name: "Woodchips", color: "#bc9a5e", image: "images/resources/woodchips.png" },
-  { id: "yellowcake", name: "Yellowcake", color: "#b5ba4c", image: "images/resources/yellowcake.png" },
+  { id: "acid", name: "Acid", color: "#a41818", image: "/images/resources/acid.png" },
+  { id: "air_pollution", name: "Air Pollution", color: "#eff6ff", image: "/images/resources/air_pollution.png" },
+  { id: "alumina", name: "Alumina", color: "#dfdfdf", image: "/images/resources/alumina.png" },
+  { id: "aluminum", name: "Aluminum", color: "#eeeeec", image: "/images/resources/aluminum.png" },
+  { id: "aluminum_scrap", name: "Aluminum Scrap", color: "#8a3c28", image: "/images/resources/aluminum_scrap.png" },
+  { id: "aluminum_scrap_pressed", name: "Aluminum Scrap Pressed", color: "#3d813d", image: "/images/resources/aluminum_scrap_pressed.png" },
+  { id: "ammonia", name: "Ammonia", color: "#7c9bb5", image: "/images/resources/ammonia.png" },
+  { id: "anesthetics", name: "Anesthetics", color: "#dbe9ee", image: "/images/resources/anesthetics.png" },
+  { id: "animal_feed", name: "Animal Feed", color: "#3b66c1", image: "/images/resources/animal_feed.png" },
+  { id: "antibiotics", name: "Antibiotics", color: "#24f2dc", image: "/images/resources/antibiotics.png" },
+  { id: "asteroid_booster_parts", name: "Asteroid Booster Parts", color: "#4c9ec3", image: "/images/resources/asteroid_booster_parts.png" },
+  { id: "bauxite", name: "Bauxite", color: "#c85d35", image: "/images/resources/bauxite.png" },
+  { id: "bauxite_powder", name: "Bauxite Powder", color: "#3d4966", image: "/images/resources/bauxite_powder.png" },
+  { id: "biomass", name: "Biomass", color: "#d0d24b", image: "/images/resources/biomass.png" },
+  { id: "blanket_fuel", name: "Blanket Fuel", color: "#297cc9", image: "/images/resources/blanket_fuel.png" },
+  { id: "blanket_fuel_enriched", name: "Blanket Fuel (Enriched)", color: "#689ac9", image: "/images/resources/blanket_fuel_enriched.png" },
+  { id: "bread", name: "Bread", color: "#f0a346", image: "/images/resources/bread.png" },
+  { id: "brine", name: "Brine", color: "#d0e7ee", image: "/images/resources/brine.png" },
+  { id: "broken_glass", name: "Broken Glass", color: "#8a3c28", image: "/images/resources/broken_glass.png" },
+  { id: "cake", name: "Cake", color: "#ffeda4", image: "/images/resources/cake.png" },
+  { id: "canola", name: "Canola", color: "#ecca2e", image: "/images/resources/canola.png" },
+  { id: "carbon_dioxide", name: "Carbon Dioxide", color: "#2f2f2f", image: "/images/resources/carbon_dioxide.png" },
+  { id: "cement", name: "Cement", color: "#dfa775", image: "/images/resources/cement.png" },
+  { id: "chemical_fuel", name: "Chemical Fuel", color: "#ff4823", image: "/images/resources/chemical_fuel.png" },
+  { id: "chicken_carcass", name: "Chicken Carcass", color: "#fde7cc", image: "/images/resources/chicken_carcass.png" },
+  { id: "chilled_water", name: "Chilled Water", color: "#25c0ee", image: "/images/resources/chilled_water.png" },
+  { id: "chlorine", name: "Chlorine", color: "#b9c646", image: "/images/resources/chlorine.png" },
+  { id: "coal", name: "Coal", color: "#494545", image: "/images/resources/coal.png" },
+  { id: "compact_reactor", name: "Compact Reactor", color: "#85bb40", image: "/images/resources/compact_reactor.png" },
+  { id: "composite_core", name: "Composite Core", color: "#c09b00", image: "/images/resources/composite_core.png" },
+  { id: "composite_core_basic", name: "Composite Core Basic", color: "#767677", image: "/images/resources/composite_core_basic.png" },
+  { id: "composite_panel", name: "Composite Panel", color: "#8e9dc2", image: "/images/resources/composite_panel.png" },
+  { id: "compost", name: "Compost", color: "#ae8962", image: "/images/resources/compost.png" },
+  { id: "computing", name: "Computing", color: "#535353", image: "/images/resources/computing.png" },
+  { id: "concrete_slab", name: "Concrete Slab", color: "#999ea2", image: "/images/resources/concrete_slab.png" },
+  { id: "construction_parts", name: "Construction Parts", color: "#d0d0d0", image: "/images/resources/construction_parts.png" },
+  { id: "construction_parts_ii", name: "Construction Parts II", color: "#bb9f31", image: "/images/resources/construction_parts_ii.png" },
+  { id: "construction_parts_iii", name: "Construction Parts III", color: "#ff5544", image: "/images/resources/construction_parts_iii.png" },
+  { id: "construction_parts_iv", name: "Construction Parts IV", color: "#7254b1", image: "/images/resources/construction_parts_iv.png" },
+  { id: "consumer_electronics", name: "Consumer Electronics", color: "#41a9f6", image: "/images/resources/consumer_electronics.png" },
+  { id: "cooking_oil", name: "Cooking Oil", color: "#ea9f26", image: "/images/resources/cooking_oil.png" },
+  { id: "copper", name: "Copper", color: "#c98454", image: "/images/resources/copper.png" },
+  { id: "copper_ore", name: "Copper Ore", color: "#295627", image: "/images/resources/copper_ore.png" },
+  { id: "copper_ore_crushed", name: "Copper Ore Crushed", color: "#3b7c38", image: "/images/resources/copper_ore_crushed.png" },
+  { id: "copper_scrap", name: "Copper Scrap", color: "#e2945d", image: "/images/resources/copper_scrap.png" },
+  { id: "copper_scrap_pressed", name: "Copper Scrap Pressed", color: "#e2945d", image: "/images/resources/copper_scrap_pressed.png" },
+  { id: "core_fuel", name: "Core Fuel", color: "#a1a1a1", image: "/images/resources/core_fuel.png" },
+  { id: "core_fuel_spent", name: "Core Fuel (Spent)", color: "#8a6a0a", image: "/images/resources/core_fuel_spent.png" },
+  { id: "corn", name: "Corn", color: "#88c057", image: "/images/resources/corn.png" },
+  { id: "corn_mash", name: "Corn Mash", color: "#d8cf4b", image: "/images/resources/corn_mash.png" },
+  { id: "crew_supplies", name: "Crew Supplies", color: "#dbae11", image: "/images/resources/crew_supplies.png" },
+  { id: "crude_oil", name: "Crude Oil", color: "#404851", image: "/images/resources/crude_oil.png" },
+  { id: "depleted_uranium", name: "Depleted Uranium", color: "#3d4966", image: "/images/resources/depleted_uranium.png" },
+  { id: "diamond", name: "Diamond", color: "#d7e2e7", image: "/images/resources/diamond.png" },
+  { id: "diamond_paste", name: "Diamond Paste", color: "#dca418", image: "/images/resources/diamond_paste.png" },
+  { id: "diesel", name: "Diesel", color: "#e75f4b", image: "/images/resources/diesel.png" },
+  { id: "dirt", name: "Dirt", color: "#cb8252", image: "/images/resources/dirt.png" },
+  { id: "disinfectant", name: "Disinfectant", color: "#8388ef", image: "/images/resources/disinfectant.png" },
+  { id: "eggs", name: "Eggs", color: "#b79e94", image: "/images/resources/eggs.png" },
+  { id: "electricity", name: "Electricity", color: "#fdbf00", image: "/images/resources/electricity.png" },
+  { id: "electronics", name: "Electronics", color: "#f3a845", image: "/images/resources/electronics.png" },
+  { id: "electronics_ii", name: "Electronics II", color: "#029250", image: "/images/resources/electronics_ii.png" },
+  { id: "electronics_iii", name: "Electronics III", color: "#8d2000", image: "/images/resources/electronics_iii.png" },
+  { id: "electronics_iv", name: "Electronics IV", color: "#7e4fc4", image: "/images/resources/electronics_iv.png" },
+  { id: "enriched_uranium_20", name: "Enriched Uranium (20%)", color: "#78ca78", image: "/images/resources/enriched_uranium_20.png" },
+  { id: "enriched_uranium_4", name: "Enriched Uranium (4%)", color: "#6f7d81", image: "/images/resources/enriched_uranium_4.png" },
+  { id: "ethanol", name: "Ethanol", color: "#d0d6e1", image: "/images/resources/ethanol.png" },
+  { id: "exhaust", name: "Exhaust", color: "#68513d", image: "/images/resources/exhaust.png" },
+  { id: "fertilizer_organic", name: "Fertilizer (Organic)", color: "#eaffbd", image: "/images/resources/fertilizer_organic.png" },
+  { id: "fertilizer_i", name: "Fertilizer I", color: "#ab8a58", image: "/images/resources/fertilizer_i.png" },
+  { id: "fertilizer_ii", name: "Fertilizer II", color: "#cbc62a", image: "/images/resources/fertilizer_ii.png" },
+  { id: "filter_media", name: "Filter Media", color: "#de8919", image: "/images/resources/filter_media.png" },
+  { id: "fission_product", name: "Fission Product", color: "#457ecd", image: "/images/resources/fission_product.png" },
+  { id: "flour", name: "Flour", color: "#fed22b", image: "/images/resources/flour.png" },
+  { id: "flowers", name: "Flowers", color: "#ffd42a", image: "/images/resources/flowers.png" },
+  { id: "food_pack", name: "Food Pack", color: "#f29c1f", image: "/images/resources/food_pack.png" },
+  { id: "fruit", name: "Fruit", color: "#ff3b6a", image: "/images/resources/fruit.png" },
+  { id: "fuel_gas", name: "Fuel Gas", color: "#e57e25", image: "/images/resources/fuel_gas.png" },
+  { id: "glass", name: "Glass", color: "#77b4b0", image: "/images/resources/glass.png" },
+  { id: "glass_mix", name: "Glass Mix", color: "#bf9a56", image: "/images/resources/glass_mix.png" },
+  { id: "gold", name: "Gold", color: "#e88604", image: "/images/resources/gold.png" },
+  { id: "gold_ore", name: "Gold Ore", color: "#6c581f", image: "/images/resources/gold_ore.png" },
+  { id: "gold_ore_concentrate", name: "Gold Ore Concentrate", color: "#3d4966", image: "/images/resources/gold_ore_concentrate.png" },
+  { id: "gold_ore_crushed", name: "Gold Ore Crushed", color: "#3d4966", image: "/images/resources/gold_ore_crushed.png" },
+  { id: "gold_ore_powder", name: "Gold Ore Powder", color: "#3d4966", image: "/images/resources/gold_ore_powder.png" },
+  { id: "gold_scrap", name: "Gold Scrap", color: "#8a3c28", image: "/images/resources/gold_scrap.png" },
+  { id: "gold_scrap_pressed", name: "Gold Scrap Pressed", color: "#3d813d", image: "/images/resources/gold_scrap_pressed.png" },
+  { id: "graphite", name: "Graphite", color: "#827f7f", image: "/images/resources/graphite.png" },
+  { id: "gravel", name: "Gravel", color: "#8f827b", image: "/images/resources/gravel.png" },
+  { id: "heavy_oil", name: "Heavy Oil", color: "#755a1c", image: "/images/resources/heavy_oil.png" },
+  { id: "household_appliances", name: "Household Appliances", color: "#3588a3", image: "/images/resources/household_appliances.png" },
+  { id: "household_goods", name: "Household Goods", color: "#9ccc65", image: "/images/resources/household_goods.png" },
+  { id: "hydrated_alumina", name: "Hydrated Alumina", color: "#dfdfdf", image: "/images/resources/hydrated_alumina.png" },
+  { id: "hydrogen", name: "Hydrogen", color: "#4a4a56", image: "/images/resources/hydrogen.png" },
+  { id: "hydrogen_fluoride", name: "Hydrogen Fluoride", color: "#b4b040", image: "/images/resources/hydrogen_fluoride.png" },
+  { id: "imported_goods", name: "Imported Goods", color: "#b07659", image: "/images/resources/imported_goods.png" },
+  { id: "impure_copper", name: "Impure Copper", color: "#c16a46", image: "/images/resources/impure_copper.png" },
+  { id: "iron", name: "Iron", color: "#7c7c7c", image: "/images/resources/iron.png" },
+  { id: "iron_ore", name: "Iron Ore", color: "#823019", image: "/images/resources/iron_ore.png" },
+  { id: "iron_ore_crushed", name: "Iron Ore Crushed", color: "#3d4966", image: "/images/resources/iron_ore_crushed.png" },
+  { id: "iron_scrap", name: "Iron Scrap", color: "#8a3c28", image: "/images/resources/iron_scrap.png" },
+  { id: "iron_scrap_pressed", name: "Iron Scrap Pressed", color: "#3d813d", image: "/images/resources/iron_scrap_pressed.png" },
+  { id: "lab_equipment", name: "Lab Equipment", color: "#e5e5e5", image: "/images/resources/lab_equipment.png" },
+  { id: "lab_equipment_ii", name: "Lab Equipment II", color: "#cfae36", image: "/images/resources/lab_equipment_ii.png" },
+  { id: "lab_equipment_iii", name: "Lab Equipment III", color: "#ff5544", image: "/images/resources/lab_equipment_iii.png" },
+  { id: "lab_equipment_iv", name: "Lab Equipment IV", color: "#7659bb", image: "/images/resources/lab_equipment_iv.png" },
+  { id: "lens", name: "Lens", color: "#6698bd", image: "/images/resources/lens.png" },
+  { id: "light_oil", name: "Light Oil", color: "#8f9e4c", image: "/images/resources/light_oil.png" },
+  { id: "limestone", name: "Limestone", color: "#b3b397", image: "/images/resources/limestone.png" },
+  { id: "luxury_goods", name: "Luxury Goods", color: "#726d7b", image: "/images/resources/luxury_goods.png" },
+  { id: "mox_rod", name: "MOX Rod", color: "#beb661", image: "/images/resources/mox_rod.png" },
+  { id: "maintenance_i", name: "Maintenance I", color: "#373737", image: "/images/resources/maintenance_i.png" },
+  { id: "maintenance_ii", name: "Maintenance II", color: "#b59a30", image: "/images/resources/maintenance_ii.png" },
+  { id: "maintenance_iii", name: "Maintenance III", color: "#ff5544", image: "/images/resources/maintenance_iii.png" },
+  { id: "manufactured_sand", name: "Manufactured Sand", color: "#a7a7a7", image: "/images/resources/manufactured_sand.png" },
+  { id: "meat", name: "Meat", color: "#e5646e", image: "/images/resources/meat.png" },
+  { id: "meat_trimmings", name: "Meat Trimmings", color: "#eb4a78", image: "/images/resources/meat_trimmings.png" },
+  { id: "mechanical_parts", name: "Mechanical Parts", color: "#776d79", image: "/images/resources/mechanical_parts.png" },
+  { id: "mechanical_power", name: "Mechanical Power", color: "#e4c059", image: "/images/resources/mechanical_power.png" },
+  { id: "medical_equipment", name: "Medical Equipment", color: "#4188ff", image: "/images/resources/medical_equipment.png" },
+  { id: "medical_supplies", name: "Medical Supplies", color: "#d1d1d1", image: "/images/resources/medical_supplies.png" },
+  { id: "medical_supplies_ii", name: "Medical Supplies II", color: "#d1b237", image: "/images/resources/medical_supplies_ii.png" },
+  { id: "medical_supplies_iii", name: "Medical Supplies III", color: "#ff5544", image: "/images/resources/medical_supplies_iii.png" },
+  { id: "medium_oil", name: "Medium Oil", color: "#e6d6ff", image: "/images/resources/medium_oil.png" },
+  { id: "microchips", name: "Microchips", color: "#114378", image: "/images/resources/microchips.png" },
+  { id: "microchips_stage_1_a", name: "Microchips Stage 1 A", color: "#f5caff", image: "/images/resources/microchips_stage_1_a.png" },
+  { id: "microchips_stage_1_b", name: "Microchips Stage 1 B", color: "#ffe0cc", image: "/images/resources/microchips_stage_1_b.png" },
+  { id: "microchips_stage_1_c", name: "Microchips Stage 1 C", color: "#ffe0cc", image: "/images/resources/microchips_stage_1_c.png" },
+  { id: "microchips_stage_2_a", name: "Microchips Stage 2 A", color: "#f1b2ff", image: "/images/resources/microchips_stage_2_a.png" },
+  { id: "microchips_stage_2_b", name: "Microchips Stage 2 B", color: "#ffd0b2", image: "/images/resources/microchips_stage_2_b.png" },
+  { id: "microchips_stage_2_c", name: "Microchips Stage 2 C", color: "#ffd0b2", image: "/images/resources/microchips_stage_2_c.png" },
+  { id: "microchips_stage_3_a", name: "Microchips Stage 3 A", color: "#ec99ff", image: "/images/resources/microchips_stage_3_a.png" },
+  { id: "microchips_stage_3_b", name: "Microchips Stage 3 B", color: "#cc9b7a", image: "/images/resources/microchips_stage_3_b.png" },
+  { id: "microchips_stage_3_c", name: "Microchips Stage 3 C", color: "#cb7aae", image: "/images/resources/microchips_stage_3_c.png" },
+  { id: "microchips_stage_4_a", name: "Microchips Stage 4 A", color: "#e780ff", image: "/images/resources/microchips_stage_4_a.png" },
+  { id: "microchips_stage_4_b", name: "Microchips Stage 4 B", color: "#cc8f66", image: "/images/resources/microchips_stage_4_b.png" },
+  { id: "molten_aluminum", name: "Molten Aluminum", color: "#fed72a", image: "/images/resources/molten_aluminum.png" },
+  { id: "molten_copper", name: "Molten Copper", color: "#fed72a", image: "/images/resources/molten_copper.png" },
+  { id: "molten_glass", name: "Molten Glass", color: "#febd41", image: "/images/resources/molten_glass.png" },
+  { id: "molten_iron", name: "Molten Iron", color: "#fea62a", image: "/images/resources/molten_iron.png" },
+  { id: "molten_silicon", name: "Molten Silicon", color: "#fed72a", image: "/images/resources/molten_silicon.png" },
+  { id: "molten_steel", name: "Molten Steel", color: "#fed72a", image: "/images/resources/molten_steel.png" },
+  { id: "molten_titanium", name: "Molten Titanium", color: "#fea62a", image: "/images/resources/molten_titanium.png" },
+  { id: "molten_titanium_alloy", name: "Molten Titanium Alloy", color: "#fea62a", image: "/images/resources/molten_titanium_alloy.png" },
+  { id: "morphine", name: "Morphine", color: "#9ce6fb", image: "/images/resources/morphine.png" },
+  { id: "naphtha", name: "Naphtha", color: "#d8cf4b", image: "/images/resources/naphtha.png" },
+  { id: "nitrogen", name: "Nitrogen", color: "#5388d1", image: "/images/resources/nitrogen.png" },
+  { id: "office_supplies", name: "Office Supplies", color: "#266868", image: "/images/resources/office_supplies.png" },
+  { id: "oxygen", name: "Oxygen", color: "#d24646", image: "/images/resources/oxygen.png" },
+  { id: "pcb", name: "PCB", color: "#029250", image: "/images/resources/pcb.png" },
+  { id: "paper", name: "Paper", color: "#e2e2e3", image: "/images/resources/paper.png" },
+  { id: "plastic", name: "Plastic", color: "#3ec2ab", image: "/images/resources/plastic.png" },
+  { id: "plutonium", name: "Plutonium", color: "#6dc658", image: "/images/resources/plutonium.png" },
+  { id: "poppy", name: "Poppy", color: "#00bc37", image: "/images/resources/poppy.png" },
+  { id: "potato", name: "Potato", color: "#734414", image: "/images/resources/potato.png" },
+  { id: "quartz", name: "Quartz", color: "#77582c", image: "/images/resources/quartz.png" },
+  { id: "quartz_crushed", name: "Quartz Crushed", color: "#3d4966", image: "/images/resources/quartz_crushed.png" },
+  { id: "rail_parts", name: "Rail Parts", color: "#99a7ab", image: "/images/resources/rail_parts.png" },
+  { id: "recyclables", name: "Recyclables", color: "#423831", image: "/images/resources/recyclables.png" },
+  { id: "recyclables_pressed", name: "Recyclables Pressed", color: "#3d813d", image: "/images/resources/recyclables_pressed.png" },
+  { id: "red_mud", name: "Red Mud", color: "#8e2319", image: "/images/resources/red_mud.png" },
+  { id: "reprocessed_uranium_1", name: "Reprocessed Uranium (1%)", color: "#397e37", image: "/images/resources/reprocessed_uranium_1.png" },
+  { id: "retired_waste", name: "Retired Waste", color: "#95A5A6", image: "/images/resources/retired_waste.png" },
+  { id: "rock", name: "Rock", color: "#8f827b", image: "/images/resources/rock.png" },
+  { id: "rubber", name: "Rubber", color: "#5d4a27", image: "/images/resources/rubber.png" },
+  { id: "salt", name: "Salt", color: "#e9edf5", image: "/images/resources/salt.png" },
+  { id: "sand", name: "Sand", color: "#bf9a56", image: "/images/resources/sand.png" },
+  { id: "sapphire_wafer", name: "Sapphire Wafer", color: "#657fef", image: "/images/resources/sapphire_wafer.png" },
+  { id: "sausage", name: "Sausage", color: "#ea7b44", image: "/images/resources/sausage.png" },
+  { id: "seawater", name: "Seawater", color: "#17bcfe", image: "/images/resources/seawater.png" },
+  { id: "server", name: "Server", color: "#64798a", image: "/images/resources/server.png" },
+  { id: "silicon_poly", name: "Silicon (Poly)", color: "#9daeb2", image: "/images/resources/silicon_poly.png" },
+  { id: "silicon_wafer", name: "Silicon Wafer", color: "#d2ccc9", image: "/images/resources/silicon_wafer.png" },
+  { id: "slag", name: "Slag", color: "#959390", image: "/images/resources/slag.png" },
+  { id: "slag_crushed", name: "Slag Crushed", color: "#3d4966", image: "/images/resources/slag_crushed.png" },
+  { id: "sludge", name: "Sludge", color: "#452e1c", image: "/images/resources/sludge.png" },
+  { id: "snack", name: "Snack", color: "#d4483f", image: "/images/resources/snack.png" },
+  { id: "solar_cell", name: "Solar Cell", color: "#26abff", image: "/images/resources/solar_cell.png" },
+  { id: "solar_cell_mono", name: "Solar Cell Mono", color: "#115279", image: "/images/resources/solar_cell_mono.png" },
+  { id: "sour_water", name: "Sour Water", color: "#5cd783", image: "/images/resources/sour_water.png" },
+  { id: "soybean", name: "Soybean", color: "#719b56", image: "/images/resources/soybean.png" },
+  { id: "space_probe_parts", name: "Space Probe Parts", color: "#ebb149", image: "/images/resources/space_probe_parts.png" },
+  { id: "spent_fuel", name: "Spent Fuel", color: "#dbb356", image: "/images/resources/spent_fuel.png" },
+  { id: "spent_mox", name: "Spent MOX", color: "#95A5A6", image: "/images/resources/spent_mox.png" },
+  { id: "station_parts", name: "Station Parts", color: "#56ace1", image: "/images/resources/station_parts.png" },
+  { id: "station_parts_basic", name: "Station Parts (Basic)", color: "#56ace1", image: "/images/resources/station_parts_basic.png" },
+  { id: "steam_depleted", name: "Steam (Depleted)", color: "#bbdefb", image: "/images/resources/steam_depleted.png" },
+  { id: "steam_high", name: "Steam (High)", color: "#a9d5f9", image: "/images/resources/steam_high.png" },
+  { id: "steam_low", name: "Steam (Low)", color: "#9dcff9", image: "/images/resources/steam_low.png" },
+  { id: "steam_super", name: "Steam (Super)", color: "#95A5A6", image: "/images/resources/steam_super.png" },
+  { id: "steel", name: "Steel", color: "#cecece", image: "/images/resources/steel.png" },
+  { id: "sugar", name: "Sugar", color: "#d89668", image: "/images/resources/sugar.png" },
+  { id: "sugar_cane", name: "Sugar Cane", color: "#69aa55", image: "/images/resources/sugar_cane.png" },
+  { id: "sulfur", name: "Sulfur", color: "#3d4966", image: "/images/resources/sulfur.png" },
+  { id: "titanium_alloy", name: "Titanium Alloy", color: "#8c8b83", image: "/images/resources/titanium_alloy.png" },
+  { id: "titanium_chloride", name: "Titanium Chloride", color: "#c38b3a", image: "/images/resources/titanium_chloride.png" },
+  { id: "titanium_chloride_pure", name: "Titanium Chloride (Pure)", color: "#c3c33a", image: "/images/resources/titanium_chloride_pure.png" },
+  { id: "titanium_ore", name: "Titanium Ore", color: "#798795", image: "/images/resources/titanium_ore.png" },
+  { id: "titanium_ore_crushed", name: "Titanium Ore Crushed", color: "#3d4966", image: "/images/resources/titanium_ore_crushed.png" },
+  { id: "titanium_slag", name: "Titanium Slag", color: "#515151", image: "/images/resources/titanium_slag.png" },
+  { id: "titanium_sponge", name: "Titanium Sponge", color: "#797d82", image: "/images/resources/titanium_sponge.png" },
+  { id: "tofu", name: "Tofu", color: "#ffe1ba", image: "/images/resources/tofu.png" },
+  { id: "toxic_slurry", name: "Toxic Slurry", color: "#cbce17", image: "/images/resources/toxic_slurry.png" },
+  { id: "tree_sapling", name: "Tree Sapling", color: "#7ac1a3", image: "/images/resources/tree_sapling.png" },
+  { id: "uranium_ore", name: "Uranium Ore", color: "#82d082", image: "/images/resources/uranium_ore.png" },
+  { id: "uranium_ore_powder", name: "Uranium Ore Powder", color: "#3d4966", image: "/images/resources/uranium_ore_powder.png" },
+  { id: "uranium_rod", name: "Uranium Rod", color: "#828282", image: "/images/resources/uranium_rod.png" },
+  { id: "vegetables", name: "Vegetables", color: "#81c83d", image: "/images/resources/vegetables.png" },
+  { id: "vehicle_parts", name: "Vehicle Parts", color: "#cdcdcd", image: "/images/resources/vehicle_parts.png" },
+  { id: "vehicle_parts_ii", name: "Vehicle Parts II", color: "#bb9f31", image: "/images/resources/vehicle_parts_ii.png" },
+  { id: "vehicle_parts_iii", name: "Vehicle Parts III", color: "#ff5544", image: "/images/resources/vehicle_parts_iii.png" },
+  { id: "waste", name: "Waste", color: "#01afea", image: "/images/resources/waste.png" },
+  { id: "waste_pressed", name: "Waste Pressed", color: "#3d813d", image: "/images/resources/waste_pressed.png" },
+  { id: "waste_water", name: "Waste Water", color: "#ce7f17", image: "/images/resources/waste_water.png" },
+  { id: "water", name: "Water", color: "#25c0ee", image: "/images/resources/water.png" },
+  { id: "water_pollution", name: "Water Pollution", color: "#eff6ff", image: "/images/resources/water_pollution.png" },
+  { id: "wheat", name: "Wheat", color: "#f3c432", image: "/images/resources/wheat.png" },
+  { id: "wood", name: "Wood", color: "#8b5016", image: "/images/resources/wood.png" },
+  { id: "woodchips", name: "Woodchips", color: "#bc9a5e", image: "/images/resources/woodchips.png" },
+  { id: "yellowcake", name: "Yellowcake", color: "#b5ba4c", image: "/images/resources/yellowcake.png" },
 ];
 
 export const coiBuildings: Building[] = [
   {
     id: "air_separator",
     name: "Air Separator",
-    image: "images/buildings/air_separator.png",
+    image: "/images/buildings/air_separator.png",
     metadata: [
       { key: "construction", value: "100" },
       { key: "workers", value: "6" },
@@ -240,7 +240,7 @@ export const coiBuildings: Building[] = [
   {
     id: "alloy_mixer",
     name: "Alloy Mixer",
-    image: "images/buildings/alloy_mixer.png",
+    image: "/images/buildings/alloy_mixer.png",
     metadata: [
       { key: "construction", value: "100" },
       { key: "workers", value: "12" },
@@ -253,7 +253,7 @@ export const coiBuildings: Building[] = [
   {
     id: "aluminum_cell",
     name: "Aluminum Cell",
-    image: "images/buildings/aluminum_cell.png",
+    image: "/images/buildings/aluminum_cell.png",
     metadata: [
       { key: "construction", value: "300" },
       { key: "workers", value: "14" },
@@ -266,7 +266,7 @@ export const coiBuildings: Building[] = [
   {
     id: "anaerobic_digester",
     name: "Anaerobic Digester",
-    image: "images/buildings/anaerobic_digester.png",
+    image: "/images/buildings/anaerobic_digester.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "4" },
@@ -279,7 +279,7 @@ export const coiBuildings: Building[] = [
   {
     id: "arc_furnace",
     name: "Arc Furnace",
-    image: "images/buildings/arc_furnace.png",
+    image: "/images/buildings/arc_furnace.png",
     metadata: [
       { key: "construction", value: "160" },
       { key: "workers", value: "12" },
@@ -292,7 +292,7 @@ export const coiBuildings: Building[] = [
   {
     id: "arc_furnace_ii",
     name: "Arc Furnace II",
-    image: "images/buildings/arc_furnace_ii.png",
+    image: "/images/buildings/arc_furnace_ii.png",
     metadata: [
       { key: "construction", value: "140" },
       { key: "workers", value: "18" },
@@ -305,7 +305,7 @@ export const coiBuildings: Building[] = [
   {
     id: "assembly_i",
     name: "Assembly I",
-    image: "images/buildings/assembly_i.png",
+    image: "/images/buildings/assembly_i.png",
     metadata: [
       { key: "construction", value: "25" },
       { key: "workers", value: "4" },
@@ -318,7 +318,7 @@ export const coiBuildings: Building[] = [
   {
     id: "assembly_ii",
     name: "Assembly II",
-    image: "images/buildings/assembly_ii.png",
+    image: "/images/buildings/assembly_ii.png",
     metadata: [
       { key: "construction", value: "30" },
       { key: "workers", value: "6" },
@@ -331,7 +331,7 @@ export const coiBuildings: Building[] = [
   {
     id: "assembly_iii",
     name: "Assembly III",
-    image: "images/buildings/assembly_iii.png",
+    image: "/images/buildings/assembly_iii.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "8" },
@@ -344,7 +344,7 @@ export const coiBuildings: Building[] = [
   {
     id: "assembly_iv",
     name: "Assembly IV",
-    image: "images/buildings/assembly_iv.png",
+    image: "/images/buildings/assembly_iv.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "2" },
@@ -357,7 +357,7 @@ export const coiBuildings: Building[] = [
   {
     id: "assembly_v",
     name: "Assembly V",
-    image: "images/buildings/assembly_v.png",
+    image: "/images/buildings/assembly_v.png",
     metadata: [
       { key: "construction", value: "80" },
       { key: "workers", value: "None" },
@@ -370,7 +370,7 @@ export const coiBuildings: Building[] = [
   {
     id: "baking_unit",
     name: "Baking Unit",
-    image: "images/buildings/baking_unit.png",
+    image: "/images/buildings/baking_unit.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "8" },
@@ -383,7 +383,7 @@ export const coiBuildings: Building[] = [
   {
     id: "basic_distiller",
     name: "Basic Distiller",
-    image: "images/buildings/basic_distiller.png",
+    image: "/images/buildings/basic_distiller.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "6" },
@@ -396,7 +396,7 @@ export const coiBuildings: Building[] = [
   {
     id: "blast_furnace",
     name: "Blast Furnace",
-    image: "images/buildings/blast_furnace.png",
+    image: "/images/buildings/blast_furnace.png",
     metadata: [
       { key: "construction", value: "60" },
       { key: "workers", value: "8" },
@@ -409,7 +409,7 @@ export const coiBuildings: Building[] = [
   {
     id: "blast_furnace_ii",
     name: "Blast Furnace II",
-    image: "images/buildings/blast_furnace_ii.png",
+    image: "/images/buildings/blast_furnace_ii.png",
     metadata: [
       { key: "construction", value: "180" },
       { key: "workers", value: "18" },
@@ -422,7 +422,7 @@ export const coiBuildings: Building[] = [
   {
     id: "boiler",
     name: "Boiler",
-    image: "images/buildings/boiler_coal.png",
+    image: "/images/buildings/boiler_coal.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "4" },
@@ -435,7 +435,7 @@ export const coiBuildings: Building[] = [
   {
     id: "boiler_electric",
     name: "Boiler (Electric)",
-    image: "images/buildings/boiler_electric.png",
+    image: "/images/buildings/boiler_electric.png",
     metadata: [
       { key: "construction", value: "60" },
       { key: "workers", value: "4" },
@@ -448,7 +448,7 @@ export const coiBuildings: Building[] = [
   {
     id: "boiler_gas",
     name: "Boiler (Gas)",
-    image: "images/buildings/boiler_gas.png",
+    image: "/images/buildings/boiler_gas.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "4" },
@@ -461,7 +461,7 @@ export const coiBuildings: Building[] = [
   {
     id: "burner_solid",
     name: "Burner (Solid)",
-    image: "images/buildings/burner_solid.png",
+    image: "/images/buildings/burner_solid.png",
     metadata: [
       { key: "construction", value: "15" },
       { key: "workers", value: "1" },
@@ -474,7 +474,7 @@ export const coiBuildings: Building[] = [
   {
     id: "chemical_plant",
     name: "Chemical Plant",
-    image: "images/buildings/chemical_plant.png",
+    image: "/images/buildings/chemical_plant.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "8" },
@@ -487,7 +487,7 @@ export const coiBuildings: Building[] = [
   {
     id: "chemical_plant_ii",
     name: "Chemical Plant II",
-    image: "images/buildings/chemical_plant_ii.png",
+    image: "/images/buildings/chemical_plant_ii.png",
     metadata: [
       { key: "construction", value: "60" },
       { key: "workers", value: "14" },
@@ -500,7 +500,7 @@ export const coiBuildings: Building[] = [
   {
     id: "chicken_farm",
     name: "Chicken Farm",
-    image: "images/buildings/chicken_farm.png",
+    image: "/images/buildings/chicken_farm.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "12" },
@@ -513,7 +513,7 @@ export const coiBuildings: Building[] = [
   {
     id: "coal_maker",
     name: "Coal Maker",
-    image: "images/buildings/coal_maker.png",
+    image: "/images/buildings/coal_maker.png",
     metadata: [
       { key: "construction", value: "20" },
       { key: "workers", value: "2" },
@@ -526,7 +526,7 @@ export const coiBuildings: Building[] = [
   {
     id: "compactor",
     name: "Compactor",
-    image: "images/buildings/compactor.png",
+    image: "/images/buildings/compactor.png",
     metadata: [
       { key: "construction", value: "25" },
       { key: "workers", value: "2" },
@@ -538,7 +538,7 @@ export const coiBuildings: Building[] = [
   {
     id: "concrete_mixer",
     name: "Concrete Mixer",
-    image: "images/buildings/concrete_mixer.png",
+    image: "/images/buildings/concrete_mixer.png",
     metadata: [
       { key: "construction", value: "30" },
       { key: "workers", value: "4" },
@@ -551,7 +551,7 @@ export const coiBuildings: Building[] = [
   {
     id: "concrete_mixer_ii",
     name: "Concrete Mixer II",
-    image: "images/buildings/concrete_mixer_ii.png",
+    image: "/images/buildings/concrete_mixer_ii.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "7" },
@@ -564,7 +564,7 @@ export const coiBuildings: Building[] = [
   {
     id: "concrete_mixer_iii",
     name: "Concrete Mixer III",
-    image: "images/buildings/concrete_mixer_iii.png",
+    image: "/images/buildings/concrete_mixer_iii.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "10" },
@@ -577,7 +577,7 @@ export const coiBuildings: Building[] = [
   {
     id: "cooled_caster",
     name: "Cooled Caster",
-    image: "images/buildings/cooled_caster.png",
+    image: "/images/buildings/cooled_caster.png",
     metadata: [
       { key: "construction", value: "30" },
       { key: "workers", value: "4" },
@@ -590,7 +590,7 @@ export const coiBuildings: Building[] = [
   {
     id: "cooled_caster_ii",
     name: "Cooled Caster II",
-    image: "images/buildings/cooled_caster_ii.png",
+    image: "/images/buildings/cooled_caster_ii.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "6" },
@@ -603,7 +603,7 @@ export const coiBuildings: Building[] = [
   {
     id: "cooling_tower",
     name: "Cooling Tower",
-    image: "images/buildings/cooling_tower.png",
+    image: "/images/buildings/cooling_tower.png",
     metadata: [
       { key: "construction", value: "30+40" },
       { key: "workers", value: "None" },
@@ -616,7 +616,7 @@ export const coiBuildings: Building[] = [
   {
     id: "cooling_tower_large",
     name: "Cooling Tower (Large)",
-    image: "images/buildings/cooling_tower_large.png",
+    image: "/images/buildings/cooling_tower_large.png",
     metadata: [
       { key: "construction", value: "80+200" },
       { key: "workers", value: "None" },
@@ -629,7 +629,7 @@ export const coiBuildings: Building[] = [
   {
     id: "copper_electrolysis",
     name: "Copper Electrolysis",
-    image: "images/buildings/copper_electrolysis.png",
+    image: "/images/buildings/copper_electrolysis.png",
     metadata: [
       { key: "construction", value: "30" },
       { key: "workers", value: "5" },
@@ -642,7 +642,7 @@ export const coiBuildings: Building[] = [
   {
     id: "cracking_unit",
     name: "Cracking Unit",
-    image: "images/buildings/cracking_unit.png",
+    image: "/images/buildings/cracking_unit.png",
     metadata: [
       { key: "construction", value: "100" },
       { key: "workers", value: "12" },
@@ -655,7 +655,7 @@ export const coiBuildings: Building[] = [
   {
     id: "crusher",
     name: "Crusher",
-    image: "images/buildings/crusher.png",
+    image: "/images/buildings/crusher.png",
     metadata: [
       { key: "construction", value: "20" },
       { key: "workers", value: "2" },
@@ -668,7 +668,7 @@ export const coiBuildings: Building[] = [
   {
     id: "crusher_large",
     name: "Crusher (Large)",
-    image: "images/buildings/crusher_large.png",
+    image: "/images/buildings/crusher_large.png",
     metadata: [
       { key: "construction", value: "120" },
       { key: "workers", value: "6" },
@@ -681,7 +681,7 @@ export const coiBuildings: Building[] = [
   {
     id: "crystallizer",
     name: "Crystallizer",
-    image: "images/buildings/crystallizer.png",
+    image: "/images/buildings/crystallizer.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "8" },
@@ -694,7 +694,7 @@ export const coiBuildings: Building[] = [
   {
     id: "data_center",
     name: "Data Center",
-    image: "images/buildings/data_center.png",
+    image: "/images/buildings/data_center.png",
     metadata: [
       { key: "construction", value: "120+40" },
       { key: "workers", value: "6" },
@@ -707,7 +707,7 @@ export const coiBuildings: Building[] = [
   {
     id: "diamond_reactor",
     name: "Diamond Reactor",
-    image: "images/buildings/diamond_reactor.png",
+    image: "/images/buildings/diamond_reactor.png",
     metadata: [
       { key: "construction", value: "100" },
       { key: "workers", value: "8" },
@@ -720,7 +720,7 @@ export const coiBuildings: Building[] = [
   {
     id: "diesel_generator",
     name: "Diesel Generator",
-    image: "images/buildings/diesel_generator.png",
+    image: "/images/buildings/diesel_generator.png",
     metadata: [
       { key: "construction", value: "20+20" },
       { key: "workers", value: "2" },
@@ -733,7 +733,7 @@ export const coiBuildings: Building[] = [
   {
     id: "diesel_generator_ii",
     name: "Diesel Generator II",
-    image: "images/buildings/diesel_generator_ii.png",
+    image: "/images/buildings/diesel_generator_ii.png",
     metadata: [
       { key: "construction", value: "40+60" },
       { key: "workers", value: "2" },
@@ -746,7 +746,7 @@ export const coiBuildings: Building[] = [
   {
     id: "distillation_stage_i",
     name: "Distillation (Stage I)",
-    image: "images/buildings/distillation_stage_i.png",
+    image: "/images/buildings/distillation_stage_i.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "6" },
@@ -759,7 +759,7 @@ export const coiBuildings: Building[] = [
   {
     id: "distillation_stage_ii",
     name: "Distillation (Stage II)",
-    image: "images/buildings/distillation_stage_ii.png",
+    image: "/images/buildings/distillation_stage_ii.png",
     metadata: [
       { key: "construction", value: "70" },
       { key: "workers", value: "8" },
@@ -772,7 +772,7 @@ export const coiBuildings: Building[] = [
   {
     id: "distillation_stage_iii",
     name: "Distillation (Stage III)",
-    image: "images/buildings/distillation_stage_iii.png",
+    image: "/images/buildings/distillation_stage_iii.png",
     metadata: [
       { key: "construction", value: "70" },
       { key: "workers", value: "8" },
@@ -785,7 +785,7 @@ export const coiBuildings: Building[] = [
   {
     id: "electrolyzer",
     name: "Electrolyzer",
-    image: "images/buildings/electrolyzer.png",
+    image: "/images/buildings/electrolyzer.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "3" },
@@ -798,7 +798,7 @@ export const coiBuildings: Building[] = [
   {
     id: "electrolyzer_ii",
     name: "Electrolyzer II",
-    image: "images/buildings/electrolyzer_ii.png",
+    image: "/images/buildings/electrolyzer_ii.png",
     metadata: [
       { key: "construction", value: "60" },
       { key: "workers", value: "3" },
@@ -811,7 +811,7 @@ export const coiBuildings: Building[] = [
   {
     id: "enrichment_plant",
     name: "Enrichment Plant",
-    image: "images/buildings/enrichment_plant.png",
+    image: "/images/buildings/enrichment_plant.png",
     metadata: [
       { key: "construction", value: "80" },
       { key: "workers", value: "14" },
@@ -824,7 +824,7 @@ export const coiBuildings: Building[] = [
   {
     id: "evaporation_pond",
     name: "Evaporation Pond",
-    image: "images/buildings/evaporation_pond.png",
+    image: "/images/buildings/evaporation_pond.png",
     metadata: [
       { key: "construction", value: "30" },
       { key: "workers", value: "4" },
@@ -837,7 +837,7 @@ export const coiBuildings: Building[] = [
   {
     id: "evaporation_pond_heated",
     name: "Evaporation Pond (Heated)",
-    image: "images/buildings/evaporation_pond_heated.png",
+    image: "/images/buildings/evaporation_pond_heated.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "6" },
@@ -850,7 +850,7 @@ export const coiBuildings: Building[] = [
   {
     id: "exhaust_scrubber",
     name: "Exhaust Scrubber",
-    image: "images/buildings/exhaust_scrubber.png",
+    image: "/images/buildings/exhaust_scrubber.png",
     metadata: [
       { key: "construction", value: "80" },
       { key: "workers", value: "8" },
@@ -863,7 +863,7 @@ export const coiBuildings: Building[] = [
   {
     id: "farm",
     name: "Farm",
-    image: "images/buildings/farm.png",
+    image: "/images/buildings/farm.png",
     metadata: [
       { key: "construction", value: "30" },
       { key: "workers", value: "10" },
@@ -876,7 +876,7 @@ export const coiBuildings: Building[] = [
   {
     id: "fast_breeder_reactor",
     name: "Fast Breeder Reactor",
-    image: "images/buildings/fast_breeder_reactor.png",
+    image: "/images/buildings/fast_breeder_reactor.png",
     metadata: [
       { key: "construction", value: "1500" },
       { key: "workers", value: "200" },
@@ -889,7 +889,7 @@ export const coiBuildings: Building[] = [
   {
     id: "fermentation_tank",
     name: "Fermentation Tank",
-    image: "images/buildings/fermentation_tank.png",
+    image: "/images/buildings/fermentation_tank.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "4" },
@@ -902,7 +902,7 @@ export const coiBuildings: Building[] = [
   {
     id: "flare",
     name: "Flare",
-    image: "images/buildings/flare.png",
+    image: "/images/buildings/flare.png",
     metadata: [
       { key: "construction", value: "10" },
       { key: "workers", value: "1" },
@@ -915,7 +915,7 @@ export const coiBuildings: Building[] = [
   {
     id: "food_processor",
     name: "Food Processor",
-    image: "images/buildings/food_processor.png",
+    image: "/images/buildings/food_processor.png",
     metadata: [
       { key: "construction", value: "30" },
       { key: "workers", value: "8" },
@@ -928,7 +928,7 @@ export const coiBuildings: Building[] = [
   {
     id: "gas_injection_pump",
     name: "Gas Injection Pump",
-    image: "images/buildings/gas_injection_pump.png",
+    image: "/images/buildings/gas_injection_pump.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "4" },
@@ -941,7 +941,7 @@ export const coiBuildings: Building[] = [
   {
     id: "glass_maker",
     name: "Glass Maker",
-    image: "images/buildings/glass_maker.png",
+    image: "/images/buildings/glass_maker.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "6" },
@@ -954,7 +954,7 @@ export const coiBuildings: Building[] = [
   {
     id: "glass_maker_ii",
     name: "Glass Maker II",
-    image: "images/buildings/glass_maker_ii.png",
+    image: "/images/buildings/glass_maker_ii.png",
     metadata: [
       { key: "construction", value: "120" },
       { key: "workers", value: "14" },
@@ -967,7 +967,7 @@ export const coiBuildings: Building[] = [
   {
     id: "gold_furnace",
     name: "Gold Furnace",
-    image: "images/buildings/gold_furnace.png",
+    image: "/images/buildings/gold_furnace.png",
     metadata: [
       { key: "construction", value: "70" },
       { key: "workers", value: "6" },
@@ -980,7 +980,7 @@ export const coiBuildings: Building[] = [
   {
     id: "greenhouse",
     name: "Greenhouse",
-    image: "images/buildings/greenhouse.png",
+    image: "/images/buildings/greenhouse.png",
     metadata: [
       { key: "construction", value: "100+320" },
       { key: "workers", value: "18" },
@@ -993,7 +993,7 @@ export const coiBuildings: Building[] = [
   {
     id: "greenhouse_ii",
     name: "Greenhouse II",
-    image: "images/buildings/greenhouse_ii.png",
+    image: "/images/buildings/greenhouse_ii.png",
     metadata: [
       { key: "construction", value: "200+640" },
       { key: "workers", value: "24" },
@@ -1006,7 +1006,7 @@ export const coiBuildings: Building[] = [
   {
     id: "groundwater_pump",
     name: "Groundwater Pump",
-    image: "images/buildings/groundwater_pump.png",
+    image: "/images/buildings/groundwater_pump.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "2" },
@@ -1018,7 +1018,7 @@ export const coiBuildings: Building[] = [
   {
     id: "high-pressure_turbine",
     name: "High-Pressure Turbine",
-    image: "images/buildings/high_pressure_turbine.png",
+    image: "/images/buildings/high_pressure_turbine.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "2" },
@@ -1031,7 +1031,7 @@ export const coiBuildings: Building[] = [
   {
     id: "high-pressure_turbine_ii",
     name: "High-Pressure Turbine II",
-    image: "images/buildings/high_pressure_turbine_ii.png",
+    image: "/images/buildings/high_pressure_turbine_ii.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "2" },
@@ -1044,7 +1044,7 @@ export const coiBuildings: Building[] = [
   {
     id: "hydrogen_reformer",
     name: "Hydrogen Reformer",
-    image: "images/buildings/hydrogen_reformer.png",
+    image: "/images/buildings/hydrogen_reformer.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "12" },
@@ -1057,7 +1057,7 @@ export const coiBuildings: Building[] = [
   {
     id: "incineration_plant",
     name: "Incineration Plant",
-    image: "images/buildings/incineration_plant.png",
+    image: "/images/buildings/incineration_plant.png",
     metadata: [
       { key: "construction", value: "180" },
       { key: "workers", value: "18" },
@@ -1069,7 +1069,7 @@ export const coiBuildings: Building[] = [
   {
     id: "irrigated_farm",
     name: "Irrigated Farm",
-    image: "images/buildings/irrigated_farm.png",
+    image: "/images/buildings/irrigated_farm.png",
     metadata: [
       { key: "construction", value: "60" },
       { key: "workers", value: "12" },
@@ -1082,7 +1082,7 @@ export const coiBuildings: Building[] = [
   {
     id: "kiln",
     name: "Kiln",
-    image: "images/buildings/rotary_kiln.png",
+    image: "/images/buildings/rotary_kiln.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "6" },
@@ -1095,7 +1095,7 @@ export const coiBuildings: Building[] = [
   {
     id: "lens_polisher",
     name: "Lens Polisher",
-    image: "images/buildings/lens_polisher.png",
+    image: "/images/buildings/lens_polisher.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "6" },
@@ -1108,7 +1108,7 @@ export const coiBuildings: Building[] = [
   {
     id: "liquid_dump",
     name: "Liquid Dump",
-    image: "images/buildings/liquid_dump.png",
+    image: "/images/buildings/liquid_dump.png",
     metadata: [
       { key: "construction", value: "20" },
       { key: "workers", value: "1" },
@@ -1121,7 +1121,7 @@ export const coiBuildings: Building[] = [
   {
     id: "low-pressure_turbine",
     name: "Low-Pressure Turbine",
-    image: "images/buildings/low_pressure_turbine.png",
+    image: "/images/buildings/low_pressure_turbine.png",
     metadata: [
       { key: "construction", value: "60" },
       { key: "workers", value: "2" },
@@ -1134,7 +1134,7 @@ export const coiBuildings: Building[] = [
   {
     id: "low-pressure_turbine_ii",
     name: "Low-Pressure Turbine II",
-    image: "images/buildings/low_pressure_turbine_ii.png",
+    image: "/images/buildings/low_pressure_turbine_ii.png",
     metadata: [
       { key: "construction", value: "60" },
       { key: "workers", value: "2" },
@@ -1147,7 +1147,7 @@ export const coiBuildings: Building[] = [
   {
     id: "maintenance_depot",
     name: "Maintenance Depot",
-    image: "images/buildings/maintenance_depot.png",
+    image: "/images/buildings/maintenance_depot.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "20" },
@@ -1160,7 +1160,7 @@ export const coiBuildings: Building[] = [
   {
     id: "maintenance_depot_basic",
     name: "Maintenance Depot (Basic)",
-    image: "images/buildings/maintenance_depot_basic.png",
+    image: "/images/buildings/maintenance_depot_basic.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "6" },
@@ -1173,7 +1173,7 @@ export const coiBuildings: Building[] = [
   {
     id: "maintenance_ii_depot",
     name: "Maintenance II Depot",
-    image: "images/buildings/maintenance_ii_depot.png",
+    image: "/images/buildings/maintenance_ii_depot.png",
     metadata: [
       { key: "construction", value: "40+10" },
       { key: "workers", value: "20" },
@@ -1186,7 +1186,7 @@ export const coiBuildings: Building[] = [
   {
     id: "maintenance_iii_depot",
     name: "Maintenance III Depot",
-    image: "images/buildings/maintenance_iii_depot.png",
+    image: "/images/buildings/maintenance_iii_depot.png",
     metadata: [
       { key: "construction", value: "40+20" },
       { key: "workers", value: "28" },
@@ -1199,7 +1199,7 @@ export const coiBuildings: Building[] = [
   {
     id: "metal_caster",
     name: "Metal Caster",
-    image: "images/buildings/metal_caster.png",
+    image: "/images/buildings/metal_caster.png",
     metadata: [
       { key: "construction", value: "30" },
       { key: "workers", value: "2" },
@@ -1212,7 +1212,7 @@ export const coiBuildings: Building[] = [
   {
     id: "metal_caster_ii",
     name: "Metal Caster II",
-    image: "images/buildings/metal_caster_ii.png",
+    image: "/images/buildings/metal_caster_ii.png",
     metadata: [
       { key: "construction", value: "40+20" },
       { key: "workers", value: "3" },
@@ -1225,7 +1225,7 @@ export const coiBuildings: Building[] = [
   {
     id: "microchip_machine",
     name: "Microchip Machine",
-    image: "images/buildings/microchip_machine.png",
+    image: "/images/buildings/microchip_machine.png",
     metadata: [
       { key: "construction", value: "60" },
       { key: "workers", value: "4" },
@@ -1238,7 +1238,7 @@ export const coiBuildings: Building[] = [
   {
     id: "microchip_machine_ii",
     name: "Microchip Machine II",
-    image: "images/buildings/microchip_machine_ii.png",
+    image: "/images/buildings/microchip_machine_ii.png",
     metadata: [
       { key: "construction", value: "180" },
       { key: "workers", value: "6" },
@@ -1251,7 +1251,7 @@ export const coiBuildings: Building[] = [
   {
     id: "mill",
     name: "Mill",
-    image: "images/buildings/mill.png",
+    image: "/images/buildings/mill.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "5" },
@@ -1264,7 +1264,7 @@ export const coiBuildings: Building[] = [
   {
     id: "mixer",
     name: "Mixer",
-    image: "images/buildings/mixer.png",
+    image: "/images/buildings/mixer.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "4" },
@@ -1277,7 +1277,7 @@ export const coiBuildings: Building[] = [
   {
     id: "mixer_ii",
     name: "Mixer II",
-    image: "images/buildings/mixer_ii.png",
+    image: "/images/buildings/mixer_ii.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "4" },
@@ -1290,7 +1290,7 @@ export const coiBuildings: Building[] = [
   {
     id: "nuclear_reactor",
     name: "Nuclear Reactor",
-    image: "images/buildings/nuclear_reactor.png",
+    image: "/images/buildings/nuclear_reactor.png",
     metadata: [
       { key: "construction", value: "400" },
       { key: "workers", value: "80" },
@@ -1303,7 +1303,7 @@ export const coiBuildings: Building[] = [
   {
     id: "nuclear_reactor_ii",
     name: "Nuclear Reactor II",
-    image: "images/buildings/nuclear_reactor_ii.png",
+    image: "/images/buildings/nuclear_reactor_ii.png",
     metadata: [
       { key: "construction", value: "700" },
       { key: "workers", value: "110" },
@@ -1316,7 +1316,7 @@ export const coiBuildings: Building[] = [
   {
     id: "nuclear_reprocessing_plant",
     name: "Nuclear Reprocessing Plant",
-    image: "images/buildings/nuclear_reprocessing_plant.png",
+    image: "/images/buildings/nuclear_reprocessing_plant.png",
     metadata: [
       { key: "construction", value: "30" },
       { key: "workers", value: "30" },
@@ -1329,7 +1329,7 @@ export const coiBuildings: Building[] = [
   {
     id: "oil_pump",
     name: "Oil Pump",
-    image: "images/buildings/oil_pump.png",
+    image: "/images/buildings/oil_pump.png",
     metadata: [
       { key: "construction", value: "30" },
       { key: "workers", value: "1" },
@@ -1342,7 +1342,7 @@ export const coiBuildings: Building[] = [
   {
     id: "oxygen_furnace",
     name: "Oxygen Furnace",
-    image: "images/buildings/oxygen_furnace.png",
+    image: "/images/buildings/oxygen_furnace.png",
     metadata: [
       { key: "construction", value: "60" },
       { key: "workers", value: "6" },
@@ -1355,7 +1355,7 @@ export const coiBuildings: Building[] = [
   {
     id: "oxygen_furnace_ii",
     name: "Oxygen Furnace II",
-    image: "images/buildings/oxygen_furnace_ii.png",
+    image: "/images/buildings/oxygen_furnace_ii.png",
     metadata: [
       { key: "construction", value: "70" },
       { key: "workers", value: "10" },
@@ -1368,7 +1368,7 @@ export const coiBuildings: Building[] = [
   {
     id: "polymerization_plant",
     name: "Polymerization Plant",
-    image: "images/buildings/polymerization_plant.png",
+    image: "/images/buildings/polymerization_plant.png",
     metadata: [
       { key: "construction", value: "100" },
       { key: "workers", value: "12" },
@@ -1381,7 +1381,7 @@ export const coiBuildings: Building[] = [
   {
     id: "power_generator",
     name: "Power Generator",
-    image: "images/buildings/power_generator.png",
+    image: "/images/buildings/power_generator.png",
     metadata: [
       { key: "construction", value: "20+20" },
       { key: "workers", value: "None" },
@@ -1394,7 +1394,7 @@ export const coiBuildings: Building[] = [
   {
     id: "power_generator_large",
     name: "Power Generator (Large)",
-    image: "images/buildings/power_generator_large.png",
+    image: "/images/buildings/power_generator_large.png",
     metadata: [
       { key: "construction", value: "40+180" },
       { key: "workers", value: "None" },
@@ -1407,7 +1407,7 @@ export const coiBuildings: Building[] = [
   {
     id: "rainwater_harvester",
     name: "Rainwater Harvester",
-    image: "images/buildings/rainwater_harvester.png",
+    image: "/images/buildings/rainwater_harvester.png",
     metadata: [
       { key: "construction", value: "20+30" },
       { key: "workers", value: "None" },
@@ -1420,7 +1420,7 @@ export const coiBuildings: Building[] = [
   {
     id: "research_lab_i",
     name: "Research Lab I",
-    image: "images/buildings/research_lab.png",
+    image: "/images/buildings/research_lab.png",
     metadata: [
       { key: "construction", value: "30" },
       { key: "workers", value: "4" },
@@ -1433,7 +1433,7 @@ export const coiBuildings: Building[] = [
   {
     id: "research_lab_ii",
     name: "Research Lab II",
-    image: "images/buildings/research_lab_ii.png",
+    image: "/images/buildings/research_lab_ii.png",
     metadata: [
       { key: "construction", value: "60+10" },
       { key: "workers", value: "8" },
@@ -1446,7 +1446,7 @@ export const coiBuildings: Building[] = [
   {
     id: "research_lab_iii",
     name: "Research Lab III",
-    image: "images/buildings/research_lab_iii.png",
+    image: "/images/buildings/research_lab_iii.png",
     metadata: [
       { key: "construction", value: "120+20" },
       { key: "workers", value: "16" },
@@ -1459,7 +1459,7 @@ export const coiBuildings: Building[] = [
   {
     id: "research_lab_iv",
     name: "Research Lab IV",
-    image: "images/buildings/research_lab_iv.png",
+    image: "/images/buildings/research_lab_iv.png",
     metadata: [
       { key: "construction", value: "120+20" },
       { key: "workers", value: "30" },
@@ -1472,7 +1472,7 @@ export const coiBuildings: Building[] = [
   {
     id: "rotary_kiln",
     name: "Rotary Kiln",
-    image: "images/buildings/rotary_kiln.png",
+    image: "/images/buildings/rotary_kiln.png",
     metadata: [
       { key: "construction", value: "30" },
       { key: "workers", value: "6" },
@@ -1485,7 +1485,7 @@ export const coiBuildings: Building[] = [
   {
     id: "rotary_kiln_gas",
     name: "Rotary Kiln (Gas)",
-    image: "images/buildings/rotary_kiln_gas.png",
+    image: "/images/buildings/rotary_kiln_gas.png",
     metadata: [
       { key: "construction", value: "60" },
       { key: "workers", value: "10" },
@@ -1498,7 +1498,7 @@ export const coiBuildings: Building[] = [
   {
     id: "rubber_maker",
     name: "Rubber Maker",
-    image: "images/buildings/rubber_maker.png",
+    image: "/images/buildings/rubber_maker.png",
     metadata: [
       { key: "construction", value: "60" },
       { key: "workers", value: "6" },
@@ -1511,7 +1511,7 @@ export const coiBuildings: Building[] = [
   {
     id: "seawater_pump",
     name: "Seawater Pump",
-    image: "images/buildings/seawater_pump.png",
+    image: "/images/buildings/seawater_pump.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "1" },
@@ -1524,7 +1524,7 @@ export const coiBuildings: Building[] = [
   {
     id: "seawater_pump_tall",
     name: "Seawater Pump (Tall)",
-    image: "images/buildings/seawater_pump_tall.png",
+    image: "/images/buildings/seawater_pump_tall.png",
     metadata: [
       { key: "construction", value: "50" },
       { key: "workers", value: "1" },
@@ -1537,7 +1537,7 @@ export const coiBuildings: Building[] = [
   {
     id: "settling_tank",
     name: "Settling Tank",
-    image: "images/buildings/settling_tank.png",
+    image: "/images/buildings/settling_tank.png",
     metadata: [
       { key: "construction", value: "80" },
       { key: "workers", value: "6" },
@@ -1550,7 +1550,7 @@ export const coiBuildings: Building[] = [
   {
     id: "shredder",
     name: "Shredder",
-    image: "images/buildings/shredder.png",
+    image: "/images/buildings/shredder.png",
     metadata: [
       { key: "construction", value: "25" },
       { key: "workers", value: "2" },
@@ -1563,7 +1563,7 @@ export const coiBuildings: Building[] = [
   {
     id: "silicon_reactor",
     name: "Silicon Reactor",
-    image: "images/buildings/silicon_reactor.png",
+    image: "/images/buildings/silicon_reactor.png",
     metadata: [
       { key: "construction", value: "20" },
       { key: "workers", value: "2" },
@@ -1576,7 +1576,7 @@ export const coiBuildings: Building[] = [
   {
     id: "smoke_stack",
     name: "Smoke Stack",
-    image: "images/buildings/smoke_stack.png",
+    image: "/images/buildings/smoke_stack.png",
     metadata: [
       { key: "construction", value: "10" },
       { key: "workers", value: "None" },
@@ -1589,7 +1589,7 @@ export const coiBuildings: Building[] = [
   {
     id: "smoke_stack_large",
     name: "Smoke Stack (Large)",
-    image: "images/buildings/smoke_stack_large.png",
+    image: "/images/buildings/smoke_stack_large.png",
     metadata: [
       { key: "construction", value: "10+40" },
       { key: "workers", value: "None" },
@@ -1602,7 +1602,7 @@ export const coiBuildings: Building[] = [
   {
     id: "sour_water_stripper",
     name: "Sour Water Stripper",
-    image: "images/buildings/sour_water_stripper.png",
+    image: "/images/buildings/sour_water_stripper.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "10" },
@@ -1615,7 +1615,7 @@ export const coiBuildings: Building[] = [
   {
     id: "super-pressure_turbine",
     name: "Super-Pressure Turbine",
-    image: "images/buildings/super_pressure_turbine.png",
+    image: "/images/buildings/super_pressure_turbine.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "1" },
@@ -1628,7 +1628,7 @@ export const coiBuildings: Building[] = [
   {
     id: "thermal_desalinator",
     name: "Thermal Desalinator",
-    image: "images/buildings/thermal_desalinator.png",
+    image: "/images/buildings/thermal_desalinator.png",
     metadata: [
       { key: "construction", value: "30+30" },
       { key: "workers", value: "4" },
@@ -1641,7 +1641,7 @@ export const coiBuildings: Building[] = [
   {
     id: "waste_sorting_plant",
     name: "Waste Sorting Plant",
-    image: "images/buildings/waste_sorting_plant.png",
+    image: "/images/buildings/waste_sorting_plant.png",
     metadata: [
       { key: "construction", value: "400" },
       { key: "workers", value: "45" },
@@ -1654,7 +1654,7 @@ export const coiBuildings: Building[] = [
   {
     id: "wastewater_treatment",
     name: "Wastewater Treatment",
-    image: "images/buildings/wastewater_treatment.png",
+    image: "/images/buildings/wastewater_treatment.png",
     metadata: [
       { key: "construction", value: "140" },
       { key: "workers", value: "26" },
@@ -1667,7 +1667,7 @@ export const coiBuildings: Building[] = [
   {
     id: "water_chiller",
     name: "Water Chiller",
-    image: "images/buildings/water_chiller.png",
+    image: "/images/buildings/water_chiller.png",
     metadata: [
       { key: "construction", value: "40" },
       { key: "workers", value: "3" },
