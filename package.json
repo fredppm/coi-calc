@@ -12,7 +12,13 @@
     "deploy": "next build && touch out/.nojekyll && echo 'coi-calc.github.io' > out/CNAME",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:all": "npm run type-check && npm run test && npm run test:e2e"
   },
   "dependencies": {
     "next": "14.1.0",
@@ -21,12 +27,19 @@
     "reactflow": "^11.10.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.53.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20.11.16",
     "@types/react": "^18.2.52",
     "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.17",
+    "jest": "^30.0.2",
+    "jest-environment-jsdom": "^30.0.2",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   }
-} 
+}

@@ -130,7 +130,7 @@ export const ObjectiveSelector: React.FC<ObjectiveSelectorProps> = ({ onSelect }
       {/* Minimal Header */}
       <div className="flex-shrink-0 py-4 px-6 bg-white border-b border-gray-200 relative z-10">
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-gray-800">Captain of Industry Calculator</h1>
+          <h1 className="text-2xl font-bold text-gray-800" data-testid="page-title">Captain of Industry Calculator</h1>
           
           {/* Centered Search Bar */}
           <div className="absolute left-1/2 transform -translate-x-1/2">
@@ -140,6 +140,7 @@ export const ObjectiveSelector: React.FC<ObjectiveSelectorProps> = ({ onSelect }
                 placeholder="Search..."
                 value={searchTerm}
                 onChange={handleSearchChange}
+                data-testid="resource-search"
                 className="w-full px-4 py-2 pl-10 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -173,6 +174,7 @@ export const ObjectiveSelector: React.FC<ObjectiveSelectorProps> = ({ onSelect }
             filteredResources.map((resource) => (
               <button
                 key={resource.id}
+                data-testid="resource-option"
                 onClick={() => handleSelect(resource)}
                 className={`group relative p-3 rounded-xl transition-all duration-200 aspect-square overflow-hidden ${
                   selectedResource?.id === resource.id
