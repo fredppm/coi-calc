@@ -28,7 +28,7 @@ COI Calculator makes it simple:
 
 ## 🎮 Try It Now!
 
-**👉 [Open COI Calculator](https://your-username.github.io/coi-calc) 👈**  
+**👉 [Open COI Calculator](https://fredppm.github.io/coi-calc) 👈**  
 *(We're working together to get this live on GitHub Pages!)*
 
 No download, no installation - just click and start planning! Works on any device with a web browser.
