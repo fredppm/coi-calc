@@ -30,7 +30,7 @@ export default function Home() {
       })))}`);
     } else {
       // Fallback to old behavior if no resource selected
-      router.push(`/canvas/${recipe.id}`);
+    router.push(`/canvas/${recipe.id}`);
     }
   };
 

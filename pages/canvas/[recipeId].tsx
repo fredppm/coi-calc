@@ -276,10 +276,10 @@ export default function CanvasPage() {
 
             // Only proceed if we successfully hydrated at least some nodes
             if (hydratedNodes.length > 0) {
-              setNodes(hydratedNodes);
-              setEdges(savedState.edges);
-              setInitialLoadComplete(true);
-              return;
+            setNodes(hydratedNodes);
+            setEdges(savedState.edges);
+            setInitialLoadComplete(true);
+            return;
             } else {
               console.warn('Failed to hydrate any nodes from saved state, falling back to initial recipe');
             }

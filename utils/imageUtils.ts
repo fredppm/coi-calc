@@ -21,6 +21,6 @@ export const getImageUrl = (imagePath: string): string => {
  */
 export const processImagePath = (imagePath: string): string => {
   return getImageUrl(imagePath);
-};
+}; 
 
  
