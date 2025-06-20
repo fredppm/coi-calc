@@ -245,7 +245,6 @@ This calculator is hosted on **GitHub Pages**, which means:
 ## 📄 For Developers & Contributors
 
 > **Want to help or run your own version?** Check out our technical docs:
-> - 🚀 **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Deploy your own version  
 > - 🤝 **[CONTRIBUTING.md](./CONTRIBUTING.md)** - How to contribute  
 > - 📸 **[SCREENSHOTS.md](./SCREENSHOTS.md)** - Taking screenshots for documentation
 
@@ -280,6 +279,6 @@ Game assets remain the property of their owners.
 
 ---
 
-**Built with ❤️ for the Captain of Industry community**
+**Built with ❤️ for the Captain of Industry community** 
 
 *Ready to build the perfect factory? [Start planning now!](https://your-username.github.io/coi-calc) 🏭✨* 

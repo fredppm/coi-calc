@@ -14,9 +14,11 @@ import { AnimatedEdge } from './AnimatedEdge';
 import { RecipeConnectionModal } from '../RecipeConnectionModal/RecipeConnectionModal';
 import { RemoveRecipeModal, ConnectionImpact } from '../RemoveRecipeModal/RemoveRecipeModal';
 import { SettingsPanel } from '../SettingsPanel/SettingsPanel';
+import { ShareButton } from '../ShareButton/ShareButton';
 import { Recipe } from '../../pages/api/recipes';
 import { coiResources } from '../../data/coi';
 import 'reactflow/dist/style.css';
+import { DebugPanel } from '../DebugPanel/DebugPanel';
 
 // Register custom node and edge types
 const nodeTypes = {
@@ -387,10 +389,15 @@ export const Flow: React.FC<FlowProps> = ({
     id: node.id,
     name: node.data.name,
     building: node.data.building,
-    inputs: node.data.inputs,
-    outputs: node.data.outputs,
+    inputs: node.data.inputs || [],
+    outputs: node.data.outputs || [],
     time: node.data.time,
-  }));
+  })).filter(recipe => {
+    // Additional safety check: ensure all required properties are present
+    return recipe.id && recipe.name && recipe.building && 
+           Array.isArray(recipe.inputs) && Array.isArray(recipe.outputs) && 
+           recipe.time;
+  });
 
   return (
     <>
@@ -409,13 +416,17 @@ export const Flow: React.FC<FlowProps> = ({
           <Controls />
           <MiniMap />
         </ReactFlow>
+      
 
+        <DebugPanel nodes={nodes} edges={edges} />
+        <ShareButton />
         <SettingsPanel
           normalizeToSixtySeconds={normalizeToSixtySeconds}
           onNormalizeToggle={onNormalizeToggle || (() => {})}
           isOpen={settingsPanelOpen}
           onToggle={() => setSettingsPanelOpen(!settingsPanelOpen)}
         />
+
       </div>
 
       <RecipeConnectionModal
@@ -426,6 +437,7 @@ export const Flow: React.FC<FlowProps> = ({
         connectionType={modalState.connectionType}
         onRecipeSelect={handleRecipeSelect}
         existingRecipes={existingRecipes}
+        normalizeToSixtySeconds={normalizeToSixtySeconds}
       />
 
       <RemoveRecipeModal

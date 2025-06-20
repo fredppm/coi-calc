@@ -1,5 +1,6 @@
 import { Handle, Position } from 'reactflow';
 import { useState } from 'react';
+import { getNormalizedAmount, getDisplayTime, clampMultiplier, getNormalizedAmountForBalance } from '../../utils/recipeCalculations';
 
 /**
  * RecipeNodeData defines the data structure for a recipe node.
@@ -43,9 +44,6 @@ export interface RecipeNodeProps {
 export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
   const [multiplier, setMultiplier] = useState(data.multiplier || 1);
 
-  // Calculate normalization factor for 60s if enabled
-  const normalizationFactor = data.normalizeToSixtySeconds ? 60 / data.time : 1;
-
   const handleResourceClick = (resourceId: string, resourceName: string, type: 'input' | 'output') => {
     if (data.onResourceClick) {
       data.onResourceClick(resourceId, resourceName, type);
@@ -60,7 +58,7 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
 
   const handleMultiplierChange = (newMultiplier: number) => {
     // Ensure multiplier is between 1 and 50
-    const clampedMultiplier = Math.max(1, Math.min(50, newMultiplier));
+    const clampedMultiplier = clampMultiplier(newMultiplier);
     setMultiplier(clampedMultiplier);
     
     if (data.onMultiplierChange) {
@@ -128,7 +126,7 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
     if (!currentResource) return 'unconnected';
 
     // Always normalize current amount for balance calculation
-    const currentAmountForBalance = currentResource.amount * multiplier * (60 / data.time);
+    const currentAmountForBalance = getNormalizedAmountForBalance(currentResource.amount, data.time, multiplier);
 
     if (type === 'input') {
       // For INPUTS: Calculate total supply from all connected producers
@@ -142,8 +140,7 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
           if (sourceResource) {
             const sourceMultiplier = sourceNodeData.multiplier || 1;
             // Always normalize for balance calculation
-            const sourceNormalizationFactor = 60 / sourceNodeData.time;
-            totalSuppliedAmount += sourceResource.amount * sourceMultiplier * sourceNormalizationFactor;
+            totalSuppliedAmount += getNormalizedAmountForBalance(sourceResource.amount, sourceNodeData.time, sourceMultiplier);
           }
         }
       });
@@ -172,8 +169,7 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
           if (targetResource) {
             const targetMultiplier = targetNodeData.multiplier || 1;
             // Always normalize for balance calculation
-            const targetNormalizationFactor = 60 / targetNodeData.time;
-            totalDemandAmount += targetResource.amount * targetMultiplier * targetNormalizationFactor;
+            totalDemandAmount += getNormalizedAmountForBalance(targetResource.amount, targetNodeData.time, targetMultiplier);
           }
         }
       });
@@ -260,7 +256,7 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
           <div>
             <h3 className="font-semibold text-sm leading-tight">{data.building.name}</h3>
             <p className="text-xs text-gray-500">
-              {data.normalizeToSixtySeconds ? '60s (normalized)' : `${data.time}s`}
+              {getDisplayTime(data.time, data.normalizeToSixtySeconds)}
             </p>
           </div>
         </div>
@@ -311,7 +307,7 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
         <div className="flex-1 p-4 relative">
           <div className="space-y-2">
             {data.inputs.map((input, index) => {
-              const adjustedAmount = input.amount * multiplier * normalizationFactor;
+              const adjustedAmount = getNormalizedAmount(input.amount, data.time, data.normalizeToSixtySeconds, multiplier);
               const styling = getResourceStyling(input.id, 'input');
               const status = getResourceConnectionStatus(input.id, 'input');
               const hasDifferentTime = hasTimeDifference(input.id, 'input');
@@ -356,7 +352,7 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
                       <span className="text-left truncate flex-1">{input.name}</span>
                     </div>
                     <span className={`font-medium ml-2 ${status === 'connected' ? 'text-blue-600' : status === 'critical-shortage' ? 'text-red-600' : status === 'excess-supply' ? 'text-blue-600' : 'text-gray-600'}`}>
-                      {Math.round(adjustedAmount * 100) / 100}
+                      {adjustedAmount}
                     </span>
                   </button>
                 </div>
@@ -376,7 +372,7 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
         <div className="flex-1 p-4 relative">
           <div className="space-y-2">
             {data.outputs.map((output, index) => {
-              const adjustedAmount = output.amount * multiplier * normalizationFactor;
+              const adjustedAmount = getNormalizedAmount(output.amount, data.time, data.normalizeToSixtySeconds, multiplier);
               const styling = getResourceStyling(output.id, 'output');
               const status = getResourceConnectionStatus(output.id, 'output');
               const hasDifferentTime = hasTimeDifference(output.id, 'output');
@@ -422,7 +418,7 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
                         )}
                     </div>
                     <span className={`font-medium ml-2 ${status === 'connected' ? 'text-blue-600' : status === 'insufficient-production' ? 'text-yellow-600' : status === 'excess-production' ? 'text-yellow-600' : 'text-gray-600'}`}>
-                      {Math.round(adjustedAmount * 100) / 100}
+                      {adjustedAmount}
                     </span>
                   </button>
                 </div>

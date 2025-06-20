@@ -1,5 +1,5 @@
 import { Node, Edge } from 'reactflow';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 /**
  * DebugPanelProps defines the properties for the DebugPanel component.
@@ -11,17 +11,40 @@ export interface DebugPanelProps {
 
 /**
  * DebugPanel shows debug information about the current canvas state.
+ * Only visible when debug=true in URL params or localStorage.
  */
 export const DebugPanel: React.FC<DebugPanelProps> = ({ nodes, edges }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDebugEnabled, setIsDebugEnabled] = useState(false);
   const recipeNodes = nodes.filter(node => node.type === 'recipe');
+
+  // Check if debug mode is enabled
+  useEffect(() => {
+    const checkDebugMode = () => {
+      // Check URL params
+      const urlParams = new URLSearchParams(window.location.search);
+      const debugFromUrl = urlParams.get('debug') === 'true';
+      
+      // Check localStorage
+      const debugFromStorage = localStorage.getItem('debug') === 'true';
+      
+      return debugFromUrl || debugFromStorage;
+    };
+
+    setIsDebugEnabled(checkDebugMode());
+  }, []);
 
   const togglePanel = () => {
     setIsOpen(!isOpen);
   };
 
+  // Don't render anything if debug mode is not enabled
+  if (!isDebugEnabled) {
+    return null;
+  }
+
   return (
-    <div className="absolute top-4 right-[3.5rem] z-50">
+    <div className="absolute top-4 right-[7rem] z-50">
       {/* Bug Button */}
       {!isOpen && (
         <button

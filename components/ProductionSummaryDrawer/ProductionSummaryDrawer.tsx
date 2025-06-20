@@ -1,5 +1,6 @@
 import { Node, Edge } from 'reactflow';
 import { useState } from 'react';
+import { roundForDisplay, getNormalizedAmount } from '../../utils/recipeCalculations';
 
 /**
  * ProductionSummaryDrawerProps defines the properties for the ProductionSummaryDrawer component.
@@ -7,6 +8,7 @@ import { useState } from 'react';
 export interface ProductionSummaryDrawerProps {
   nodes: Node[];
   edges: Edge[];
+  normalizeToSixtySeconds?: boolean;
 }
 
 /**
@@ -70,7 +72,7 @@ const ArrowUpIcon = ({ className = "w-4 h-4", color = "currentColor" }: { classN
 /**
  * ProductionSummaryDrawer shows production summary in a bottom drawer that slides up.
  */
-export const ProductionSummaryDrawer: React.FC<ProductionSummaryDrawerProps> = ({ nodes, edges }) => {
+export const ProductionSummaryDrawer: React.FC<ProductionSummaryDrawerProps> = ({ nodes, edges, normalizeToSixtySeconds }) => {
   const [isOpen, setIsOpen] = useState(false);
   
   const toggleDrawer = () => {
@@ -97,6 +99,7 @@ export const ProductionSummaryDrawer: React.FC<ProductionSummaryDrawerProps> = (
     // Process each recipe node
     recipeNodes.forEach(node => {
       const multiplier = node.data.multiplier || 1;
+      const recipeTime = node.data.time || 60;
       
       // Count buildings
       const buildingId = node.data.building.id;
@@ -109,7 +112,7 @@ export const ProductionSummaryDrawer: React.FC<ProductionSummaryDrawerProps> = (
       }
       buildingsRequired[buildingId].count += multiplier;
 
-      // Count inputs
+      // Count inputs with normalization
       node.data.inputs?.forEach((input: any) => {
         if (!totalInputs[input.id]) {
           totalInputs[input.id] = {
@@ -118,10 +121,18 @@ export const ProductionSummaryDrawer: React.FC<ProductionSummaryDrawerProps> = (
             icon: input.icon,
           };
         }
-        totalInputs[input.id].amount += input.amount * multiplier;
+        
+        const normalizedAmount = getNormalizedAmount(
+          input.amount,
+          recipeTime,
+          normalizeToSixtySeconds || false,
+          multiplier
+        );
+        
+        totalInputs[input.id].amount += normalizedAmount;
       });
 
-      // Count outputs
+      // Count outputs with normalization
       node.data.outputs?.forEach((output: any) => {
         if (!totalOutputs[output.id]) {
           totalOutputs[output.id] = {
@@ -130,7 +141,15 @@ export const ProductionSummaryDrawer: React.FC<ProductionSummaryDrawerProps> = (
             icon: output.icon,
           };
         }
-        totalOutputs[output.id].amount += output.amount * multiplier;
+        
+        const normalizedAmount = getNormalizedAmount(
+          output.amount,
+          recipeTime,
+          normalizeToSixtySeconds || false,
+          multiplier
+        );
+        
+        totalOutputs[output.id].amount += normalizedAmount;
       });
     });
 
@@ -293,7 +312,7 @@ export const ProductionSummaryDrawer: React.FC<ProductionSummaryDrawerProps> = (
                             </span>
                           </div>
                           <span className="font-bold">
-                            {resource.type === 'surplus' ? '+' : ''}{Math.round(resource.amount * 10) / 10}
+                            {resource.type === 'surplus' ? '+' : ''}{roundForDisplay(resource.amount)}
                           </span>
                         </div>
                       ))}

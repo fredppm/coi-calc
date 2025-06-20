@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Recipe } from '../../pages/api/recipes';
 import { fetchRecipes } from '../../utils/dataFetcher';
+import { getNormalizedAmount, getDisplayTime } from '../../utils/recipeCalculations';
 
 /**
  * RecipeConnectionModalProps defines the properties for the RecipeConnectionModal component.
@@ -13,6 +14,7 @@ export interface RecipeConnectionModalProps {
   connectionType: 'input' | 'output'; // 'input' means we want recipes that produce this resource, 'output' means recipes that consume it
   onRecipeSelect: (recipe: Recipe) => void;
   existingRecipes?: Recipe[]; // Recipes already on the canvas
+  normalizeToSixtySeconds?: boolean; // Whether to normalize values to 60s like the nodes
 }
 
 /**
@@ -26,6 +28,7 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
   connectionType,
   onRecipeSelect,
   existingRecipes = [],
+  normalizeToSixtySeconds = false,
 }) => {
   const [newRecipes, setNewRecipes] = useState<Recipe[]>([]);
   const [loading, setLoading] = useState(false);
@@ -42,6 +45,18 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
         const allRecipes = await fetchRecipes();
         
         const filteredRecipes = allRecipes.filter((recipe: Recipe) => {
+          // Safety check: ensure recipe has required properties
+          if (!recipe || !recipe.inputs || !recipe.outputs) {
+            console.warn('Invalid recipe data found in filtered recipes:', {
+              recipe,
+              hasInputs: !!recipe?.inputs,
+              hasOutputs: !!recipe?.outputs,
+              resourceId,
+              connectionType
+            });
+            return false;
+          }
+
           if (connectionType === 'input') {
             // Find recipes that produce this resource
             return recipe.outputs.some(output => output.id === resourceId);
@@ -64,6 +79,19 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
 
   // Filter existing recipes that can connect to this resource
   const connectableExistingRecipes = existingRecipes.filter((recipe) => {
+    // Safety check: ensure recipe has required properties
+    if (!recipe || !recipe.inputs || !recipe.outputs) {
+      console.warn('Invalid existing recipe data found:', {
+        recipe,
+        hasInputs: !!recipe?.inputs,
+        hasOutputs: !!recipe?.outputs,
+        resourceId,
+        connectionType,
+        existingRecipesLength: existingRecipes.length
+      });
+      return false;
+    }
+
     if (connectionType === 'input') {
       // Find existing recipes that produce this resource
       return recipe.outputs.some(output => output.id === resourceId);
@@ -134,7 +162,6 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                         isExisting ? 'border-blue-300 bg-blue-50 ring-1 ring-blue-200' : 'border-gray-200'
                       }`}
                     >
-                      {/* Recipe Card similar to canvas layout */}
                       <div className={`bg-white rounded-lg h-full border flex flex-col ${isExisting ? 'border-blue-200' : ''}`}>
                         {/* Building Header */}
                         <div className={`flex items-center justify-between p-3 border-b rounded-t-lg ${
@@ -154,7 +181,9 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                                 {recipe.building.name}
                                 {isExisting && <span className="text-blue-600 ml-1 text-xs">(reuse)</span>}
                               </h4>
-                              <p className="text-xs text-gray-500">{recipe.time}s</p>
+                              <p className="text-xs text-gray-500">
+                                {getDisplayTime(recipe.time, normalizeToSixtySeconds)}
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -163,7 +192,7 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                           {/* Left Side - Inputs */}
                           <div className="flex-1 p-3">
                             <div className="space-y-1">
-                              {recipe.inputs.length === 0 ? (
+                              {!recipe.inputs || recipe.inputs.length === 0 ? (
                                 <p className="text-xs text-gray-400 text-center italic">No inputs</p>
                               ) : (
                                 recipe.inputs.map((input) => (
@@ -183,7 +212,9 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                                       </div>
                                       <span className="truncate">{input.name}</span>
                                     </div>
-                                    <span className="text-gray-500 font-medium ml-1">{input.amount}</span>
+                                    <span className="text-gray-500 font-medium ml-1">
+                                      {getNormalizedAmount(input.amount, recipe.time, normalizeToSixtySeconds)}
+                                    </span>
                                   </div>
                                 ))
                               )}
@@ -198,7 +229,7 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                           {/* Right Side - Outputs */}
                           <div className="flex-1 p-3">
                             <div className="space-y-1">
-                              {recipe.outputs.length === 0 ? (
+                              {!recipe.outputs || recipe.outputs.length === 0 ? (
                                 <p className="text-xs text-gray-400 text-center italic">No outputs</p>
                               ) : (
                                 recipe.outputs.map((output) => (
@@ -208,7 +239,9 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                                       output.id === resourceId ? 'bg-green-100 border border-green-300' : 'bg-gray-50'
                                     }`}
                                   >
-                                    <span className="text-gray-500 font-medium mr-1">{output.amount}</span>
+                                    <span className="text-gray-500 font-medium mr-1">
+                                      {getNormalizedAmount(output.amount, recipe.time, normalizeToSixtySeconds)}
+                                    </span>
                                     <div className="flex items-center space-x-1">
                                       <span className="truncate">{output.name}</span>
                                       <div className="w-4 h-4 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0">

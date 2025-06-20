@@ -1,9 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/router';
-import { Flow } from '../../components/Flow/Flow';
-import { Recipe, getRecipeById, getAllRecipes } from '../../utils/recipes';
+import { Flow } from '../components/Flow/Flow';
+import { getAllRecipes } from '../utils/recipes';
 import { Node, Edge } from 'reactflow';
-import { ProductionSummaryDrawer } from '../../components/ProductionSummaryDrawer/ProductionSummaryDrawer';
+import { ProductionSummaryDrawer } from '../components/ProductionSummaryDrawer/ProductionSummaryDrawer';
+import { DebugPanel } from '../components/DebugPanel/DebugPanel';
 import 'reactflow/dist/style.css';
 
 // LZ-string compression functions (inline implementation for small bundle size)
@@ -172,8 +173,7 @@ const decodeCanvasState = (stateParam: string): { nodes: Node[], edges: Edge[] }
 
 export default function CanvasPage() {
   const router = useRouter();
-  const { recipeId, state } = router.query;
-  const [recipe, setRecipe] = useState<Recipe | null>(null);
+  const { state } = router.query;
   const [nodes, setNodes] = useState<Node[]>([]);
   const [edges, setEdges] = useState<Edge[]>([]);
   const [loading, setLoading] = useState(true);
@@ -201,11 +201,11 @@ export default function CanvasPage() {
     if (!initialLoadComplete) return;
     
     const stateParam = encodeCanvasState(newNodes, newEdges);
-    const url = `/canvas/${recipeId}?state=${stateParam}`;
+    const url = `/canvas?state=${stateParam}`;
     
     // Update URL without triggering navigation
     window.history.replaceState(null, '', url);
-  }, [recipeId, initialLoadComplete]);
+  }, [initialLoadComplete]);
 
   // Handle state changes from Flow component
   const handleStateChange = useCallback((newNodes: Node[], newEdges: Edge[]) => {
@@ -221,29 +221,16 @@ export default function CanvasPage() {
   }, [updateURLState]);
 
   useEffect(() => {
-    if (!recipeId || typeof recipeId !== 'string') return;
-
-    const fetchRecipe = async () => {
+    const loadCanvas = async () => {
       try {
         setLoading(true);
         setError(null);
         
-        // Get recipe by ID directly from data
-        const foundRecipe = getRecipeById(recipeId);
-        
-        if (!foundRecipe) {
-          setError('Recipe not found');
-          return;
-        }
-        
-        setRecipe(foundRecipe);
-
         // Check if we have saved state in URL
         if (state && typeof state === 'string') {
           const savedState = decodeCanvasState(state);
           if (savedState) {
             // Import all recipes to hydrate nodes properly
-            const { getAllRecipes } = await import('../../utils/recipes');
             const allRecipes = getAllRecipes();
             
             // Hydrate all nodes with complete recipe data
@@ -281,40 +268,24 @@ export default function CanvasPage() {
               setInitialLoadComplete(true);
               return;
             } else {
-              console.warn('Failed to hydrate any nodes from saved state, falling back to initial recipe');
+              console.warn('Failed to hydrate any nodes from saved state');
             }
           }
         }
 
-        // If no saved state, create initial node
-        const initialNode: Node = {
-          id: `recipe-${foundRecipe.id}`,
-          type: 'recipe',
-          position: { x: 400, y: 200 },
-          data: {
-            name: foundRecipe.name,
-            building: foundRecipe.building,
-            inputs: foundRecipe.inputs,
-            outputs: foundRecipe.outputs,
-            time: foundRecipe.time,
-            multiplier: 1,
-          },
-        };
-
-        setNodes([initialNode]);
-        setEdges([]);
-        setInitialLoadComplete(true);
+        // If no saved state or failed to load, show error
+        setError('No valid canvas state found');
         
       } catch (err) {
-        console.error('Error fetching recipe:', err);
-        setError('Failed to load recipe');
+        console.error('Error loading canvas:', err);
+        setError('Failed to load canvas');
       } finally {
         setLoading(false);
       }
     };
 
-    fetchRecipe();
-  }, [recipeId, state]);
+    loadCanvas();
+  }, [state]);
 
   const handleBackToSelection = () => {
     router.push('/');
@@ -325,18 +296,18 @@ export default function CanvasPage() {
       <main className="h-screen w-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading recipe...</p>
+          <p className="text-gray-600">Loading canvas...</p>
         </div>
       </main>
     );
   }
 
-  if (error || !recipe) {
+  if (error) {
     return (
       <main className="h-screen w-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-red-600 mb-4">Error</h1>
-          <p className="text-gray-600 mb-6">{error || 'Recipe not found'}</p>
+          <p className="text-gray-600 mb-6">{error}</p>
           <button
             onClick={handleBackToSelection}
             className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -358,8 +329,10 @@ export default function CanvasPage() {
         >
           ↻ New Objective
         </button>
-        
       </div>
+      
+      {/* Debug Panel */}
+      <DebugPanel nodes={nodes} edges={edges} />
 
       {/* Flow Canvas */}
       <Flow 

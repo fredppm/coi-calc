@@ -13,8 +13,25 @@ export default function Home() {
   };
 
   const handleRecipeSelect = (recipe: Recipe) => {
-    // Redirect to canvas page with recipe ID
-    router.push(`/canvas/${recipe.id}`);
+    // Redirect to canvas page with objective (resourceId from selectedResource)
+    if (selectedResource) {
+      router.push(`/canvas/objective/${selectedResource.id}?state=${encodeURIComponent(btoa(JSON.stringify({
+        n: [{
+          i: `recipe-${recipe.id}`,
+          t: 'recipe',
+          p: [400, 200],
+          d: {
+            n: recipe.name,
+            b: recipe.building.id,
+            m: 1
+          }
+        }],
+        e: []
+      })))}`);
+    } else {
+      // Fallback to old behavior if no resource selected
+      router.push(`/canvas/${recipe.id}`);
+    }
   };
 
   const handleBackToObjectives = () => {
