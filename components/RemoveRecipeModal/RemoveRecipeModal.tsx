@@ -1,6 +1,6 @@
 import { Edge, Node } from 'reactflow';
+import Image from 'next/image';
 import { RecipeNodeData } from '../RecipeNode/RecipeNode';
-import { processImagePath } from '../../utils/imageUtils';
 
 /**
  * Connection impact information for the removal modal
@@ -60,10 +60,12 @@ export const RemoveRecipeModal: React.FC<RemoveRecipeModalProps> = ({
         <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gray-100 rounded flex items-center justify-center overflow-hidden">
-              <img 
-                                  src={processImagePath(recipeNode.data.building.image)} 
+              <Image 
+                src={recipeNode.data.building.image} 
                 alt={recipeNode.data.building.name}
-                className="w-full h-full object-contain"
+                width={40}
+                height={40}
+                className="object-contain"
               />
             </div>
             <div>
@@ -94,10 +96,12 @@ export const RemoveRecipeModal: React.FC<RemoveRecipeModalProps> = ({
                       <span className="text-orange-600">→</span>
                       <div className="flex items-center space-x-1">
                         <div className="w-4 h-4 bg-gray-100 rounded flex items-center justify-center overflow-hidden">
-                          <img 
-                                                          src={processImagePath(impact.resourceIcon)} 
+                          <Image 
+                            src={impact.resourceIcon} 
                             alt={impact.resourceName}
-                            className="w-full h-full object-contain"
+                            width={16}
+                            height={16}
+                            className="object-contain"
                           />
                         </div>
                         <span className="font-medium text-orange-700">{impact.resourceName}</span>

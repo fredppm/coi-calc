@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Recipe, getRecipesByResource } from '../../utils/recipes';
-import { processImagePath } from '../../utils/imageUtils';
 
 /**
  * RecipeSelectorProps defines the properties for the RecipeSelector component.
@@ -142,10 +142,12 @@ export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
                 {/* Left Side - Image and Text */}
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-gray-100 rounded-full border-2 border-gray-200 flex items-center justify-center overflow-hidden flex-shrink-0">
-                    <img 
-                                              src={processImagePath(recipe.building.image)} 
+                    <Image 
+                      src={recipe.building.image} 
                       alt={recipe.building.name}
-                      className="w-full h-full object-contain"
+                      width={32}
+                      height={32}
+                      className="object-contain"
                     />
                   </div>
                   <div>
@@ -172,10 +174,12 @@ export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
                         <div className="w-full flex items-center justify-between text-xs p-2 rounded border border-gray-300">
                           <div className="flex items-center space-x-2">
                             <div className="w-6 h-6 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
-                              <img 
+                              <Image 
                                 src={input.icon} 
                                 alt={input.name}
-                                className="w-full h-full object-contain"
+                                width={24}
+                                height={24}
+                                className="object-contain"
                               />
                             </div>
                             <span className="text-left truncate flex-1">{input.name}</span>
@@ -204,10 +208,12 @@ export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
                         <div className="w-full flex items-center justify-between text-xs p-2 rounded border border-gray-300">
                           <div className="flex items-center space-x-2">
                             <div className="w-6 h-6 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
-                              <img 
+                              <Image 
                                 src={output.icon} 
                                 alt={output.name}
-                                className="w-full h-full object-contain"
+                                width={24}
+                                height={24}
+                                className="object-contain"
                               />
                             </div>
                             <span className="text-left truncate flex-1">{output.name}</span>

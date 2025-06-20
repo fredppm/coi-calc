@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Recipe } from '../../pages/api/recipes';
 import { fetchRecipes } from '../../utils/dataFetcher';
 import { getNormalizedAmount, getDisplayTime, validateRecipes } from '../../utils/recipeCalculations';
-import { processImagePath } from '../../utils/imageUtils';
 
 /**
  * RecipeConnectionModalProps defines the properties for the RecipeConnectionModal component.
@@ -171,10 +171,12 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                           {/* Left Side - Image and Text */}
                           <div className="flex items-center space-x-3">
                             <div className="w-10 h-10 bg-gray-100 rounded-full border-2 border-gray-200 flex items-center justify-center overflow-hidden flex-shrink-0">
-                              <img 
-                                                                 src={processImagePath(recipe.building.image)} 
+                              <Image 
+                                src={recipe.building.image} 
                                 alt={recipe.building.name}
-                                className="w-full h-full object-contain"
+                                width={40}
+                                height={40}
+                                className="object-contain"
                               />
                             </div>
                             <div>
@@ -205,10 +207,12 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                                   >
                                     <div className="flex items-center space-x-1">
                                       <div className="w-4 h-4 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
-                                        <img 
+                                        <Image 
                                           src={input.icon} 
                                           alt={input.name}
-                                          className="w-full h-full object-contain"
+                                          width={16}
+                                          height={16}
+                                          className="object-contain"
                                         />
                                       </div>
                                       <span className="truncate">{input.name}</span>
@@ -246,10 +250,12 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                                     <div className="flex items-center space-x-1">
                                       <span className="truncate">{output.name}</span>
                                       <div className="w-4 h-4 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
-                                        <img 
+                                        <Image 
                                           src={output.icon} 
                                           alt={output.name}
-                                          className="w-full h-full object-contain"
+                                          width={16}
+                                          height={16}
+                                          className="object-contain"
                                         />
                                       </div>
                                     </div>

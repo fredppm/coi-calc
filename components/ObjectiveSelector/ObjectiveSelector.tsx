@@ -1,12 +1,10 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { coiResources } from '../../data/coi';
 import { Resource as CoiResource } from '../../types';
-import { processImagePath } from '../../utils/imageUtils';
-
 
 /**
- * Resource represents a possible objective in the system.
+ * Resource represents a production objective that can be selected by the user.
  */
 export interface Resource {
   id: string;
@@ -22,7 +20,7 @@ const convertResource = (coiResource: CoiResource): Resource => {
     id: coiResource.id,
     name: coiResource.name,
     description: `${coiResource.name} resource for production chains`,
-    image: processImagePath(coiResource.image),
+    image: coiResource.image,
     color: coiResource.color,
   };
 };

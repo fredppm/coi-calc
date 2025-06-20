@@ -1,12 +1,13 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import { Flow } from '../../../components/Flow/Flow';
 import { getAllRecipes } from '../../../utils/recipes';
 import { Node, Edge } from 'reactflow';
+import { Recipe } from '../../../utils/recipes';
 import { ProductionSummaryDrawer } from '../../../components/ProductionSummaryDrawer/ProductionSummaryDrawer';
 import { DebugPanel } from '../../../components/DebugPanel/DebugPanel';
 import { coiResources } from '../../../data/coi';
-import { processImagePath } from '../../../utils/imageUtils';
 import 'reactflow/dist/style.css';
 
 // LZ-string compression functions (inline implementation for small bundle size)
@@ -346,10 +347,12 @@ export default function ObjectiveCanvasPage() {
           <span>↻</span>
           {objective ? (
             <>
-              <img 
-                src={processImagePath(objective.image)} 
+              <Image 
+                src={objective.image} 
                 alt={objective.name}
-                className="w-4 h-4 object-contain"
+                width={32}
+                height={32}
+                className="object-contain"
               />
               <span>{objective.name}</span>
             </>

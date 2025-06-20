@@ -1,7 +1,7 @@
 import { Handle, Position } from 'reactflow';
 import { useState } from 'react';
+import Image from 'next/image';
 import { getNormalizedAmount, getDisplayTime, clampMultiplier, getNormalizedAmountForBalance } from '../../utils/recipeCalculations';
-import { processImagePath } from '../../utils/imageUtils';
 
 /**
  * RecipeNodeData defines the data structure for a recipe node.
@@ -248,10 +248,12 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
         {/* Left Side - Image and Text */}
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 bg-gray-100 rounded-full border-2 border-gray-200 flex items-center justify-center overflow-hidden flex-shrink-0">
-            <img 
-              src={processImagePath(data.building.image)} 
+            <Image 
+              src={data.building.image} 
               alt={data.building.name}
-              className="w-8 h-8 object-contain"
+              width={32}
+              height={32}
+              className="object-contain"
             />
           </div>
           <div>
@@ -344,10 +346,12 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
                          </div>
                        )}
                       <div className="w-6 h-6 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0 relative">
-                        <img 
+                        <Image 
                           src={input.icon} 
                           alt={input.name}
-                          className="w-full h-full object-contain"
+                          width={24}
+                          height={24}
+                          className="object-contain"
                         />
                       </div>
                       <span className="text-left truncate flex-1">{input.name}</span>
@@ -401,10 +405,12 @@ export const RecipeNode: React.FC<RecipeNodeProps> = ({ data, id }) => {
                   >
                     <div className="flex items-center space-x-2">
                       <div className="w-6 h-6 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0 relative">
-                        <img 
+                        <Image 
                           src={output.icon} 
                           alt={output.name}
-                          className="w-full h-full object-contain"
+                          width={24}
+                          height={24}
+                          className="object-contain"
                         />
                       </div>
                       <span className="text-left truncate flex-1">{output.name}</span>
