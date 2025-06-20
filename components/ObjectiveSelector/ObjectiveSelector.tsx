@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { coiResources } from '../../data/coi';
 import { Resource as CoiResource } from '../../types';
 import { processImagePath } from '../../utils/imageUtils';
@@ -197,10 +198,12 @@ export const ObjectiveSelector: React.FC<ObjectiveSelectorProps> = ({ onSelect }
                       ? 'bg-blue-50 ring-1 ring-blue-200'
                       : 'group-group-hover:ring-1 group-hover:ring-gray-200'
                   }`}>
-                    <img 
-                                              src={processImagePath(resource.image)} 
+                    <Image 
+                      src={resource.image} 
                       alt={resource.name}
-                      className="w-8 h-8 object-contain"
+                      width={32}
+                      height={32}
+                      className="object-contain"
                     />
                     <div className="hidden w-full h-full items-center justify-center text-2xl opacity-60">📦</div>
                   </div>
@@ -241,10 +244,12 @@ export const ObjectiveSelector: React.FC<ObjectiveSelectorProps> = ({ onSelect }
           <div className="bg-white/95 backdrop-blur-sm shadow-xl border border-blue-200 rounded-xl p-4 max-w-md mx-auto">
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center ring-2 ring-blue-200">
-                <img 
-                                      src={processImagePath(selectedResource.image)} 
+                <Image 
+                  src={selectedResource.image} 
                   alt={selectedResource.name}
-                  className="w-6 h-6 object-contain"
+                  width={24}
+                  height={24}
+                  className="object-contain"
                 />
               </div>
               <div className="flex-1">
