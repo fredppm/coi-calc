@@ -1,23 +1,19 @@
 /**
- * Utility function to generate correct image URLs for both local development and GitHub Pages deployment
+ * Utility function to generate correct image URLs for both local development and any deployment
+ * Works automatically with Next.js basePath configuration
  */
 
 export const getImageUrl = (imagePath: string): string => {
-  // Remove leading slash if present
+  // Remove leading slash if present to normalize
   const cleanPath = imagePath.startsWith('/') ? imagePath.slice(1) : imagePath;
   
-  // In production on GitHub Pages, we need to add the basePath
-  if (typeof window !== 'undefined' && window.location.hostname === 'fredppm.github.io') {
-    return `/coi-calc/${cleanPath}`;
-  }
-  
-  // For local development or other deployments
+  // Simply prepend with / - Next.js will automatically handle basePath
+  // when the app is built with basePath configuration
   return `/${cleanPath}`;
 };
 
 /**
- * Process image path from data - now simply returns the URL without conversion
- * since all files are normalized to snake_case
+ * Process image path from data - handles both absolute and relative paths
  */
 export const processImagePath = (imagePath: string): string => {
   return getImageUrl(imagePath);
