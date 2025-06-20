@@ -6,6 +6,9 @@
 
 # Testing
 /coverage
+/test-results/
+/playwright-report/
+*.tsbuildinfo
 
 # Next.js
 /.next/
@@ -39,6 +42,7 @@ next-env.d.ts
 .idea/
 *.swp
 *.swo
+.cursor/
 
 # OS
 Thumbs.db 
