@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Recipe } from '../../utils/dataFetcher';
 import { fetchRecipes } from '../../utils/dataFetcher';
 import { getNormalizedAmount, getDisplayTime, validateRecipes } from '../../utils/recipeCalculations';
+import { getImagePath } from '../../utils/urlHelper';
 
 /**
  * RecipeConnectionModalProps defines the properties for the RecipeConnectionModal component.
@@ -172,7 +173,7 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                           <div className="flex items-center space-x-3">
                             <div className="w-10 h-10 bg-gray-100 rounded-full border-2 border-gray-200 flex items-center justify-center overflow-hidden flex-shrink-0">
                               <Image 
-                                src={recipe.building.image} 
+                                src={getImagePath(recipe.building.image)}
                                 alt={recipe.building.name}
                                 width={40}
                                 height={40}

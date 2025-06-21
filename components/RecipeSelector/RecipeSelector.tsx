@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Recipe, getRecipesByResource } from '../../utils/recipes';
+import { getImagePath } from '../../utils/urlHelper';
 
 /**
  * RecipeSelectorProps defines the properties for the RecipeSelector component.
@@ -142,12 +143,12 @@ export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
                 {/* Left Side - Image and Text */}
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-gray-100 rounded-full border-2 border-gray-200 flex items-center justify-center overflow-hidden flex-shrink-0">
-                    <Image 
-                      src={recipe.building.image} 
+                    <Image
+                      src={getImagePath(recipe.building.image)}
                       alt={recipe.building.name}
                       width={32}
                       height={32}
-                      className="object-contain"
+                      className="rounded"
                     />
                   </div>
                   <div>

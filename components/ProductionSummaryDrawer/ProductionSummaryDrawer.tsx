@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { roundForDisplay, getNormalizedAmount } from '../../utils/recipeCalculations';
 import { RecipeNodeData } from '../RecipeNode/RecipeNode';
+import { getImagePath } from '../../utils/urlHelper';
 
 /**
  * ProductionSummaryDrawerProps defines the properties for the ProductionSummaryDrawer component.
@@ -275,12 +276,12 @@ export const ProductionSummaryDrawer: React.FC<ProductionSummaryDrawerProps> = (
                   <div className="flex space-x-3 overflow-x-auto pb-2">
                     {Object.entries(summary.buildingsRequired).map(([id, building]) => (
                       <div key={id} className="flex-shrink-0 flex items-center space-x-2 bg-gray-50 px-3 py-2 rounded text-sm">
-                        <Image 
-                          src={building.image} 
+                        <Image
+                          src={getImagePath(building.image)}
                           alt={building.name}
-                          width={20}
-                          height={20}
-                          className="object-contain"
+                          width={24}
+                          height={24}
+                          className="rounded"
                         />
                         <span className="text-gray-800 font-medium">{building.name}</span>
                         <span className="text-gray-600 font-bold">×{building.count}</span>

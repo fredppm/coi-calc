@@ -12,7 +12,7 @@ export const getBasePath = (): string => {
     const pathname = window.location.pathname;
     
     // Check if we're running with /coi-calc basePath (GitHub Pages)
-    if (pathname.startsWith('/coi-calc/')) {
+    if (pathname.startsWith('/coi-calc/') || pathname === '/coi-calc') {
       return '/coi-calc';
     }
   }
@@ -55,6 +55,17 @@ export const updateBrowserUrl = (stateParam: string): void => {
   
   const url = getCanvasUrl(stateParam);
   window.history.replaceState(null, '', url);
+};
+
+/**
+ * Get the correct image path with basePath for Next.js Image component
+ * @param imagePath - The image path from data (e.g., "/images/resources/cooking_oil.png")
+ * @returns Complete image path including basePath
+ */
+export const getImagePath = (imagePath: string): string => {
+  // Always detect basePath dynamically at runtime
+  const basePath = getBasePath();
+  return `${basePath}${imagePath}`;
 };
 
  
