@@ -1,8 +1,13 @@
-# 🏭 COI Calculator
+# 🏭 COI Calculator - Captain of Industry Factory Planner
 
-**The easiest way to plan production chains for Captain of Industry**
+**The ultimate production chain calculator and factory planner for Captain of Industry**
 
-No more spreadsheets! Just drag, drop, and watch your factory come to life ✨
+Transform complex factory planning into simple drag-and-drop fun! No more spreadsheets, no more guesswork - just pure factory optimization magic ✨
+
+🎮 **[➤ Start Planning Your Factory Now!](https://fredppm.github.io/coi-calc)** 🎮
+
+[![GitHub stars](https://img.shields.io/github/stars/fredppm/coi-calc?style=social)](https://github.com/fredppm/coi-calc/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/fredppm/coi-calc?style=social)](https://github.com/fredppm/coi-calc/network/members)
 
 ![Next.js](https://img.shields.io/badge/Next.js-14+-black?style=flat-square)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue?style=flat-square)
@@ -23,6 +28,17 @@ COI Calculator makes it simple:
 ✅ **Share with friends** - Send a link to get help or show off  
 
 **Think of it as drawing your factory on paper, but smarter!** 📝
+
+### 🔍 **Perfect for:**
+- **Factory optimization** and production line balancing
+- **Supply chain planning** and resource management  
+- **Building placement** and layout design
+- **Recipe comparison** and efficiency analysis
+- **Multiplayer coordination** and factory sharing
+- **Learning Captain of Industry** mechanics and recipes
+
+### 🎯 **Keywords:** 
+`captain of industry` `factory planner` `production calculator` `supply chain` `resource calculator` `manufacturing` `logistics` `industrial game` `city builder` `factory optimization` `production chain` `building calculator`
 
 ---
 

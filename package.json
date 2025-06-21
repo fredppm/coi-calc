@@ -1,7 +1,38 @@
 {
-  "name": "coi",
+  "name": "coi-calculator",
   "version": "0.1.0",
-  "private": true,
+  "description": "Production chain calculator and factory planner for Captain of Industry game. Visual drag-and-drop interface to optimize resource production, building placement, and supply chains.",
+  "keywords": [
+    "captain-of-industry",
+    "coi",
+    "factory-planner",
+    "production-calculator",
+    "supply-chain",
+    "factory-builder",
+    "resource-calculator",
+    "game-tool",
+    "production-chain",
+    "factory-optimization",
+    "industrial-game",
+    "city-builder",
+    "manufacturing",
+    "logistics",
+    "planning-tool"
+  ],
+  "homepage": "https://fredppm.github.io/coi-calc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fredppm/coi-calc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fredppm/coi-calc/issues"
+  },
+  "author": {
+    "name": "Fred PPM",
+    "url": "https://github.com/fredppm"
+  },
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",

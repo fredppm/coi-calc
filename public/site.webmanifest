@@ -1,0 +1,42 @@
+{
+  "name": "COI Calculator - Captain of Industry Factory Planner",
+  "short_name": "COI Calculator",
+  "description": "Production chain calculator and factory planner for Captain of Industry game",
+  "start_url": "/coi-calc/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "landscape-primary",
+  "categories": ["games", "productivity", "utilities"],
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/coi-calc/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/coi-calc/icon-512x512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/coi-calc/images/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Factory planning interface"
+    },
+    {
+      "src": "/coi-calc/images/screenshot-mobile.png", 
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile factory planner"
+    }
+  ]
+} 

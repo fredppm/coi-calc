@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://fredppm.github.io/coi-calc/sitemap.xml
+
+# Disallow test and development files
+Disallow: /test-results/
+Disallow: /playwright-report/
+Disallow: /_next/static/chunks/webpack-*
+Disallow: /api/
+
+# Allow important pages
+Allow: /canvas
+Allow: /images/ 
