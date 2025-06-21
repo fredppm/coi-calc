@@ -55,4 +55,20 @@ export const updateBrowserUrl = (stateParam: string): void => {
   
   const url = getCanvasUrl(stateParam);
   window.history.replaceState(null, '', url);
+};
+
+/**
+ * Get the correct image path with basePath for Next.js Image component
+ * @param imagePath - The image path from data (e.g., "/images/resources/cooking_oil.png")
+ * @returns Complete image path including basePath
+ */
+export const getImagePath = (imagePath: string): string => {
+  // During build time, use the configured basePath from environment
+  if (process.env.GITHUB_PAGES && process.env.BASE_PATH) {
+    return `${process.env.BASE_PATH}${imagePath}`;
+  }
+  
+  // At runtime, detect basePath from current location
+  const basePath = getBasePath();
+  return `${basePath}${imagePath}`;
 }; 

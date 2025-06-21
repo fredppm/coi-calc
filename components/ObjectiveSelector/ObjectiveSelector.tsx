@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { coiResources } from '../../data/coi';
 import { Resource as CoiResource } from '../../types';
+import { getImagePath } from '../../utils/urlHelper';
 
 /**
  * Resource represents a production objective that can be selected by the user.
@@ -197,7 +198,7 @@ export const ObjectiveSelector: React.FC<ObjectiveSelectorProps> = ({ onSelect }
                       : 'group-group-hover:ring-1 group-hover:ring-gray-200'
                   }`}>
                     <Image 
-                      src={resource.image} 
+                      src={getImagePath(resource.image)} 
                       alt={resource.name}
                       width={32}
                       height={32}
@@ -242,8 +243,8 @@ export const ObjectiveSelector: React.FC<ObjectiveSelectorProps> = ({ onSelect }
           <div className="bg-white/95 backdrop-blur-sm shadow-xl border border-blue-200 rounded-xl p-4 max-w-md mx-auto">
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center ring-2 ring-blue-200">
-                <Image 
-                  src={selectedResource.image} 
+                                      <Image 
+                        src={getImagePath(selectedResource.image)} 
                   alt={selectedResource.name}
                   width={24}
                   height={24}
