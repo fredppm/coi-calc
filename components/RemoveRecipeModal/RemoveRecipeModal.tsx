@@ -98,7 +98,7 @@ export const RemoveRecipeModal: React.FC<RemoveRecipeModalProps> = ({
                       <div className="flex items-center space-x-1">
                         <div className="w-4 h-4 bg-gray-100 rounded flex items-center justify-center overflow-hidden">
                           <Image 
-                            src={impact.resourceIcon} 
+                            src={getImagePath(impact.resourceIcon)} 
                             alt={impact.resourceName}
                             width={16}
                             height={16}

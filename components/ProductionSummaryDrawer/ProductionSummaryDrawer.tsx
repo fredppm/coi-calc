@@ -308,7 +308,7 @@ export const ProductionSummaryDrawer: React.FC<ProductionSummaryDrawerProps> = (
                         }`}>
                           <div className="flex items-center space-x-1">
                             <Image 
-                              src={resource.icon} 
+                              src={getImagePath(resource.icon)} 
                               alt={resource.name}
                               width={16}
                               height={16}

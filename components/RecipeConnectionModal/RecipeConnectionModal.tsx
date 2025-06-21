@@ -209,7 +209,7 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                                     <div className="flex items-center space-x-1">
                                       <div className="w-4 h-4 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
                                         <Image 
-                                          src={input.icon} 
+                                          src={getImagePath(input.icon)} 
                                           alt={input.name}
                                           width={16}
                                           height={16}
@@ -252,7 +252,7 @@ export const RecipeConnectionModal: React.FC<RecipeConnectionModalProps> = ({
                                       <span className="truncate">{output.name}</span>
                                       <div className="w-4 h-4 bg-gray-100 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
                                         <Image 
-                                          src={output.icon} 
+                                          src={getImagePath(output.icon)} 
                                           alt={output.name}
                                           width={16}
                                           height={16}

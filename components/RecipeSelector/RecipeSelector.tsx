@@ -176,7 +176,7 @@ export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
                           <div className="flex items-center space-x-2">
                             <div className="w-6 h-6 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
                               <Image 
-                                src={input.icon} 
+                                src={getImagePath(input.icon)} 
                                 alt={input.name}
                                 width={24}
                                 height={24}
@@ -210,7 +210,7 @@ export const RecipeSelector: React.FC<RecipeSelectorProps> = ({
                           <div className="flex items-center space-x-2">
                             <div className="w-6 h-6 rounded flex items-center justify-center overflow-hidden flex-shrink-0">
                               <Image 
-                                src={output.icon} 
+                                src={getImagePath(output.icon)} 
                                 alt={output.name}
                                 width={24}
                                 height={24}
