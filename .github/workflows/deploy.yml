@@ -32,6 +32,9 @@ jobs:
         run: npm ci
 
       - name: Build and deploy
+        env:
+          GITHUB_PAGES: true
+          BASE_PATH: /coi-calc
         run: npm run deploy
 
       - name: Debug - List build output

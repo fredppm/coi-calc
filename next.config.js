@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static export and basePath for GitHub Pages deployment
-  ...(process.env.GITHUB_ACTIONS && {
+  // Enable static export for GitHub Pages deployment
+  ...(process.env.GITHUB_PAGES && {
     output: 'export',
-    trailingSlash: true
+    trailingSlash: true,
+    basePath: process.env.BASE_PATH || '',
   }),
   images: {
     unoptimized: true
