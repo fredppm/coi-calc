@@ -37,30 +37,22 @@ export const getFullPath = (path: string): string => {
 
 /**
  * Construct a canvas URL with state parameter that includes proper basePath
- * @param canvasType - Type of canvas ("", "recipeId", "objective/resourceId")
  * @param stateParam - Encoded state parameter
  * @returns Complete URL with basePath and state
  */
-export const getCanvasUrl = (canvasType: string, stateParam: string): string => {
-  let path = '/canvas';
-  
-  if (canvasType) {
-    path += `/${canvasType}`;
-  }
-  
-  const fullPath = getFullPath(path);
+export const getCanvasUrl = (stateParam: string): string => {
+  const fullPath = getFullPath('/canvas');
   return `${fullPath}?state=${stateParam}`;
 };
 
 /**
  * Update the browser URL state without triggering navigation
  * This properly handles basePath for deployment environments
- * @param canvasType - Type of canvas ("", "recipeId", "objective/resourceId")
  * @param stateParam - Encoded state parameter
  */
-export const updateBrowserUrl = (canvasType: string, stateParam: string): void => {
+export const updateBrowserUrl = (stateParam: string): void => {
   if (typeof window === 'undefined') return;
   
-  const url = getCanvasUrl(canvasType, stateParam);
+  const url = getCanvasUrl(stateParam);
   window.history.replaceState(null, '', url);
 }; 

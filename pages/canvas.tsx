@@ -1,11 +1,13 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import { Flow } from '../components/Flow/Flow';
 import { getAllRecipes } from '../utils/recipes';
 import { Node, Edge } from 'reactflow';
 import { ProductionSummaryDrawer } from '../components/ProductionSummaryDrawer/ProductionSummaryDrawer';
 import { DebugPanel } from '../components/DebugPanel/DebugPanel';
 import { updateBrowserUrl } from '../utils/urlHelper';
+import { coiResources } from '../data/coi';
 import 'reactflow/dist/style.css';
 
 // LZ-string compression functions (inline implementation for small bundle size)
@@ -172,6 +174,55 @@ const decodeCanvasState = (stateParam: string): { nodes: Node[], edges: Edge[] }
   }
 };
 
+// Helper function to detect the main objective from nodes
+const detectMainObjective = (nodes: Node[]): { name: string; image: string } | null => {
+  if (nodes.length === 0) return null;
+  
+  // Get all outputs from all nodes
+  const allOutputs = new Set<string>();
+  const allInputs = new Set<string>();
+  
+  nodes.forEach(node => {
+    if (node.data.outputs) {
+      node.data.outputs.forEach((output: any) => allOutputs.add(output.id));
+    }
+    if (node.data.inputs) {
+      node.data.inputs.forEach((input: any) => allInputs.add(input.id));
+    }
+  });
+  
+  // Find resources that are produced but not consumed (final products)
+  const finalProducts = Array.from(allOutputs).filter(output => !allInputs.has(output));
+  
+  if (finalProducts.length > 0) {
+    // Return the first final product found
+    const resourceId = finalProducts[0];
+    const resource = coiResources.find(r => r.id === resourceId);
+    return resource ? { name: resource.name, image: resource.image } : null;
+  }
+  
+  // Fallback: if no clear final product, return the most common output
+  const outputCounts: { [key: string]: number } = {};
+  nodes.forEach(node => {
+    if (node.data.outputs) {
+      node.data.outputs.forEach((output: any) => {
+        outputCounts[output.id] = (outputCounts[output.id] || 0) + 1;
+      });
+    }
+  });
+  
+  const mostCommonOutput = Object.keys(outputCounts).reduce((a, b) => 
+    outputCounts[a] > outputCounts[b] ? a : b, Object.keys(outputCounts)[0]
+  );
+  
+  if (mostCommonOutput) {
+    const resource = coiResources.find(r => r.id === mostCommonOutput);
+    return resource ? { name: resource.name, image: resource.image } : null;
+  }
+  
+  return null;
+};
+
 export default function CanvasPage() {
   const router = useRouter();
   const { state } = router.query;
@@ -181,6 +232,7 @@ export default function CanvasPage() {
   const [error, setError] = useState<string | null>(null);
   const [initialLoadComplete, setInitialLoadComplete] = useState(false);
   const [normalizeToSixtySeconds, setNormalizeToSixtySeconds] = useState(false);
+  const [currentObjective, setCurrentObjective] = useState<{ name: string; image: string } | null>(null);
 
   // Load normalization setting from localStorage on mount
   useEffect(() => {
@@ -204,13 +256,17 @@ export default function CanvasPage() {
     const stateParam = encodeCanvasState(newNodes, newEdges);
     
     // Use helper function that handles basePath correctly
-    updateBrowserUrl('', stateParam);
+    updateBrowserUrl(stateParam);
   }, [initialLoadComplete]);
 
   // Handle state changes from Flow component
   const handleStateChange = useCallback((newNodes: Node[], newEdges: Edge[]) => {
     setNodes(newNodes);
     setEdges(newEdges);
+    
+    // Update current objective based on nodes
+    const objective = detectMainObjective(newNodes);
+    setCurrentObjective(objective);
     
     // Auto-update URL with debouncing
     const timeoutId = setTimeout(() => {
@@ -265,6 +321,11 @@ export default function CanvasPage() {
             if (hydratedNodes.length > 0) {
               setNodes(hydratedNodes);
               setEdges(savedState.edges);
+              
+              // Set initial objective
+              const objective = detectMainObjective(hydratedNodes);
+              setCurrentObjective(objective);
+              
               setInitialLoadComplete(true);
               return;
             } else {
@@ -321,13 +382,30 @@ export default function CanvasPage() {
 
   return (
     <main className="h-screen w-screen">
-      {/* Header with back button */}
+      {/* Header with objective button */}
       <div className="absolute top-4 left-4 right-4 z-10 flex justify-between items-start">
         <button
           onClick={handleBackToSelection}
-          className="px-2 py-1 bg-gray-400 text-white text-xs rounded hover:bg-gray-500 transition-colors"
+          className="px-3 py-2 bg-white border-2 border-gray-300 text-gray-700 text-sm rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-colors shadow-sm flex items-center gap-2"
+          title={currentObjective ? `Change objective from ${currentObjective.name}` : 'Select an objective to start planning'}
         >
-          ↻ New Objective
+          {currentObjective ? (
+            <div className="w-5 h-5 relative flex-shrink-0">
+              <Image
+                src={currentObjective.image}
+                alt={currentObjective.name}
+                width={20}
+                height={20}
+                className="rounded"
+              />
+            </div>
+          ) : (
+            <span className="text-blue-600">🎯</span>
+          )}
+          <span className="font-medium">
+            {currentObjective ? `Objective: ${currentObjective.name}` : 'Select an Objective'}
+          </span>
+          <span className="text-gray-400 text-xs">↻</span>
         </button>
       </div>
       

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Recipe } from '../../pages/api/recipes';
+import { Recipe } from '../../utils/dataFetcher';
 import { fetchRecipes } from '../../utils/dataFetcher';
 import { getNormalizedAmount, getDisplayTime, validateRecipes } from '../../utils/recipeCalculations';
 

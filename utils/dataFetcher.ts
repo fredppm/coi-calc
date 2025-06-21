@@ -4,7 +4,7 @@
 import { coiRecipes, coiBuildings, coiResources } from '../data/coi';
 import { Recipe as CoiRecipe, Resource as CoiResource, Building } from '../types';
 
-// This is the Recipe format expected by the RecipeConnectionModal (from pages/api/recipes.ts)
+// Recipe format used throughout the application
 export interface Recipe {
   id: string;
   name: string;

@@ -15,7 +15,7 @@ import { RecipeConnectionModal } from '../RecipeConnectionModal/RecipeConnection
 import { RemoveRecipeModal, ConnectionImpact } from '../RemoveRecipeModal/RemoveRecipeModal';
 import { SettingsPanel } from '../SettingsPanel/SettingsPanel';
 import { ShareButton } from '../ShareButton/ShareButton';
-import { Recipe } from '../../pages/api/recipes';
+import { Recipe } from '../../utils/dataFetcher';
 import { coiResources } from '../../data/coi';
 import 'reactflow/dist/style.css';
 import { DebugPanel } from '../DebugPanel/DebugPanel';
@@ -416,7 +416,7 @@ export const Flow: React.FC<FlowProps> = ({
           <Controls />
           <MiniMap />
         </ReactFlow>
-      
+
 
         <DebugPanel nodes={nodes} edges={edges} />
         <ShareButton />
