@@ -1,7 +1,6 @@
 import { Edge, Node } from 'reactflow';
 import Image from 'next/image';
 import { RecipeNodeData } from '../RecipeNode/RecipeNode';
-import { getImagePath } from '../../utils/urlHelper';
 
 /**
  * Connection impact information for the removal modal
@@ -62,11 +61,11 @@ export const RemoveRecipeModal: React.FC<RemoveRecipeModalProps> = ({
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gray-100 rounded flex items-center justify-center overflow-hidden">
               <Image 
-                src={getImagePath(recipeNode.data.building.image)} 
+                src={recipeNode.data.building.image}
                 alt={recipeNode.data.building.name}
-                width={40}
-                height={40}
-                className="object-contain"
+                width={32}
+                height={32}
+                className="rounded"
               />
             </div>
             <div>

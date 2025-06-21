@@ -6,7 +6,7 @@ import { getAllRecipes } from '../utils/recipes';
 import { Node, Edge } from 'reactflow';
 import { ProductionSummaryDrawer } from '../components/ProductionSummaryDrawer/ProductionSummaryDrawer';
 import { DebugPanel } from '../components/DebugPanel/DebugPanel';
-import { updateBrowserUrl, getImagePath } from '../utils/urlHelper';
+import { updateBrowserUrl } from '../utils/urlHelper';
 import { coiResources } from '../data/coi';
 import 'reactflow/dist/style.css';
 
@@ -392,7 +392,7 @@ export default function CanvasPage() {
           {currentObjective ? (
             <div className="w-5 h-5 relative flex-shrink-0">
               <Image
-                src={getImagePath(currentObjective.image)}
+                src={currentObjective.image}
                 alt={currentObjective.name}
                 width={20}
                 height={20}
