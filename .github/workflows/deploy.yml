@@ -31,14 +31,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate static API files
-        run: npm run generate:static
-
-      - name: Build project
-        run: npm run build
-
-      - name: Create .nojekyll file
-        run: touch out/.nojekyll
+      - name: Build and deploy
+        run: npm run deploy
 
       - name: Debug - List build output
         run: |
