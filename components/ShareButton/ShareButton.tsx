@@ -2,12 +2,18 @@ import { useState, useEffect, useRef } from 'react';
 import { Node, Edge } from 'reactflow';
 import { encodeToBlueprintString, decodeFromBlueprintString } from '../../utils/blueprint';
 
+/**
+ * ShareButtonProps defines the properties for the ShareButton component.
+ */
 export interface ShareButtonProps {
-  nodes: Node[];
-  edges: Edge[];
-  onImport: (nodes: Node[], edges: Edge[]) => void;
+  nodes: Node[]; // Current canvas nodes to encode on export
+  edges: Edge[]; // Current canvas edges to encode on export
+  onImport: (nodes: Node[], edges: Edge[]) => void; // Called with decoded nodes/edges when a blueprint is loaded
 }
 
+/**
+ * ShareButton provides blueprint export (copy to clipboard) and import (paste modal) for canvas builds.
+ */
 export const ShareButton: React.FC<ShareButtonProps> = ({ nodes, edges, onImport }) => {
   const [notification, setNotification] = useState<string | null>(null);
   const [showImport, setShowImport] = useState(false);

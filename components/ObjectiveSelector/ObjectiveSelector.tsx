@@ -37,7 +37,7 @@ const getResources = (): Resource[] => {
  */
 export interface ObjectiveSelectorProps {
   onSelect: (resource: Resource) => void;
-  actionButton?: React.ReactNode;
+  actionButton?: React.ReactNode; // Optional element rendered in the header right slot
 }
 
 /**

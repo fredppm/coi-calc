@@ -43,7 +43,7 @@ export interface FlowProps {
   onStateChange?: (nodes: Node[], edges: Edge[]) => void;
   normalizeToSixtySeconds?: boolean;
   onNormalizeToggle?: (enabled: boolean) => void;
-  externalState?: { nodes: Node[]; edges: Edge[]; version: number } | null;
+  externalState?: { nodes: Node[]; edges: Edge[]; version: number } | null; // When version increments, Flow replaces its internal state
 }
 
 /**

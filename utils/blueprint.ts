@@ -28,6 +28,11 @@ interface MinimalState {
   e: MinimalEdge[];
 }
 
+/**
+ * Encodes canvas nodes and edges into a shareable blueprint string.
+ * Strips runtime-only fields (callbacks, inputs/outputs, full building objects)
+ * so the result is safe to copy-paste and free of stale closures.
+ */
 export const encodeToBlueprintString = (nodes: Node[], edges: Edge[]): string => {
   const minimal: MinimalState = {
     n: nodes.map(node => ({
@@ -54,6 +59,10 @@ export const encodeToBlueprintString = (nodes: Node[], edges: Edge[]): string =>
   return `${BLUEPRINT_PREFIX}${compressed}`;
 };
 
+/**
+ * Decodes a blueprint string back into canvas nodes and edges.
+ * Returns null if the input is invalid, empty, or cannot be decompressed.
+ */
 export const decodeFromBlueprintString = (code: string): { nodes: Node[]; edges: Edge[] } | null => {
   try {
     const payload = code.startsWith(BLUEPRINT_PREFIX) ? code.slice(BLUEPRINT_PREFIX.length) : code;
