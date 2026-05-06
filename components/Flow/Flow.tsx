@@ -14,7 +14,6 @@ import { AnimatedEdge } from './AnimatedEdge';
 import { RecipeConnectionModal } from '../RecipeConnectionModal/RecipeConnectionModal';
 import { RemoveRecipeModal, ConnectionImpact } from '../RemoveRecipeModal/RemoveRecipeModal';
 import { SettingsPanel } from '../SettingsPanel/SettingsPanel';
-import { ShareButton } from '../ShareButton/ShareButton';
 import { Recipe } from '../../utils/dataFetcher';
 import { coiResources } from '../../data/coi';
 import 'reactflow/dist/style.css';
@@ -419,7 +418,6 @@ export const Flow: React.FC<FlowProps> = ({
 
 
         <DebugPanel nodes={nodes} edges={edges} />
-        <ShareButton />
         <SettingsPanel
           normalizeToSixtySeconds={normalizeToSixtySeconds}
           onNormalizeToggle={onNormalizeToggle || (() => {})}
