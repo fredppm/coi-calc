@@ -167,6 +167,7 @@ export default function CanvasPage() {
   const [error, setError] = useState<string | null>(null);
   const [normalizeToSixtySeconds, setNormalizeToSixtySeconds] = useState(false);
   const [currentObjective, setCurrentObjective] = useState<{ name: string; image: string } | null>(null);
+  const [externalState, setExternalState] = useState<{ nodes: Node[]; edges: Edge[]; version: number } | null>(null);
 
   // Load normalization setting from localStorage on mount
   useEffect(() => {
@@ -220,6 +221,7 @@ export default function CanvasPage() {
     setNodes(hydrated);
     setEdges(rawEdges);
     setCurrentObjective(detectMainObjective(hydrated));
+    setExternalState(prev => ({ nodes: hydrated, edges: rawEdges, version: (prev?.version ?? 0) + 1 }));
   }, [hydrateNodes]);
 
   useEffect(() => {
@@ -241,6 +243,7 @@ export default function CanvasPage() {
               setNodes(hydratedNodes);
               setEdges(savedState.edges);
               setCurrentObjective(detectMainObjective(hydratedNodes));
+              setExternalState({ nodes: hydratedNodes, edges: savedState.edges, version: 1 });
 
               // Clean the ?state= param from the URL — blueprint strings are shared separately
               window.history.replaceState(null, '', window.location.pathname);
@@ -331,12 +334,13 @@ export default function CanvasPage() {
       <DebugPanel nodes={nodes} edges={edges} />
 
       {/* Flow Canvas */}
-      <Flow 
-        initialNodes={nodes} 
+      <Flow
+        initialNodes={nodes}
         initialEdges={edges}
         onStateChange={handleStateChange}
         normalizeToSixtySeconds={normalizeToSixtySeconds}
         onNormalizeToggle={handleNormalizeToggle}
+        externalState={externalState}
       />
 
       {/* Production Summary Drawer - Bottom */}

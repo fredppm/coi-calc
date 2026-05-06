@@ -1,4 +1,4 @@
-import { useCallback, useState, useEffect } from 'react';
+import { useCallback, useState, useEffect, useRef } from 'react';
 import ReactFlow, {
   Background,
   Controls,
@@ -43,6 +43,7 @@ export interface FlowProps {
   onStateChange?: (nodes: Node[], edges: Edge[]) => void;
   normalizeToSixtySeconds?: boolean;
   onNormalizeToggle?: (enabled: boolean) => void;
+  externalState?: { nodes: Node[]; edges: Edge[]; version: number } | null;
 }
 
 /**
@@ -54,9 +55,20 @@ export const Flow: React.FC<FlowProps> = ({
   onStateChange,
   normalizeToSixtySeconds = false,
   onNormalizeToggle,
+  externalState,
 }) => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const lastExternalVersionRef = useRef<number>(-1);
+
+  // Sync externally-imported state (e.g. blueprint load) into Flow's internal state
+  useEffect(() => {
+    if (externalState && externalState.version !== lastExternalVersionRef.current) {
+      lastExternalVersionRef.current = externalState.version;
+      setNodes(externalState.nodes);
+      setEdges(externalState.edges);
+    }
+  }, [externalState, setNodes, setEdges]);
   
   // Modal state for connections
   const [modalState, setModalState] = useState<{

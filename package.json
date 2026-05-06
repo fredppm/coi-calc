@@ -51,6 +51,8 @@
     "test:all": "npm run type-check && npm run test && npm run test:e2e"
   },
   "dependencies": {
+    "baseline-browser-mapping": "^2.10.27",
+    "caniuse-lite": "^1.0.30001792",
     "lz-string": "^1.5.0",
     "next": "14.1.0",
     "react": "^18.2.0",

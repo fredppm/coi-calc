@@ -169,5 +169,79 @@ describe('blueprint', () => {
 
       expect(result.edges[0].style).toEqual({ strokeWidth: 2 });
     });
+
+    it('decoded nodes contain exactly the fields hydrateNodes needs (building.id + name)', () => {
+      const code = encodeToBlueprintString([makeNode()], []);
+      const result = decodeFromBlueprintString(code)!;
+      const node = result.nodes[0];
+
+      // These two fields are the only lookup keys used by hydrateNodes in canvas.tsx
+      expect(node.data.building.id).toBe('iron_mine');
+      expect(node.data.name).toBe('Iron Ore Mining');
+    });
+  });
+});
+
+describe('blueprint — runtime node fields are stripped on encode', () => {
+  it('strips Flow runtime callbacks and metadata from encoded nodes', () => {
+    // Flow enriches each node with callbacks and computed data before rendering.
+    // Encoding such a node must produce a clean blueprint with no runtime junk.
+    const runtimeNode: Node = {
+      id: 'node-1',
+      type: 'recipe',
+      position: { x: 100, y: 200 },
+      data: {
+        name: 'Iron Ore Mining',
+        building: { id: 'iron_mine', name: 'Iron Mine', image: '/img/mine.png' },
+        multiplier: 2,
+        // Fields added by Flow's nodesWithHandlers map:
+        onResourceClick: () => {},
+        onRemove: () => {},
+        onMultiplierChange: () => {},
+        connectedEdges: [{ source: 'node-1', target: 'node-2' }],
+        normalizeToSixtySeconds: true,
+        inputs: [{ id: 'water', name: 'Water', amount: 5, icon: '/img/water.png' }],
+        outputs: [{ id: 'iron_ore', name: 'Iron Ore', amount: 10, icon: '/img/iron.png' }],
+        time: 30,
+      },
+    };
+
+    const code = encodeToBlueprintString([runtimeNode], []);
+    const result = decodeFromBlueprintString(code)!;
+    const node = result.nodes[0];
+
+    // Core fields must survive
+    expect(node.data.name).toBe('Iron Ore Mining');
+    expect(node.data.building.id).toBe('iron_mine');
+    expect(node.data.multiplier).toBe(2);
+
+    // Runtime fields must not appear in the decoded node
+    expect(node.data.onResourceClick).toBeUndefined();
+    expect(node.data.onRemove).toBeUndefined();
+    expect(node.data.onMultiplierChange).toBeUndefined();
+    expect(node.data.connectedEdges).toBeUndefined();
+    expect(node.data.normalizeToSixtySeconds).toBeUndefined();
+    expect(node.data.inputs).toBeUndefined();
+    expect(node.data.outputs).toBeUndefined();
+    expect(node.data.time).toBeUndefined();
+  });
+
+  it('encodes only the building id, not the full building object', () => {
+    const nodeWithFullBuilding: Node = {
+      id: 'node-1',
+      type: 'recipe',
+      position: { x: 0, y: 0 },
+      data: {
+        name: 'Iron Ore Mining',
+        building: { id: 'iron_mine', name: 'Iron Mine', image: '/img/mine.png', tier: 3 },
+        multiplier: 1,
+      },
+    };
+
+    const code = encodeToBlueprintString([nodeWithFullBuilding], []);
+    const result = decodeFromBlueprintString(code)!;
+
+    // Decoded building must only have the id — hydration fills the rest
+    expect(result.nodes[0].data.building).toEqual({ id: 'iron_mine' });
   });
 });

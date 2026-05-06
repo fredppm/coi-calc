@@ -37,12 +37,13 @@ const getResources = (): Resource[] => {
  */
 export interface ObjectiveSelectorProps {
   onSelect: (resource: Resource) => void;
+  actionButton?: React.ReactNode;
 }
 
 /**
  * ObjectiveSelector allows users to select their objective from available resources.
  */
-export const ObjectiveSelector: React.FC<ObjectiveSelectorProps> = ({ onSelect }) => {
+export const ObjectiveSelector: React.FC<ObjectiveSelectorProps> = ({ onSelect, actionButton }) => {
   const [selectedResource, setSelectedResource] = useState<Resource | null>(null);
   const [availableResources, setAvailableResources] = useState<Resource[]>([]);
   const [filteredResources, setFilteredResources] = useState<Resource[]>([]);
@@ -158,8 +159,10 @@ export const ObjectiveSelector: React.FC<ObjectiveSelectorProps> = ({ onSelect }
             </div>
           </div>
           
-          {/* Empty space for balance */}
-          <div className="w-96"></div>
+          {/* Right slot — used for optional action buttons */}
+          <div className="w-96 flex justify-end">
+            {actionButton}
+          </div>
         </div>
       </div>
       
