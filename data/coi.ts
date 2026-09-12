@@ -1981,14 +1981,14 @@ export const coiRecipes: Recipe[] = [
     name: "SiliconSmeltingArc",
     buildingId: "arc_furnace",
     inputs: [
-      { resourceId: "sand", amount: 16 },
-      { resourceId: "coal", amount: 4 },
+      { resourceId: "sand", amount: 10 },
+      { resourceId: "coal", amount: 2 },
       { resourceId: "graphite", amount: 1 },
     ],
     outputs: [
-      { resourceId: "molten_silicon", amount: 12 },
-      { resourceId: "slag", amount: 6 },
-      { resourceId: "exhaust", amount: 8 },
+      { resourceId: "molten_silicon", amount: 8 },
+      { resourceId: "slag", amount: 4 },
+      { resourceId: "exhaust", amount: 6 },
     ],
     metadata: [
       { key: "time", value: "20" },
@@ -2128,16 +2128,16 @@ export const coiRecipes: Recipe[] = [
     name: "SiliconSmeltingArc2",
     buildingId: "arc_furnace_ii",
     inputs: [
-      { resourceId: "sand", amount: 32 },
-      { resourceId: "coal", amount: 8 },
+      { resourceId: "sand", amount: 20 },
+      { resourceId: "coal", amount: 4 },
       { resourceId: "graphite", amount: 1 },
       { resourceId: "water", amount: 2 },
     ],
     outputs: [
-      { resourceId: "molten_silicon", amount: 24 },
-      { resourceId: "slag", amount: 12 },
+      { resourceId: "molten_silicon", amount: 16 },
+      { resourceId: "slag", amount: 8 },
       { resourceId: "steam_low", amount: 2 },
-      { resourceId: "exhaust", amount: 16 },
+      { resourceId: "exhaust", amount: 12 },
     ],
     metadata: [
       { key: "time", value: "20" },
@@ -2658,7 +2658,7 @@ export const coiRecipes: Recipe[] = [
     name: "PCBAssemblyT1",
     buildingId: "assembly_iii",
     inputs: [
-      { resourceId: "glass", amount: 4 },
+      { resourceId: "glass", amount: 2 },
       { resourceId: "plastic", amount: 4 },
       { resourceId: "copper", amount: 2 },
     ],
@@ -2691,7 +2691,7 @@ export const coiRecipes: Recipe[] = [
     inputs: [
       { resourceId: "pcb", amount: 4 },
       { resourceId: "electronics", amount: 8 },
-      { resourceId: "silicon_poly", amount: 4 },
+      { resourceId: "silicon_poly", amount: 2 },
     ],
     outputs: [
       { resourceId: "electronics_ii", amount: 4 },
@@ -3196,7 +3196,7 @@ export const coiRecipes: Recipe[] = [
     name: "PCBAssemblyT2",
     buildingId: "assembly_iv",
     inputs: [
-      { resourceId: "glass", amount: 4 },
+      { resourceId: "glass", amount: 2 },
       { resourceId: "plastic", amount: 4 },
       { resourceId: "copper", amount: 2 },
     ],
@@ -3229,7 +3229,7 @@ export const coiRecipes: Recipe[] = [
     inputs: [
       { resourceId: "pcb", amount: 4 },
       { resourceId: "electronics", amount: 8 },
-      { resourceId: "silicon_poly", amount: 4 },
+      { resourceId: "silicon_poly", amount: 2 },
     ],
     outputs: [
       { resourceId: "electronics_ii", amount: 4 },
@@ -3779,7 +3779,7 @@ export const coiRecipes: Recipe[] = [
     name: "PCBAssemblyT3",
     buildingId: "assembly_v",
     inputs: [
-      { resourceId: "glass", amount: 4 },
+      { resourceId: "glass", amount: 2 },
       { resourceId: "plastic", amount: 4 },
       { resourceId: "copper", amount: 2 },
     ],
@@ -3812,7 +3812,7 @@ export const coiRecipes: Recipe[] = [
     inputs: [
       { resourceId: "pcb", amount: 4 },
       { resourceId: "electronics", amount: 8 },
-      { resourceId: "silicon_poly", amount: 4 },
+      { resourceId: "silicon_poly", amount: 2 },
     ],
     outputs: [
       { resourceId: "electronics_ii", amount: 4 },
@@ -6173,7 +6173,7 @@ export const coiRecipes: Recipe[] = [
     name: "SiliconCrystallization",
     buildingId: "crystallizer",
     inputs: [
-      { resourceId: "silicon_poly", amount: 24 },
+      { resourceId: "silicon_poly", amount: 12 },
       { resourceId: "water", amount: 2 },
     ],
     outputs: [
@@ -6252,7 +6252,7 @@ export const coiRecipes: Recipe[] = [
       { resourceId: "diesel", amount: 6 },
     ],
     outputs: [
-      { resourceId: "electricity", amount: 0 },
+      { resourceId: "electricity", amount: 5000 },
       { resourceId: "exhaust", amount: 8 },
     ],
     metadata: [
@@ -8146,7 +8146,7 @@ export const coiRecipes: Recipe[] = [
       { resourceId: "steam_high", amount: 4 },
     ],
     outputs: [
-      { resourceId: "mechanical_power", amount: 0 },
+      { resourceId: "mechanical_power", amount: 1000 },
       { resourceId: "steam_low", amount: 4 },
     ],
     metadata: [
@@ -8161,7 +8161,7 @@ export const coiRecipes: Recipe[] = [
       { resourceId: "steam_high", amount: 8 },
     ],
     outputs: [
-      { resourceId: "mechanical_power", amount: 0 },
+      { resourceId: "mechanical_power", amount: 2000 },
       { resourceId: "steam_low", amount: 8 },
     ],
     metadata: [
@@ -8776,7 +8776,7 @@ export const coiRecipes: Recipe[] = [
       { resourceId: "steam_low", amount: 4 },
     ],
     outputs: [
-      { resourceId: "mechanical_power", amount: 0 },
+      { resourceId: "mechanical_power", amount: 500 },
       { resourceId: "steam_depleted", amount: 4 },
     ],
     metadata: [
@@ -8791,7 +8791,7 @@ export const coiRecipes: Recipe[] = [
       { resourceId: "steam_low", amount: 8 },
     ],
     outputs: [
-      { resourceId: "mechanical_power", amount: 0 },
+      { resourceId: "mechanical_power", amount: 1000 },
       { resourceId: "steam_depleted", amount: 8 },
     ],
     metadata: [
@@ -10217,12 +10217,13 @@ export const coiRecipes: Recipe[] = [
     name: "PowerGeneratorT1",
     buildingId: "power_generator",
     inputs: [
-      { resourceId: "mechanical_power", amount: 0 },
+      { resourceId: "mechanical_power", amount: 500 },
     ],
     outputs: [
-      { resourceId: "electricity", amount: 0 },
+      { resourceId: "electricity", amount: 333.33 },
     ],
     metadata: [
+      { key: "time", value: "10" },
     ]
   },
   {
@@ -10230,12 +10231,13 @@ export const coiRecipes: Recipe[] = [
     name: "PowerGeneratorT2",
     buildingId: "power_generator_large",
     inputs: [
-      { resourceId: "mechanical_power", amount: 0 },
+      { resourceId: "mechanical_power", amount: 3000 },
     ],
     outputs: [
-      { resourceId: "electricity", amount: 0 },
+      { resourceId: "electricity", amount: 2500 },
     ],
     metadata: [
+      { key: "time", value: "10" },
     ]
   },
   {
@@ -10754,11 +10756,11 @@ export const coiRecipes: Recipe[] = [
     name: "SiliconTreatment",
     buildingId: "silicon_reactor",
     inputs: [
-      { resourceId: "molten_silicon", amount: 9 },
+      { resourceId: "molten_silicon", amount: 6 },
       { resourceId: "hydrogen", amount: 2 },
     ],
     outputs: [
-      { resourceId: "silicon_poly", amount: 9 },
+      { resourceId: "silicon_poly", amount: 6 },
     ],
     metadata: [
       { key: "time", value: "30" },
@@ -11001,7 +11003,7 @@ export const coiRecipes: Recipe[] = [
       { resourceId: "steam_super", amount: 8 },
     ],
     outputs: [
-      { resourceId: "mechanical_power", amount: 0 },
+      { resourceId: "mechanical_power", amount: 3000 },
       { resourceId: "steam_high", amount: 8 },
     ],
     metadata: [
