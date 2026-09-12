@@ -60,6 +60,9 @@ jobs:
           path: ./out
 
   deploy:
+    # Pages deployment needs id-token/pages write permissions, which PR runs
+    # (especially from forks) don't get. Only deploy on pushes to main.
+    if: github.event_name == 'push'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
