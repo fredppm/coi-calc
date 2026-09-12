@@ -6,42 +6,13 @@ import { getAllRecipes } from '../utils/recipes';
 import { Node, Edge } from 'reactflow';
 import { ProductionSummaryDrawer } from '../components/ProductionSummaryDrawer/ProductionSummaryDrawer';
 import { DebugPanel } from '../components/DebugPanel/DebugPanel';
-import { updateBrowserUrl, getImagePath } from '../utils/urlHelper';
+import { ShareButton } from '../components/ShareButton/ShareButton';
+import { decodeFromBlueprintString } from '../utils/blueprint';
+import { getImagePath } from '../utils/urlHelper';
 import { coiResources } from '../data/coi';
 import 'reactflow/dist/style.css';
 
-// LZ-string compression functions (inline implementation for small bundle size)
-const compress = (str: string): string => {
-  try {
-    // Simple LZ77-like compression
-    const dictionary: { [key: string]: number } = {};
-    const data = [];
-    let dictSize = 256;
-    let w = "";
-    
-    for (let i = 0; i < str.length; i++) {
-      const c = str.charAt(i);
-      const wc = w + c;
-      if (dictionary[wc] !== undefined) {
-        w = wc;
-      } else {
-        data.push(w.length === 1 ? w.charCodeAt(0) : dictionary[w]);
-        dictionary[wc] = dictSize++;
-        w = c;
-      }
-    }
-    
-    if (w !== "") {
-      data.push(w.length === 1 ? w.charCodeAt(0) : dictionary[w]);
-    }
-    
-    return btoa(String.fromCharCode(...data));
-  } catch {
-    // Fallback to base64 if compression fails
-    return btoa(str);
-  }
-};
-
+// Legacy decompression for backward-compatible loading of old ?state= URLs
 const decompress = (compressed: string): string => {
   try {
     const data = Array.from(atob(compressed)).map(c => c.charCodeAt(0));
@@ -99,42 +70,6 @@ interface MinimalState {
   n: MinimalNode[]; // nodes
   e: MinimalEdge[]; // edges
 }
-
-// Helper functions for URL state management with advanced compression
-const encodeCanvasState = (nodes: Node[], edges: Edge[]): string => {
-  // Minimize the state by removing redundant data
-  const minimalNodes: MinimalNode[] = nodes.map(node => ({
-    i: node.id,
-    t: node.type || 'recipe',
-    p: [Math.round(node.position.x), Math.round(node.position.y)],
-    d: {
-      n: node.data.name,
-      b: node.data.building?.id || '', // Only store building ID, not full object
-      ...(node.data.multiplier && node.data.multiplier !== 1 && { m: node.data.multiplier })
-    }
-  }));
-
-  const minimalEdges: MinimalEdge[] = edges.map(edge => ({
-    i: edge.id,
-    s: edge.source,
-    t: edge.target,
-    ...(edge.sourceHandle && { sh: edge.sourceHandle }),
-    ...(edge.targetHandle && { th: edge.targetHandle }),
-    ...(edge.label && { l: String(edge.label) })
-  }));
-
-  const minimalState: MinimalState = {
-    n: minimalNodes,
-    e: minimalEdges
-  };
-
-  // Convert to compact JSON and compress
-  const jsonString = JSON.stringify(minimalState);
-  const compressed = compress(jsonString);
-  
-  // Additional URL encoding for special characters
-  return encodeURIComponent(compressed);
-};
 
 const decodeCanvasState = (stateParam: string): { nodes: Node[], edges: Edge[] } | null => {
   try {
@@ -230,9 +165,9 @@ export default function CanvasPage() {
   const [edges, setEdges] = useState<Edge[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [initialLoadComplete, setInitialLoadComplete] = useState(false);
   const [normalizeToSixtySeconds, setNormalizeToSixtySeconds] = useState(false);
   const [currentObjective, setCurrentObjective] = useState<{ name: string; image: string } | null>(null);
+  const [externalState, setExternalState] = useState<{ nodes: Node[]; edges: Edge[]; version: number } | null>(null);
 
   // Load normalization setting from localStorage on mount
   useEffect(() => {
@@ -248,33 +183,46 @@ export default function CanvasPage() {
     localStorage.setItem('normalizeToSixtySeconds', JSON.stringify(enabled));
   }, []);
 
-  // Debounced URL update function
-  const updateURLState = useCallback((newNodes: Node[], newEdges: Edge[]) => {
-    // Don't update URL during initial load
-    if (!initialLoadComplete) return;
-    
-    const stateParam = encodeCanvasState(newNodes, newEdges);
-    
-    // Use helper function that handles basePath correctly
-    updateBrowserUrl(stateParam);
-  }, [initialLoadComplete]);
-
   // Handle state changes from Flow component
   const handleStateChange = useCallback((newNodes: Node[], newEdges: Edge[]) => {
     setNodes(newNodes);
     setEdges(newEdges);
-    
-    // Update current objective based on nodes
-    const objective = detectMainObjective(newNodes);
-    setCurrentObjective(objective);
-    
-    // Auto-update URL with debouncing
-    const timeoutId = setTimeout(() => {
-      updateURLState(newNodes, newEdges);
-    }, 500); // 500ms debounce
+    setCurrentObjective(detectMainObjective(newNodes));
+  }, []);
 
-    return () => clearTimeout(timeoutId);
-  }, [updateURLState]);
+  // Hydrate minimal nodes with full recipe data
+  const hydrateNodes = useCallback((rawNodes: Node[]): Node[] => {
+    const allRecipes = getAllRecipes();
+    return rawNodes.map(node => {
+      const recipe = allRecipes.find(r =>
+        r.building.id === node.data.building.id && r.name === node.data.name
+      );
+      if (!recipe) {
+        console.warn('Recipe not found for node:', node.data);
+        return null;
+      }
+      return {
+        ...node,
+        data: {
+          ...node.data,
+          building: recipe.building,
+          inputs: recipe.inputs || [],
+          outputs: recipe.outputs || [],
+          time: recipe.time,
+        },
+      };
+    }).filter(Boolean) as Node[];
+  }, []);
+
+  // Handle import from blueprint string
+  const handleBlueprintImport = useCallback((rawNodes: Node[], rawEdges: Edge[]) => {
+    const hydrated = hydrateNodes(rawNodes);
+    if (hydrated.length === 0) return;
+    setNodes(hydrated);
+    setEdges(rawEdges);
+    setCurrentObjective(detectMainObjective(hydrated));
+    setExternalState(prev => ({ nodes: hydrated, edges: rawEdges, version: (prev?.version ?? 0) + 1 }));
+  }, [hydrateNodes]);
 
   useEffect(() => {
     const loadCanvas = async () => {
@@ -282,54 +230,24 @@ export default function CanvasPage() {
         setLoading(true);
         setError(null);
         
-        // Check if we have saved state in URL
+        // Check if we have saved state in URL (legacy ?state= links)
         if (state && typeof state === 'string') {
-          const savedState = decodeCanvasState(state);
-          if (savedState) {
-            // Import all recipes to hydrate nodes properly
-            const allRecipes = getAllRecipes();
-            
-            // Hydrate all nodes with complete recipe data
-            const hydratedNodes = savedState.nodes.map(node => {
-              // Find the recipe by building ID and name
-              const nodeRecipe = allRecipes.find(r => 
-                r.building.id === node.data.building.id && r.name === node.data.name
-              );
-              
-              if (nodeRecipe) {
-                return {
-                  ...node,
-                  data: {
-                    ...node.data,
-                    building: nodeRecipe.building,
-                    inputs: nodeRecipe.inputs || [],
-                    outputs: nodeRecipe.outputs || [],
-                    time: nodeRecipe.time,
-                  }
-                };
-              } else {
-                // Log warning for missing recipe data
-                console.warn('Could not hydrate node - recipe not found:', {
-                  buildingId: node.data.building.id,
-                  name: node.data.name
-                });
-                return null; // Mark for removal
-              }
-            }).filter(Boolean) as Node[]; // Remove null entries
+          // Try new blueprint format first, then fall back to old URL format
+          const blueprintResult = decodeFromBlueprintString(state);
+          const savedState = blueprintResult ?? decodeCanvasState(state);
 
-            // Only proceed if we successfully hydrated at least some nodes
+          if (savedState) {
+            const hydratedNodes = hydrateNodes(savedState.nodes);
+
             if (hydratedNodes.length > 0) {
               setNodes(hydratedNodes);
               setEdges(savedState.edges);
-              
-              // Set initial objective
-              const objective = detectMainObjective(hydratedNodes);
-              setCurrentObjective(objective);
-              
-              setInitialLoadComplete(true);
+              setCurrentObjective(detectMainObjective(hydratedNodes));
+              setExternalState({ nodes: hydratedNodes, edges: savedState.edges, version: 1 });
+
+              // Clean the ?state= param from the URL — blueprint strings are shared separately
+              window.history.replaceState(null, '', window.location.pathname);
               return;
-            } else {
-              console.warn('Failed to hydrate any nodes from saved state');
             }
           }
         }
@@ -346,7 +264,7 @@ export default function CanvasPage() {
     };
 
     loadCanvas();
-  }, [state]);
+  }, [state, hydrateNodes]);
 
   const handleBackToSelection = () => {
     router.push('/');
@@ -409,16 +327,20 @@ export default function CanvasPage() {
         </button>
       </div>
       
+      {/* Blueprint share / import */}
+      <ShareButton nodes={nodes} edges={edges} onImport={handleBlueprintImport} />
+
       {/* Debug Panel */}
       <DebugPanel nodes={nodes} edges={edges} />
 
       {/* Flow Canvas */}
-      <Flow 
-        initialNodes={nodes} 
+      <Flow
+        initialNodes={nodes}
         initialEdges={edges}
         onStateChange={handleStateChange}
         normalizeToSixtySeconds={normalizeToSixtySeconds}
         onNormalizeToggle={handleNormalizeToggle}
+        externalState={externalState}
       />
 
       {/* Production Summary Drawer - Bottom */}
