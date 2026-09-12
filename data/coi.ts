@@ -2658,7 +2658,7 @@ export const coiRecipes: Recipe[] = [
     name: "PCBAssemblyT1",
     buildingId: "assembly_iii",
     inputs: [
-      { resourceId: "glass", amount: 4 },
+      { resourceId: "glass", amount: 2 },
       { resourceId: "plastic", amount: 4 },
       { resourceId: "copper", amount: 2 },
     ],
@@ -3196,7 +3196,7 @@ export const coiRecipes: Recipe[] = [
     name: "PCBAssemblyT2",
     buildingId: "assembly_iv",
     inputs: [
-      { resourceId: "glass", amount: 4 },
+      { resourceId: "glass", amount: 2 },
       { resourceId: "plastic", amount: 4 },
       { resourceId: "copper", amount: 2 },
     ],
@@ -3779,7 +3779,7 @@ export const coiRecipes: Recipe[] = [
     name: "PCBAssemblyT3",
     buildingId: "assembly_v",
     inputs: [
-      { resourceId: "glass", amount: 4 },
+      { resourceId: "glass", amount: 2 },
       { resourceId: "plastic", amount: 4 },
       { resourceId: "copper", amount: 2 },
     ],
@@ -8161,7 +8161,7 @@ export const coiRecipes: Recipe[] = [
       { resourceId: "steam_high", amount: 8 },
     ],
     outputs: [
-      { resourceId: "mechanical_power", amount: 1200 },
+      { resourceId: "mechanical_power", amount: 2000 },
       { resourceId: "steam_low", amount: 8 },
     ],
     metadata: [
@@ -10217,12 +10217,13 @@ export const coiRecipes: Recipe[] = [
     name: "PowerGeneratorT1",
     buildingId: "power_generator",
     inputs: [
-      { resourceId: "mechanical_power", amount: 3000 },
+      { resourceId: "mechanical_power", amount: 500 },
     ],
     outputs: [
-      { resourceId: "electricity", amount: 2000 },
+      { resourceId: "electricity", amount: 333.33 },
     ],
     metadata: [
+      { key: "time", value: "10" },
     ]
   },
   {
@@ -10230,12 +10231,13 @@ export const coiRecipes: Recipe[] = [
     name: "PowerGeneratorT2",
     buildingId: "power_generator_large",
     inputs: [
-      { resourceId: "mechanical_power", amount: 18000 },
+      { resourceId: "mechanical_power", amount: 3000 },
     ],
     outputs: [
-      { resourceId: "electricity", amount: 15000 },
+      { resourceId: "electricity", amount: 2500 },
     ],
     metadata: [
+      { key: "time", value: "10" },
     ]
   },
   {
